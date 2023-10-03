@@ -1,7 +1,7 @@
 extends Sprite
 
-const SPEED = 400 # pixel per second
-const MAX_TRACKING_DISTANCE = 400 # pixel
+const SPEED = 500 # pixel per second
+const MAX_TRACKING_DISTANCE = 600 # pixel
 
 var screen_touch = false
 var path = []
@@ -48,3 +48,7 @@ func _physics_process(delta):
 			next_pos = path.front()
 			direction = global_position.direction_to(next_pos)
 			distance = global_position.distance_to(next_pos)
+
+
+#func _on_Timer_timeout():
+	
