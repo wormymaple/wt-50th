@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Games/PreciscionMachining/DrawingHandler.gd" type="Script" id=1]
+
+[node name="RootNode" type="Node2D"]
+
+[node name="DrawingLine" type="Line2D" parent="."]
+width = 5.0
+joint_mode = 1
+script = ExtResource( 1 )
+min_finish_dist = 100
+simp_threshold = 0.95
+min_draw_dist = 15
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
