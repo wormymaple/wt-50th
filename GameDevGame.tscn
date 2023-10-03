@@ -5,4 +5,7 @@
 [node name="GameDevGame" type="Node"]
 
 [node name="UeNode" parent="." instance=ExtResource( 1 )]
-position = Vector2( 90, 45 )
+position = Vector2( 56, 61 )
+
+[node name="UeNode2" parent="." instance=ExtResource( 1 )]
+position = Vector2( 118, 25 )

@@ -60,4 +60,6 @@ default_color = Color( 1, 1, 1, 1 )
 
 [connection signal="input_event" from="Area2D" to="." method="_on_Area2D_input_event"]
 [connection signal="input_event" from="NodeLineOutput" to="." method="_on_NodeLine_input_event"]
+[connection signal="mouse_exited" from="NodeLineOutput" to="." method="_on_NodeLineOutput_mouse_exited"]
 [connection signal="input_event" from="NodeLineInput" to="." method="_on_NodeLineInput_input_event"]
+[connection signal="mouse_exited" from="NodeLineInput" to="." method="_on_NodeLineInput_mouse_exited"]

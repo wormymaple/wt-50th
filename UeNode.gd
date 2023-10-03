@@ -5,13 +5,32 @@ var myClickPos
 var myDistance = Vector2(0,0)
 var lineClickingOutput = false
 var lineClickingInput = false
+var hoveringInput = false
+var hoveringOutput = false
 
 export var nodeType = "unset"
 
 func _ready():
-	pass
+	if nodeType == "BeginPlay":
+		$NodeLineInput.hide()
+	elif nodeType == "SpawnActor":
+		pass
+	elif nodeType == "SetRun":
+		pass
 
 func _process(delta):
+	
+	#print("hoverInput ",hoveringInput)
+	#print("hoverOutput ",hoveringOutput)
+	
+	if hoveringInput:
+		if lineClickingOutput:
+			print("eurekia")
+	if hoveringOutput:
+		if lineClickingInput:
+			print("eurekia")
+		pass
+	
 	if selected:
 		followMouse()
 	
@@ -46,12 +65,21 @@ func _on_Area2D_input_event(viewport, event, shape_idx):
 
 
 func _on_NodeLine_input_event(viewport, event, shape_idx):
+	hoveringOutput = true
 	if Input.is_action_just_pressed("LMC"):
 		$NodeLineOutput/Line2D.add_point(get_local_mouse_position())
 		lineClickingOutput = true
-	
 
 func _on_NodeLineInput_input_event(viewport, event, shape_idx):
+	hoveringInput = true
 	if Input.is_action_just_pressed("LMC"):
 		$NodeLineInput/Line2D.add_point(get_local_mouse_position())
 		lineClickingInput = true
+		
+
+func _on_NodeLineOutput_mouse_exited():
+	hoveringOutput = false
+
+
+func _on_NodeLineInput_mouse_exited():
+	hoveringInput = false
