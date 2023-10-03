@@ -22,6 +22,10 @@ func _process(delta):
 		var dist = points[-1].distance_to(points[0])
 		if dist <= min_finish_dist:
 			add_point(points[0])
+			var simp_points = simplify_shape(points)
+			clear_points()
+			for point in simp_points:
+				add_point(point)
 		else:
 			clear_points()
 
@@ -34,5 +38,15 @@ func _input(event):
 			else:
 				clear_points()
 
-func simplify_shape():
-	
+func simplify_shape(in_points):
+	var new_points = [in_points[0]]
+	for i in range(1, len(in_points) - 1):
+		var point = in_points[i]
+		var d1 = point.direction_to(in_points[i - 1])
+		var d2 = point.direction_to(in_points[i + 1])
+		
+		if abs(d1.dot(d2)) < simp_threshold:
+			new_points.append(point)
+			
+	new_points.append(in_points[-1])
+	return new_points

@@ -9,6 +9,7 @@ width = 5.0
 joint_mode = 1
 script = ExtResource( 1 )
 min_finish_dist = 20
+simp_threshold = 0.9
 
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
