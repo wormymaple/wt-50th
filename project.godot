@@ -14,6 +14,10 @@ config/name="wt-50th"
 run/main_scene="res://Games/PreciscionMachining/MarshallTesting.tscn"
 config/icon="res://icon.png"
 
+[display]
+
+window/size/fullscreen=true
+
 [global]
 
 touch=false
