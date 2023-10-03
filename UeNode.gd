@@ -3,7 +3,8 @@ extends Node2D
 var selected = false
 var myClickPos
 var myDistance = Vector2(0,0)
-var lineClicking = false
+var lineClickingOutput = false
+var lineClickingInput = false
 
 export var nodeType = "unset"
 
@@ -14,14 +15,19 @@ func _process(delta):
 	if selected:
 		followMouse()
 	
-	if lineClicking == true:
+	if lineClickingOutput == true:
 		$NodeLineOutput/Line2D.set_point_position(1, get_local_mouse_position())
 	else:
 		$NodeLineOutput/Line2D.remove_point(1)
 	
 	if Input.is_action_just_released("LMC"):
-		lineClicking = false
+		lineClickingOutput = false
+		lineClickingInput = false
 	
+	if lineClickingInput == true:
+		$NodeLineInput/Line2D.set_point_position(1, get_local_mouse_position())
+	else:
+		$NodeLineInput/Line2D.remove_point(1)
 
 
 func followMouse():
@@ -42,7 +48,10 @@ func _on_Area2D_input_event(viewport, event, shape_idx):
 func _on_NodeLine_input_event(viewport, event, shape_idx):
 	if Input.is_action_just_pressed("LMC"):
 		$NodeLineOutput/Line2D.add_point(get_local_mouse_position())
-		lineClicking = true
+		lineClickingOutput = true
 	
 
-
+func _on_NodeLineInput_input_event(viewport, event, shape_idx):
+	if Input.is_action_just_pressed("LMC"):
+		$NodeLineInput/Line2D.add_point(get_local_mouse_position())
+		lineClickingInput = true
