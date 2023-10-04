@@ -2,10 +2,15 @@ extends Line2D
 
 var drawing = false
 var just_released = false
+var finished_drawing = false
 
 export var min_finish_dist = 0
 export var simp_threshold = 0.0
 export var min_draw_dist = 0
+export var max_score = 0
+
+export var ref_object: NodePath
+export var score_indicator: NodePath
 
 var prev_point := Vector2.INF
 
@@ -15,6 +20,9 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	if finished_drawing:
+		return
+	
 	if drawing:
 		var mouse_pos = get_global_mouse_position()
 		var dist = mouse_pos.distance_to(prev_point)
@@ -32,6 +40,14 @@ func _process(delta):
 			clear_points()
 			for point in simp_points:
 				add_point(point)
+			
+			var score = max_score - int(check_points(points))
+			if (score < 0):
+				score = 0
+			
+			get_node(score_indicator).set_score(score)
+			get_node(ref_object).modulate = Color(1, 1, 1, 0.2)
+			finished_drawing = true
 		else:
 			clear_points()
 
@@ -62,3 +78,17 @@ func simplify_shape(in_points, n):
 		return simplify_shape(new_points, n - 1)
 	else:
 		return new_points
+
+func check_points(in_points):
+	var total = 0.0
+	var ref_points = get_node(ref_object).points
+	for point in in_points:
+		var closest_point = Vector2.INF
+		for ref_point in ref_points:
+			var new_dist = point.distance_to(ref_point)
+			if (new_dist	 < point.distance_to(closest_point)):
+				closest_point = ref_point
+			
+		total += point.distance_to(closest_point)
+	
+	return total / len(in_points)

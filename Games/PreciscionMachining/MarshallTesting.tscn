@@ -1,16 +1,56 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Games/PreciscionMachining/DrawingHandler.gd" type="Script" id=1]
+[ext_resource path="res://Games/PreciscionMachining/ReferenceObject.gd" type="Script" id=2]
+[ext_resource path="res://Games/PreciscionMachining/ScoreLabel.gd" type="Script" id=3]
+[ext_resource path="res://icon.png" type="Texture" id=4]
+
+[sub_resource type="Curve" id=1]
+_data = [ Vector2( 0, 0 ), 0.0, 0.0, 0, 0, Vector2( 1, 1 ), 0.0, 0.0, 0, 0 ]
 
 [node name="RootNode" type="Node2D"]
 
+[node name="Background" type="Sprite" parent="."]
+modulate = Color( 0, 0, 0, 1 )
+scale = Vector2( 50, 50 )
+z_index = -10
+texture = ExtResource( 4 )
+
+[node name="ReferenceObject" type="Line2D" parent="."]
+width = 5.0
+default_color = Color( 1, 1, 1, 1 )
+joint_mode = 1
+begin_cap_mode = 2
+end_cap_mode = 2
+script = ExtResource( 2 )
+shape_points = [ Vector2( -200, 200 ), Vector2( -200, -200 ), Vector2( 200, -200 ), Vector2( 200, 200 ) ]
+
 [node name="DrawingLine" type="Line2D" parent="."]
+z_index = 1
 width = 5.0
 joint_mode = 1
 script = ExtResource( 1 )
 min_finish_dist = 100
 simp_threshold = 0.95
 min_draw_dist = 15
+max_score = 500
+ref_object = NodePath("../ReferenceObject")
+score_indicator = NodePath("../Score")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
+
+[node name="Score" type="RichTextLabel" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = -100.0
+margin_top = 250.0
+margin_right = 100.0
+margin_bottom = 290.0
+bbcode_enabled = true
+bbcode_text = "[center] Score:"
+text = " Score:"
+script = ExtResource( 3 )
+show_time_max = 0.5
+start_pos = 250
+shift_pos = -20
+show_curve = SubResource( 1 )
