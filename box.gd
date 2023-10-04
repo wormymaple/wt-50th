@@ -15,16 +15,9 @@ extends RigidBody2D
 #func _process(delta):
 #	pass
 
+func _on_box_input_event(_viewport, event, _shape_idx):
+		if event is InputEventMouseButton and event.pressed and event.button_index == BUTTON_LEFT:
+			print ('Correct')
+			hide()
 
-func _on_box_input_event(viewport, event, shape_idx):
-	if	event is InputEventMouseButton and event.pressed and event.button_index == BUTTON_LEFT:
-		print ('lol it works')
-		queue_free()
-#onready var box = preload("res://box.tscn")
 
-func _ready():
-	new_box()
-	
-func new_box():
-	var New_box = box.instance()
-	add_child(New_box)
