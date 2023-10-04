@@ -1,11 +1,22 @@
 [gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Timer.gd" type="Script" id=1]
-[ext_resource path="res://box.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Countdown.gd" type="Script" id=2]
 
-[node name="Node2D" type="Node2D"]
+[node name="Node" type="Node"]
 
-[node name="box" parent="." instance=ExtResource( 2 )]
+[node name="Countdown" type="Control" parent="."]
+margin_right = 180.0
+margin_bottom = 15.0
+script = ExtResource( 2 )
 
-[node name="Timer" type="Timer" parent="."]
+[node name="Seconds" type="RichTextLabel" parent="Countdown"]
+margin_right = 34.0
+margin_bottom = 25.0
+
+[node name="dsec" type="RichTextLabel" parent="Countdown"]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="Timer" type="Timer" parent="Countdown"]
 script = ExtResource( 1 )
