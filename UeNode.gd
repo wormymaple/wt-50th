@@ -7,16 +7,10 @@ var lineClickingOutput = false
 var lineClickingInput = false
 var hoveringInput = false
 var hoveringOutput = false
+var inputConnected = false
+var outputConnected = false
 
 export var nodeType = "unset"
-
-func _ready():
-	if nodeType == "BeginPlay":
-		$NodeLineInput.hide()
-	elif nodeType == "SpawnActor":
-		pass
-	elif nodeType == "SetRun":
-		pass
 
 func _process(delta):
 	
@@ -25,32 +19,36 @@ func _process(delta):
 	
 	if hoveringInput:
 		if lineClickingOutput:
-			print("eurekia")
+			if Input.is_action_just_released("LMC"):
+				print("eurekia")
+				outputConnected = true
+
 	if hoveringOutput:
 		if lineClickingInput:
-			print("eurekia")
-		pass
+			if Input.is_action_just_released("LMC"):
+				print("eurekia")
+				inputConnected = true
 	
 	if selected:
 		followMouse()
 	
-	if lineClickingOutput == true:
-		$NodeLineOutput/Line2D.set_point_position(1, get_local_mouse_position())
-	else:
-		$NodeLineOutput/Line2D.remove_point(1)
+	if lineClickingOutput == true and outputConnected == false:
+		$SpawnActor/NodeLineOutput/Line2D.set_point_position(1, $SpawnActor.get_local_mouse_position())
+	elif outputConnected == false:
+		$SpawnActor/NodeLineOutput/Line2D.remove_point(1)
 	
 	if Input.is_action_just_released("LMC"):
 		lineClickingOutput = false
 		lineClickingInput = false
 	
-	if lineClickingInput == true:
-		$NodeLineInput/Line2D.set_point_position(1, get_local_mouse_position())
-	else:
-		$NodeLineInput/Line2D.remove_point(1)
+	if lineClickingInput == true and inputConnected == false:
+		$SpawnActor/NodeLineInput/Line2D.set_point_position(1, $SpawnActor.get_local_mouse_position())
+	elif inputConnected == false:
+		$SpawnActor/NodeLineInput/Line2D.remove_point(1)
 
 
 func followMouse():
-	position = get_global_mouse_position()+myDistance
+	$SpawnActor.global_position = get_global_mouse_position()#+myDistance
 
 func _on_Area2D_input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton and event.button_index == BUTTON_LEFT:
@@ -66,14 +64,14 @@ func _on_Area2D_input_event(viewport, event, shape_idx):
 
 func _on_NodeLine_input_event(viewport, event, shape_idx):
 	hoveringOutput = true
-	if Input.is_action_just_pressed("LMC"):
-		$NodeLineOutput/Line2D.add_point(get_local_mouse_position())
+	if Input.is_action_just_pressed("LMC") and outputConnected == false:
+		$SpawnActor/NodeLineOutput/Line2D.add_point(get_local_mouse_position())
 		lineClickingOutput = true
 
 func _on_NodeLineInput_input_event(viewport, event, shape_idx):
 	hoveringInput = true
-	if Input.is_action_just_pressed("LMC"):
-		$NodeLineInput/Line2D.add_point(get_local_mouse_position())
+	if Input.is_action_just_pressed("LMC") and inputConnected == false:
+		$SpawnActor/NodeLineInput/Line2D.add_point(get_local_mouse_position())
 		lineClickingInput = true
 		
 
