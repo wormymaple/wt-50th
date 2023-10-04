@@ -41,3 +41,14 @@ func _physics_process(delta):
 			global_position += direction * distance
 			reach -= distance
 			path.pop_front()
+			
+			# check if theres another position in the path
+			# that we can already move towards
+			if path.empty(): return
+			next_pos = path.front()
+			direction = global_position.direction_to(next_pos)
+			distance = global_position.distance_to(next_pos)
+
+
+#func _on_Timer_timeout():
+	
