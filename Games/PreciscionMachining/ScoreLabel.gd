@@ -11,11 +11,16 @@ var show_time = 0.0
 
 export(Curve) var show_curve
 export var sheet: NodePath
+export var score_cuttoff: int
 
 var showing = false
 
 func set_score(score):
-	bbcode_text = "[center][b]Score: " + str(score)
+	var passed = score_cuttoff < score
+	if passed:
+		bbcode_text += "[color=green]PASSED!"
+	else:
+		bbcode_text += "[color=red]FAILED"
 	showing = true
 
 

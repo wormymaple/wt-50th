@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Games/PreciscionMachining/DrawingHandler.gd" type="Script" id=1]
 [ext_resource path="res://Games/PreciscionMachining/ReferenceObject.gd" type="Script" id=2]
 [ext_resource path="res://Games/PreciscionMachining/ScoreLabel.gd" type="Script" id=3]
+[ext_resource path="res://Games/PreciscionMachining/Start.gd" type="Script" id=4]
 
 [sub_resource type="Gradient" id=3]
 colors = PoolColorArray( 0, 0.460938, 1, 1, 0.435518, 0.788319, 1, 1 )
@@ -10,6 +11,9 @@ colors = PoolColorArray( 0, 0.460938, 1, 1, 0.435518, 0.788319, 1, 1 )
 [sub_resource type="Gradient" id=2]
 offsets = PoolRealArray( 0.0027933, 0.162011, 0.371508, 0.709497, 1 )
 colors = PoolColorArray( 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0 )
+
+[sub_resource type="Curve" id=4]
+_data = [ Vector2( 0, 0 ), 0.0, 0.0, 0, 0, Vector2( 1, 1 ), 0.0, 0.0, 0, 0 ]
 
 [sub_resource type="Curve" id=1]
 _data = [ Vector2( 0, 0 ), 0.0, 0.0, 0, 0, Vector2( 1, 1 ), 0.0, 0.0, 0, 0 ]
@@ -33,7 +37,7 @@ joint_mode = 1
 begin_cap_mode = 2
 end_cap_mode = 2
 script = ExtResource( 2 )
-shape_points = [ Vector2( -200, 200 ), Vector2( -200, -200 ), Vector2( 200, -200 ), Vector2( 200, 200 ) ]
+shape_points = [ Vector2( -180, 200 ), Vector2( -200, -200 ), Vector2( 0, -150 ), Vector2( 200, -200 ), Vector2( 200, 200 ), Vector2( 50, 120 ), Vector2( 0, 0 ) ]
 
 [node name="DrawingLine" type="Line2D" parent="."]
 z_index = 2
@@ -41,19 +45,24 @@ width = 4.0
 default_color = Color( 1, 1, 1, 1 )
 gradient = SubResource( 3 )
 joint_mode = 1
+antialiased = true
 script = ExtResource( 1 )
 min_finish_dist = 100
 simp_threshold = 0.95
 min_draw_dist = 15
 max_score = 500
+start_pos = Vector2( -200, -200 )
+start_dist = 20.0
 ref_object = NodePath("../ReferenceObject")
 score_indicator = NodePath("../Score")
 water_particles = NodePath("WaterParticles")
 fill = NodePath("Fill")
+start = NodePath("Start")
 
 [node name="Fill" type="Polygon2D" parent="DrawingLine"]
 z_index = 1
 color = Color( 0.607843, 0.607843, 0.607843, 1 )
+invert_border = 10000.0
 
 [node name="WaterParticles" type="CPUParticles2D" parent="DrawingLine"]
 scale = Vector2( 5, 5 )
@@ -74,21 +83,40 @@ scale_amount = 5.0
 color = Color( 0, 0.439216, 1, 1 )
 color_ramp = SubResource( 2 )
 
+[node name="Start" type="Polygon2D" parent="DrawingLine"]
+z_index = 6
+color = Color( 0, 0, 0, 0.588235 )
+invert_enable = true
+invert_border = 1000.0
+polygon = PoolVector2Array( -220, -200, -200, -220, -180, -200, -200, -180 )
+script = ExtResource( 4 )
+fade_time_max = 0.25
+disappear_curve = SubResource( 4 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="DrawingLine/Start"]
+margin_left = -402.0
+margin_top = -244.0
+margin_right = -2.0
+margin_bottom = -204.0
+bbcode_enabled = true
+bbcode_text = "[center] Start Here! - Waterjet the Shape"
+text = " Start Here! - Waterjet the Shape"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+
 [node name="Score" type="RichTextLabel" parent="."]
-modulate = Color( 1, 1, 1, 0 )
+process_priority = -1
 margin_left = -100.0
 margin_top = 250.0
 margin_right = 100.0
 margin_bottom = 290.0
 bbcode_enabled = true
-bbcode_text = "[center] Score:"
-text = " Score:"
+bbcode_text = "[center][b]"
 script = ExtResource( 3 )
 show_time_max = 0.5
 start_pos = 250
 shift_pos = -20
 show_curve = SubResource( 1 )
 sheet = NodePath("../MetalSheet")
-
-[node name="Camera2D" type="Camera2D" parent="."]
-current = true
+score_cuttoff = 400
