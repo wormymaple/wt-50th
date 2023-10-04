@@ -11,6 +11,8 @@ export var max_score = 0
 
 export var ref_object: NodePath
 export var score_indicator: NodePath
+export var water_particles: NodePath
+export var fill: NodePath
 
 var prev_point := Vector2.INF
 
@@ -29,17 +31,20 @@ func _process(delta):
 		if (dist > min_draw_dist):
 			add_point(mouse_pos)
 			prev_point = mouse_pos
+		get_node(water_particles).position = mouse_pos
 		
 	elif just_released:
 		just_released = false
 		
 		var dist = points[-1].distance_to(points[0])
 		if dist <= min_finish_dist:
-			add_point(points[0])
+			set_point_position(len(points) - 1, points[0])
 			var simp_points = simplify_shape(points, 4)
 			clear_points()
 			for point in simp_points:
 				add_point(point)
+				
+			get_node(fill).polygon = points
 			
 			var score = max_score - int(check_points(points))
 			if (score < 0):
@@ -52,12 +57,17 @@ func _process(delta):
 			clear_points()
 
 func _input(event):
+	if (finished_drawing):
+		return
+	
 	if event is InputEventMouseButton:
 		if event.button_index == BUTTON_LEFT:
 			drawing = event.pressed
 			if (!drawing):
 				just_released = true
+				get_node(water_particles).emitting = false
 			else:
+				get_node(water_particles).emitting = true
 				clear_points()
 
 func simplify_shape(in_points, n):

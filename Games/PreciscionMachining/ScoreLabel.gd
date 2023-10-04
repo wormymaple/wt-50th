@@ -10,11 +10,12 @@ export var shift_pos = 0
 var show_time = 0.0
 
 export(Curve) var show_curve
+export var sheet: NodePath
 
 var showing = false
 
 func set_score(score):
-	bbcode_text = "[center]Score: " + str(score)
+	bbcode_text = "[center][b]Score: " + str(score)
 	showing = true
 
 
@@ -31,4 +32,7 @@ func _process(delta):
 	var interpolation = show_curve.interpolate(show_time / show_time_max)
 	rect_global_position = Vector2(-100, start_pos + shift_pos * interpolation)
 	modulate = Color(1, 1, 1, interpolation)
+	
+	get_node(sheet).modulate = Color(1, 1, 1, 1 - interpolation)
+	print(interpolation)
 	
