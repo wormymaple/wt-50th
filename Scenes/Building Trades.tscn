@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scenes/SpriteRotate.gd" type="Script" id=1]
+[ext_resource path="res://Game Assets/Building Trades/wood-ply-1100944153.jpeg" type="Texture" id=2]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 87, 90 )
+scale = Vector2( 0.12, 0.12 )
+texture = ExtResource( 2 )
+script = ExtResource( 1 )
