@@ -1,8 +1,7 @@
-extends Sprite
+extends Node2D
 
-export (float) var rotation_speed = 1.5
-
-var rotation_dir = -1.5
+export (float) var rotation_speed = -1.5
+export (bool) var is_rotating = true
 
 #func get_input():
 	#rotation_dir = 0
@@ -13,4 +12,11 @@ var rotation_dir = -1.5
 
 func _physics_process(delta):
 	#get_input()
-	rotation += rotation_dir * rotation_speed * delta
+	if (is_rotating == true):
+		rotation += 1 * rotation_speed * delta
+	elif (is_rotating == false):
+		rotation += 0
+
+func _on_Button_pressed():
+	is_rotating = false
+	print("stop pls?")
