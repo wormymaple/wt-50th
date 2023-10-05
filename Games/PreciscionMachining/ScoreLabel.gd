@@ -20,7 +20,7 @@ func set_score(score):
 	if passed:
 		bbcode_text += "[color=green]PASSED!"
 	else:
-		bbcode_text += "[color=red]FAILED"
+		bbcode_text += "[color=red]FAILED!"
 	showing = true
 
 
@@ -38,6 +38,6 @@ func _process(delta):
 	rect_global_position = Vector2(-100, start_pos + shift_pos * interpolation)
 	modulate = Color(1, 1, 1, interpolation)
 	
-	get_node(sheet).modulate = Color(1, 1, 1, 1 - interpolation)
+	get_node(sheet).modulate = Color(1, 1, 1, interpolation)
 	print(interpolation)
 	

@@ -1,9 +1,11 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Games/PreciscionMachining/DrawingHandler.gd" type="Script" id=1]
 [ext_resource path="res://Games/PreciscionMachining/ReferenceObject.gd" type="Script" id=2]
 [ext_resource path="res://Games/PreciscionMachining/ScoreLabel.gd" type="Script" id=3]
 [ext_resource path="res://Games/PreciscionMachining/Start.gd" type="Script" id=4]
+[ext_resource path="res://Game Assets/Precision_Macining /MetalSheetWithGuidlines1.png" type="Texture" id=5]
+[ext_resource path="res://Game Assets/Precision_Macining /Ui_waternozzle.png" type="Texture" id=6]
 
 [sub_resource type="Gradient" id=3]
 colors = PoolColorArray( 0, 0.460938, 1, 1, 0.435518, 0.788319, 1, 1 )
@@ -20,15 +22,15 @@ _data = [ Vector2( 0, 0 ), 0.0, 0.0, 0, 0, Vector2( 1, 1 ), 0.0, 0.0, 0, 0 ]
 
 [node name="RootNode" type="Node2D"]
 
-[node name="Background" type="Polygon2D" parent="."]
-z_index = -11
-color = Color( 0, 0, 0, 1 )
-polygon = PoolVector2Array( 1000, 1000, -1000, 1000, -1000, -1000, 1000, -1000 )
-
 [node name="MetalSheet" type="Polygon2D" parent="."]
 z_index = -10
-color = Color( 0.607843, 0.607843, 0.607843, 1 )
+color = Color( 0.521569, 0.521569, 0.521569, 1 )
 polygon = PoolVector2Array( 1000, 1000, -1000, 1000, -1000, -1000, 1000, -1000 )
+
+[node name="MetalSheetWithGuidlines1" type="Sprite" parent="."]
+scale = Vector2( 0.7, 0.7 )
+z_index = -9
+texture = ExtResource( 5 )
 
 [node name="ReferenceObject" type="Line2D" parent="."]
 width = 2.5
@@ -37,7 +39,7 @@ joint_mode = 1
 begin_cap_mode = 2
 end_cap_mode = 2
 script = ExtResource( 2 )
-shape_points = [ Vector2( -180, 200 ), Vector2( -200, -200 ), Vector2( 0, -150 ), Vector2( 200, -200 ), Vector2( 200, 200 ), Vector2( 50, 120 ), Vector2( 0, 0 ) ]
+shape_points = PoolVector2Array( -197, -114, 215, -118, 216, -31, 89, -32, 92, 233, -66, 234, -64, 56, -196, 57, -197, -114 )
 
 [node name="DrawingLine" type="Line2D" parent="."]
 z_index = 2
@@ -51,17 +53,20 @@ min_finish_dist = 100
 simp_threshold = 0.95
 min_draw_dist = 15
 max_score = 500
-start_pos = Vector2( -200, -200 )
+start_pos = Vector2( -196, -113 )
 start_dist = 20.0
 ref_object = NodePath("../ReferenceObject")
 score_indicator = NodePath("../Score")
 water_particles = NodePath("WaterParticles")
 fill = NodePath("Fill")
 start = NodePath("Start")
+water_nozzle = NodePath("../UiWaternozzle")
 
 [node name="Fill" type="Polygon2D" parent="DrawingLine"]
-z_index = 1
-color = Color( 0.607843, 0.607843, 0.607843, 1 )
+modulate = Color( 1, 1, 1, 0 )
+z_index = 10
+color = Color( 0.207843, 0.207843, 0.207843, 1 )
+invert_enable = true
 invert_border = 10000.0
 
 [node name="WaterParticles" type="CPUParticles2D" parent="DrawingLine"]
@@ -84,26 +89,30 @@ color = Color( 0, 0.439216, 1, 1 )
 color_ramp = SubResource( 2 )
 
 [node name="Start" type="Polygon2D" parent="DrawingLine"]
+position = Vector2( -196, -113 )
 z_index = 6
 color = Color( 0, 0, 0, 0.588235 )
 invert_enable = true
 invert_border = 1000.0
-polygon = PoolVector2Array( -220, -200, -200, -220, -180, -200, -200, -180 )
+polygon = PoolVector2Array( -20, 0, 0, -20, 20, 0, 0, 20 )
 script = ExtResource( 4 )
 fade_time_max = 0.25
 disappear_curve = SubResource( 4 )
 
 [node name="RichTextLabel" type="RichTextLabel" parent="DrawingLine/Start"]
-margin_left = -402.0
-margin_top = -244.0
-margin_right = -2.0
-margin_bottom = -204.0
+margin_left = -200.0
+margin_top = -40.0
+margin_right = 200.0
 bbcode_enabled = true
 bbcode_text = "[center] Start Here! - Waterjet the Shape"
 text = " Start Here! - Waterjet the Shape"
 
-[node name="Camera2D" type="Camera2D" parent="."]
-current = true
+[node name="UiWaternozzle" type="Sprite" parent="."]
+position = Vector2( -114, -109 )
+scale = Vector2( 0.15, 0.15 )
+z_index = 4
+texture = ExtResource( 6 )
+offset = Vector2( -54, 0 )
 
 [node name="Score" type="RichTextLabel" parent="."]
 process_priority = -1
@@ -115,8 +124,11 @@ bbcode_enabled = true
 bbcode_text = "[center][b]"
 script = ExtResource( 3 )
 show_time_max = 0.5
-start_pos = 250
+start_pos = 20
 shift_pos = -20
 show_curve = SubResource( 1 )
-sheet = NodePath("../MetalSheet")
+sheet = NodePath("../DrawingLine/Fill")
 score_cuttoff = 400
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true

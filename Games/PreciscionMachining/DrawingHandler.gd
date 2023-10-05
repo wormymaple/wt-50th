@@ -17,6 +17,7 @@ export var score_indicator: NodePath
 export var water_particles: NodePath
 export var fill: NodePath
 export var start: NodePath
+export var water_nozzle: NodePath
 
 var prev_point := Vector2.INF
 
@@ -35,7 +36,12 @@ func _process(delta):
 		if (dist > min_draw_dist):
 			add_point(mouse_pos)
 			prev_point = mouse_pos
+			
 		get_node(water_particles).position = mouse_pos
+		
+		var nozzle = get_node(water_nozzle)
+		nozzle.position = mouse_pos
+		nozzle.rotation = Vector2.ZERO.angle_to_point(mouse_pos) - 90
 		
 	elif just_released:
 		just_released = false
