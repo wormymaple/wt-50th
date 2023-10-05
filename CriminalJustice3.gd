@@ -20,3 +20,7 @@ func _on_Box_input_event(_viewport, event, _shape_ind):
 		if event is InputEventMouseButton and event.pressed and event.button_index == BUTTON_LEFT:
 			print ('Correct')
 			hide()
+
+
+func _on_RigidBody2D_input_event(viewport, event, shape_idx):
+	pass # Replace with function body.
