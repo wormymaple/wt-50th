@@ -1,7 +1,7 @@
 extends Sprite
 
-const SPEED = 500 # pixel per second
-const MAX_TRACKING_DISTANCE = 600 # pixel
+const SPEED = 90 # pixel per second
+const MAX_TRACKING_DISTANCE = 10 # pixel
 
 var screen_touch = false
 var path = []
