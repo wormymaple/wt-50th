@@ -7,10 +7,12 @@ var beginPlaySet = false
 var spawnActorSet = false
 var setRunSet = false
 
-var rng = RandomNumberGenerator.new()
+var rng
+
 
 func _ready():
-	
+	rng = RandomNumberGenerator.new()
+	rng.randomize()
 	var beginPlayPos = rng.randf_range(-30,30)
 	var spawnActorPos = rng.randf_range(-30,30)
 	var setRunPos = rng.randf_range(-30,30)
@@ -20,6 +22,7 @@ func _ready():
 	$SetRun.global_position = $SetRun.global_position + Vector2(setRunPos,setRunPos)
 	
 func _process(delta):
+	
 	
 	if beginPlayLineMade:
 		$BeginPlay/StartBeginPlay/LineBeginPlay.set_point_position(1,get_global_mouse_position() - $BeginPlay/StartBeginPlay/LineBeginPlay.global_position)
