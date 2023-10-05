@@ -6,7 +6,7 @@ func _ready():
 
 func _process(_delta):
 	global_position = get_global_mouse_position()
-	
-	if Input.is_action_just_released("LeftMouse"):
+
+func _unhandled_input(event):
+	if event is InputEventMouseButton and event.button_index == BUTTON_LEFT:
 		queue_free()
-	pass
