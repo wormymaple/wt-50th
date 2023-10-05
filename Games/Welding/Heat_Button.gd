@@ -19,7 +19,6 @@ func _process(delta):
 		max_or_min = false
 	if is_pressed == true and max_or_min == false: 
 		heat += 1
-		print(heat) 
 	elif is_pressed == false and max_or_min == false:
 		heat -= 1
-		print(heat)
+	$Heat_Bar.value = heat 
