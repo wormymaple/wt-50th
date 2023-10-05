@@ -1,7 +1,7 @@
 [gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://box.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Game Assets/criminal_justice/court_foreground.png" type="Texture" id=2]
+[ext_resource path="res://Game Assets/criminal_justice/chr_pirate.png" type="Texture" id=2]
 [ext_resource path="res://Label.gd" type="Script" id=3]
 [ext_resource path="res://Game Assets/optimusprinceps/OptimusPrincepsSemiBold.ttf" type="DynamicFontData" id=4]
 [ext_resource path="res://Game Assets/criminal_justice/ripped_cloth.png" type="Texture" id=5]
@@ -22,10 +22,11 @@ font_data = ExtResource( 4 )
 [node name="Node2D" type="Node2D"]
 
 [node name="box" parent="." instance=ExtResource( 1 )]
+position = Vector2( 20, 2 )
 
-[node name="Sprite7" type="Sprite" parent="box"]
-position = Vector2( 90, 58 )
-scale = Vector2( 0.0420035, 0.0348558 )
+[node name="Sprite13" type="Sprite" parent="box"]
+position = Vector2( 250, 29 )
+scale = Vector2( 0.0366312, 0.0252933 )
 texture = ExtResource( 2 )
 
 [node name="Sprite8" type="Sprite" parent="box"]
