@@ -2,6 +2,7 @@
 
 [ext_resource path="res://Game Assets/criminal_justice/chr_judge.png" type="Texture" id=1]
 [ext_resource path="res://Game Assets/criminal_justice/court_foreground.png" type="Texture" id=2]
+[ext_resource path="res://Game Assets/criminal_justice/chr_rippedshirt.png" type="Texture" id=3]
 [ext_resource path="res://Game Assets/optimusprinceps/OptimusPrincepsSemiBold.ttf" type="DynamicFontData" id=4]
 [ext_resource path="res://Game Assets/criminal_justice/ripped_cloth.png" type="Texture" id=5]
 [ext_resource path="res://Game Assets/criminal_justice/photo.png" type="Texture" id=6]
@@ -9,7 +10,6 @@
 [ext_resource path="res://Game Assets/criminal_justice/knife.png" type="Texture" id=8]
 [ext_resource path="res://Game Assets/criminal_justice/missing_hook.png" type="Texture" id=9]
 [ext_resource path="res://Correct.gd" type="Script" id=10]
-[ext_resource path="res://Game Assets/criminal_justice/chr_pirate.png" type="Texture" id=11]
 [ext_resource path="res://CriminalJustice3.gd" type="Script" id=12]
 
 [sub_resource type="RectangleShape2D" id=1]
@@ -27,9 +27,9 @@ gravity_scale = 0.0
 script = ExtResource( 12 )
 
 [node name="Sprite7" type="Sprite" parent="."]
-position = Vector2( 112, 50 )
+position = Vector2( 118, 50 )
 scale = Vector2( 0.0239636, 0.0259427 )
-texture = ExtResource( 11 )
+texture = ExtResource( 3 )
 
 [node name="Sprite6" type="Sprite" parent="."]
 position = Vector2( 106, 71 )
@@ -47,7 +47,7 @@ scale = Vector2( -0.0200529, 0.0185958 )
 texture = ExtResource( 5 )
 
 [node name="Correct" type="CollisionShape2D" parent="."]
-position = Vector2( 23, 73 )
+position = Vector2( 61, 30 )
 shape = SubResource( 1 )
 script = ExtResource( 10 )
 
