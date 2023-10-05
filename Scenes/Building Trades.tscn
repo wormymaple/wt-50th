@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Scenes/SpriteRotate.gd" type="Script" id=1]
 [ext_resource path="res://Game Assets/BuildingTrades/Plywood.png" type="Texture" id=2]
@@ -6,6 +6,13 @@
 [ext_resource path="res://Game Assets/BuildingTrades/PressButtonToStopDotInGreenRingMinigame.png" type="Texture" id=4]
 [ext_resource path="res://Game Assets/BuildingTrades/DotToStopInGreen.png" type="Texture" id=5]
 [ext_resource path="res://Scenes/SpriteRotateFaster.gd" type="Script" id=6]
+[ext_resource path="res://Game Assets/BuildingTrades/NailTopDown.png" type="Texture" id=7]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 80.6451, 64.5161 )
+
+[sub_resource type="CircleShape2D" id=2]
+radius = 40.0
 
 [node name="Node2D" type="Node2D"]
 
@@ -30,14 +37,36 @@ position = Vector2( 15, 19 )
 scale = Vector2( 0.031, 0.031 )
 texture = ExtResource( 4 )
 
-[node name="KinematicBody2D" type="KinematicBody2D" parent="."]
+[node name="Area2D" type="Area2D" parent="Button/Sprite"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Button/Sprite/Area2D"]
+position = Vector2( 16.1287, -709.677 )
+scale = Vector2( 3, 3 )
+shape = SubResource( 1 )
+
+[node name="Dot" type="KinematicBody2D" parent="."]
 position = Vector2( 91, 62 )
 scale = Vector2( 0.05, 0.05 )
 script = ExtResource( 6 )
 
-[node name="Sprite" type="Sprite" parent="KinematicBody2D"]
-position = Vector2( -40.0001, -360 )
+[node name="Sprite" type="Sprite" parent="Dot"]
+position = Vector2( -39.9999, -360 )
 texture = ExtResource( 5 )
 
+[node name="Area2D" type="Area2D" parent="Dot/Sprite"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Dot/Sprite/Area2D"]
+position = Vector2( 30, -40 )
+shape = SubResource( 2 )
+
+[node name="Nail" type="KinematicBody2D" parent="."]
+
+[node name="Sprite" type="Sprite" parent="Nail"]
+position = Vector2( 89, 14 )
+scale = Vector2( 0.008, 0.008 )
+texture = ExtResource( 7 )
+
 [connection signal="button_down" from="Button" to="Wood" method="_on_Button_button_down"]
-[connection signal="button_down" from="Button" to="KinematicBody2D" method="_on_Button_button_down"]
+[connection signal="button_down" from="Button" to="Dot" method="_on_Button_button_down"]
+[connection signal="area_entered" from="Button/Sprite/Area2D" to="Dot" method="_on_Area2D_area_entered"]
+[connection signal="area_exited" from="Button/Sprite/Area2D" to="Dot" method="_on_Area2D_area_exited"]
