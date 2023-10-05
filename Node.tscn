@@ -129,3 +129,7 @@ texture = ExtResource( 1 )
 shape = SubResource( 9 )
 
 [connection signal="input_event" from="BeginPlay/StartBeginPlay" to="." method="_on_StartBeginPlay_input_event"]
+[connection signal="input_event" from="SpawnActor/StartSpawnActor" to="." method="_on_StartSpawnActor_input_event"]
+[connection signal="input_event" from="SpawnActor/EndSpawnActor" to="." method="_on_EndSpawnActor_input_event"]
+[connection signal="input_event" from="SetRun/StartSetRun" to="." method="_on_StartSetRun_input_event"]
+[connection signal="input_event" from="SetRun/EndSetRun" to="." method="_on_EndSetRun_input_event"]
