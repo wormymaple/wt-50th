@@ -3,10 +3,8 @@ extends Button
 # var rotation_speed = Node2D.rotation
 
 func _ready():
-	var button = Button.new()
-	button.text = "Stop"
-	button.connect("pressed", self, "_button_pressed")
-	add_child(button)
+	pass
+	# Button.connect("pressed", self, "_button_pressed")
 
 func _button_pressed():
 	# rotation_speed = 0

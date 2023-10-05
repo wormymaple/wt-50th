@@ -1,6 +1,6 @@
-extends Node2D
+extends KinematicBody2D
 
-export (float) var rotation_speed = -1.5
+export (float) var rotation_speed = -6
 export (bool) var is_rotating = true
 
 #func get_input():

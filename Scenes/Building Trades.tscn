@@ -1,8 +1,11 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Scenes/SpriteRotate.gd" type="Script" id=1]
-[ext_resource path="res://Game Assets/Building Trades/wood-ply-1100944153.jpeg" type="Texture" id=2]
+[ext_resource path="res://Game Assets/BuildingTrades/Plywood.png" type="Texture" id=2]
 [ext_resource path="res://Scenes/ButtonStopRotate.gd" type="Script" id=3]
+[ext_resource path="res://Game Assets/BuildingTrades/PressButtonToStopDotInGreenRingMinigame.png" type="Texture" id=4]
+[ext_resource path="res://Game Assets/BuildingTrades/DotToStopInGreen.png" type="Texture" id=5]
+[ext_resource path="res://Scenes/SpriteRotateFaster.gd" type="Script" id=6]
 
 [node name="Node2D" type="Node2D"]
 
@@ -11,15 +14,30 @@ position = Vector2( 90, 90 )
 script = ExtResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="Wood"]
-scale = Vector2( 0.12, 0.12 )
+rotation = 0.785398
+scale = Vector2( 0.06, 0.06 )
 texture = ExtResource( 2 )
 
 [node name="Button" type="Button" parent="."]
-margin_left = 70.0
-margin_top = 70.0
-margin_right = 110.0
-margin_bottom = 90.0
-text = "Stop"
+margin_left = 75.0
+margin_top = 45.0
+margin_right = 107.0
+margin_bottom = 77.0
 script = ExtResource( 3 )
 
-[connection signal="pressed" from="Button" to="Wood" method="_on_Button_pressed" flags=6]
+[node name="Sprite" type="Sprite" parent="Button"]
+position = Vector2( 15, 19 )
+scale = Vector2( 0.031, 0.031 )
+texture = ExtResource( 4 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="."]
+position = Vector2( 91, 62 )
+scale = Vector2( 0.05, 0.05 )
+script = ExtResource( 6 )
+
+[node name="Sprite" type="Sprite" parent="KinematicBody2D"]
+position = Vector2( -40.0001, -360 )
+texture = ExtResource( 5 )
+
+[connection signal="button_down" from="Button" to="Wood" method="_on_Button_button_down"]
+[connection signal="button_down" from="Button" to="KinematicBody2D" method="_on_Button_button_down"]
