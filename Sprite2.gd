@@ -1,6 +1,6 @@
 extends Sprite
 
-const SPEED = 500 # pixel per second
+const SPEED = 490 # pixel per second
 const MAX_TRACKING_DISTANCE = 600 # pixel
 
 var screen_touch = false
@@ -25,6 +25,7 @@ func add_to_path(position):
 func _physics_process(delta):
 	if path.empty(): return
 	var next_pos = path.front()
+	#var ParentPos = get_tree().get_root().get_node("Sprite").global_position
 	
 	var direction = global_position.direction_to(next_pos)
 	var distance = global_position.distance_to(next_pos)
@@ -48,3 +49,5 @@ func _physics_process(delta):
 			next_pos = path.front()
 			direction = global_position.direction_to(next_pos)
 			distance = global_position.distance_to(next_pos)
+
+#func 
