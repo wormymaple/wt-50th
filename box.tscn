@@ -11,7 +11,7 @@
 [ext_resource path="res://Game Assets/criminal_justice/court_foreground.png" type="Texture" id=9]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 12.0918, 14.4888 )
+extents = Vector2( 13.0459, 14.5 )
 
 [sub_resource type="DynamicFont" id=2]
 size = 11
@@ -41,7 +41,7 @@ scale = Vector2( -0.0200529, 0.0185958 )
 texture = ExtResource( 4 )
 
 [node name="Correct" type="CollisionShape2D" parent="."]
-position = Vector2( 60.9082, 30.5112 )
+position = Vector2( 61, 30 )
 shape = SubResource( 1 )
 
 [node name="Sprite2" type="Sprite" parent="."]
@@ -65,5 +65,8 @@ margin_bottom = 14.0
 custom_fonts/font = SubResource( 2 )
 text = "Match the item to the suspect"
 script = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
 
 [connection signal="input_event" from="." to="." method="_on_box_input_event"]
