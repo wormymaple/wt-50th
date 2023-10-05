@@ -8,7 +8,7 @@
 [ext_resource path="res://Game Assets/criminal_justice/tabletop.png" type="Texture" id=6]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 7.875, 8.1875 )
+extents = Vector2( 11.4375, 14.0938 )
 
 [node name="box" type="RigidBody2D"]
 input_pickable = true
@@ -17,32 +17,32 @@ gravity_scale = 0.0
 script = ExtResource( 2 )
 
 [node name="Sprite5" type="Sprite" parent="."]
-position = Vector2( 18, 43 )
-scale = Vector2( 0.00642704, 0.0362109 )
+position = Vector2( 41, 42.4687 )
+scale = Vector2( 0.0156872, 0.0365429 )
 texture = ExtResource( 6 )
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 21.1286, 11.7438 )
-scale = Vector2( -0.0132821, 0.0117705 )
+position = Vector2( 62.1102, 18.7606 )
+scale = Vector2( -0.0200529, 0.0185958 )
 texture = ExtResource( 4 )
 
 [node name="Correct" type="CollisionShape2D" parent="."]
-position = Vector2( 21, 12 )
+position = Vector2( 61.4375, 18.9062 )
 shape = SubResource( 1 )
 
 [node name="Sprite2" type="Sprite" parent="."]
-position = Vector2( 19, 57 )
-scale = Vector2( 0.00432598, 0.00432598 )
+position = Vector2( 24, 64 )
+scale = Vector2( 0.00647672, 0.00670844 )
 texture = ExtResource( 3 )
 
 [node name="Sprite4" type="Sprite" parent="."]
-position = Vector2( 20, 27 )
-scale = Vector2( 0.00598652, 0.00598652 )
+position = Vector2( 26, 23 )
+scale = Vector2( 0.0100521, 0.0084478 )
 texture = ExtResource( 5 )
 
 [node name="Sprite3" type="Sprite" parent="."]
-position = Vector2( 21, 41 )
-scale = Vector2( 0.00863547, 0.00863547 )
+position = Vector2( 61, 64 )
+scale = Vector2( 0.0136752, 0.0205589 )
 texture = ExtResource( 1 )
 
 [connection signal="input_event" from="." to="." method="_on_box_input_event"]
