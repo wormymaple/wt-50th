@@ -1,20 +1,29 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Scenes/SpriteRotate.gd" type="Script" id=1]
 [ext_resource path="res://Game Assets/BuildingTrades/Plywood.png" type="Texture" id=2]
-[ext_resource path="res://Scenes/ButtonStopRotate.gd" type="Script" id=3]
+[ext_resource path="res://Game Assets/BuildingTrades/HammerDown.png" type="Texture" id=3]
 [ext_resource path="res://Game Assets/BuildingTrades/PressButtonToStopDotInGreenRingMinigame.png" type="Texture" id=4]
 [ext_resource path="res://Game Assets/BuildingTrades/DotToStopInGreen.png" type="Texture" id=5]
 [ext_resource path="res://Scenes/SpriteRotateFaster.gd" type="Script" id=6]
 [ext_resource path="res://Game Assets/BuildingTrades/NailTopDown.png" type="Texture" id=7]
+[ext_resource path="res://Game Assets/Backgrounds/Background_Garage.jpg" type="Texture" id=8]
+[ext_resource path="res://Scenes/NailHit.gd" type="Script" id=9]
+[ext_resource path="res://Game Assets/BuildingTrades/HammerUp.png" type="Texture" id=10]
+[ext_resource path="res://Scenes/ButtonText.gd" type="Script" id=11]
 
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 80.6451, 64.5161 )
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 241.936, 143.911 )
 
 [sub_resource type="CircleShape2D" id=2]
-radius = 40.0
+radius = 29.9999
 
 [node name="Node2D" type="Node2D"]
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 90, 45 )
+scale = Vector2( 0.07, 0.07 )
+texture = ExtResource( 8 )
 
 [node name="Wood" type="Node2D" parent="."]
 position = Vector2( 90, 90 )
@@ -30,7 +39,8 @@ margin_left = 75.0
 margin_top = 45.0
 margin_right = 107.0
 margin_bottom = 77.0
-script = ExtResource( 3 )
+script = ExtResource( 11 )
+hammer = NodePath("../NailAndHammer")
 
 [node name="Sprite" type="Sprite" parent="Button"]
 position = Vector2( 15, 19 )
@@ -40,14 +50,22 @@ texture = ExtResource( 4 )
 [node name="Area2D" type="Area2D" parent="Button/Sprite"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Button/Sprite/Area2D"]
-position = Vector2( 16.1287, -709.677 )
-scale = Vector2( 3, 3 )
-shape = SubResource( 1 )
+position = Vector2( 16.1284, -724.556 )
+shape = SubResource( 3 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Button"]
+margin_left = -74.0
+margin_top = 16.0
+margin_right = -7.0
+margin_bottom = 46.0
+tab_size = 1
+text = "Stop the Dot!"
 
 [node name="Dot" type="KinematicBody2D" parent="."]
 position = Vector2( 91, 62 )
 scale = Vector2( 0.05, 0.05 )
 script = ExtResource( 6 )
+hammer = NodePath("../NailAndHammer")
 
 [node name="Sprite" type="Sprite" parent="Dot"]
 position = Vector2( -39.9999, -360 )
@@ -59,14 +77,36 @@ texture = ExtResource( 5 )
 position = Vector2( 30, -40 )
 shape = SubResource( 2 )
 
-[node name="Nail" type="KinematicBody2D" parent="."]
+[node name="NailAndHammer" type="KinematicBody2D" parent="."]
+script = ExtResource( 9 )
+button = NodePath("../Button")
 
-[node name="Sprite" type="Sprite" parent="Nail"]
+[node name="Nail" type="Sprite" parent="NailAndHammer"]
 position = Vector2( 89, 14 )
 scale = Vector2( 0.008, 0.008 )
 texture = ExtResource( 7 )
 
+[node name="HammerUp" type="Sprite" parent="NailAndHammer"]
+visible = false
+position = Vector2( 95, 19 )
+rotation = -0.403171
+scale = Vector2( 0.04, 0.03 )
+texture = ExtResource( 10 )
+
+[node name="HammerDown" type="Sprite" parent="NailAndHammer"]
+visible = false
+position = Vector2( 82, -11 )
+rotation = -0.403171
+scale = Vector2( 0.04, 0.03 )
+texture = ExtResource( 3 )
+
+[node name="AnimTimer" type="Timer" parent="NailAndHammer"]
+wait_time = 0.3
+one_shot = true
+
 [connection signal="button_down" from="Button" to="Wood" method="_on_Button_button_down"]
 [connection signal="button_down" from="Button" to="Dot" method="_on_Button_button_down"]
+[connection signal="button_down" from="Button" to="NailAndHammer" method="_on_Button_button_down"]
 [connection signal="area_entered" from="Button/Sprite/Area2D" to="Dot" method="_on_Area2D_area_entered"]
 [connection signal="area_exited" from="Button/Sprite/Area2D" to="Dot" method="_on_Area2D_area_exited"]
+[connection signal="area_shape_entered" from="Button/Sprite/Area2D" to="Dot" method="_on_Area2D_area_shape_entered"]

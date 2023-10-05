@@ -2,7 +2,9 @@ extends KinematicBody2D
 
 export (float) var rotation_speed = -6
 export (bool) var is_rotating = true
-export (bool) var dot_in_range = true
+var dot_in_range = true
+var dot_in_green = false
+export var hammer: NodePath
 
 #func get_input():
 	#rotation_dir = 0
@@ -20,9 +22,12 @@ func _physics_process(delta):
 
 
 func _on_Button_button_down():
-	is_rotating = false
-	if (dot_in_range == true):
-		print("hooray")
+	if (!dot_in_green):
+		is_rotating = false
+		if (dot_in_range == true):
+			dot_in_green = true
+			print("hooray")
+	get_node(hammer).dot_in_green = dot_in_green
 	# print("stop pls?")
 
 
