@@ -39,5 +39,4 @@ func _process(delta):
 	modulate = Color(1, 1, 1, interpolation)
 	
 	get_node(sheet).modulate = Color(1, 1, 1, interpolation)
-	print(interpolation)
 	
