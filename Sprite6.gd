@@ -1,7 +1,7 @@
 extends Sprite
 
-const SPEED = 450 # pixel per second
-const MAX_TRACKING_DISTANCE = 600 # pixel
+const SPEED = 50 # pixel per second
+const MAX_TRACKING_DISTANCE = 100 # pixel
 
 var screen_touch = false
 var path = []
@@ -10,9 +10,9 @@ func _unhandled_input(event):
 	if event is InputEventMouseButton and event.button_index == BUTTON_LEFT:
 		screen_touch = event.pressed
 		if screen_touch:
-			add_to_path(event.global_position)
+			add_to_path(event.position)
 	elif event is InputEventMouseMotion and screen_touch:
-		add_to_path(event.global_position)
+		add_to_path(event.position)
 		
 		
 func add_to_path(position):

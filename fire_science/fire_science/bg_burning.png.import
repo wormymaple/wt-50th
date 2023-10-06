@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/bg_burning.png-224918a0d8c8cf33da66438ea253020d.stex"
+path="res://.import/bg_burning.png-4acaa5a448846d3ba3ebec242070fbe8.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Game Assets/fire_science/bg_burning.png"
-dest_files=[ "res://.import/bg_burning.png-224918a0d8c8cf33da66438ea253020d.stex" ]
+source_file="res://fire_science/fire_science/bg_burning.png"
+dest_files=[ "res://.import/bg_burning.png-4acaa5a448846d3ba3ebec242070fbe8.stex" ]
 
 [params]
 

@@ -10,9 +10,9 @@ func _unhandled_input(event):
 	if event is InputEventMouseButton and event.button_index == BUTTON_LEFT:
 		screen_touch = event.pressed
 		if screen_touch:
-			add_to_path(event.global_position)
+			add_to_path(event.position)
 	elif event is InputEventMouseMotion and screen_touch:
-		add_to_path(event.global_position)
+		add_to_path(event.position)
 		
 		
 func add_to_path(position):
@@ -48,3 +48,8 @@ func _physics_process(delta):
 			next_pos = path.front()
 			direction = global_position.direction_to(next_pos)
 			distance = global_position.distance_to(next_pos)
+
+func _on_DetectionArea_body_entered(body):
+	print("Hit Something")
+	if body.name == "House":
+		print("Congratulations")

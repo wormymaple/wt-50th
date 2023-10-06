@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/chr_axe.png-933ddf64b90ba7d3483fa25e731a0213.stex"
+path="res://.import/chr_axe.png-347393120f3820e4a1254dd5fda3c5ba.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Game Assets/fire_science/chr_axe.png"
-dest_files=[ "res://.import/chr_axe.png-933ddf64b90ba7d3483fa25e731a0213.stex" ]
+source_file="res://fire_science/fire_science/chr_axe.png"
+dest_files=[ "res://.import/chr_axe.png-347393120f3820e4a1254dd5fda3c5ba.stex" ]
 
 [params]
 
