@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/chr_book.png-1ed8868032daa018485077c5d9486835.stex"
+path="res://.import/chr_book.png-cbce0692a55219f4ba8e9132ce03c809.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Game Assets/fire_science/chr_book.png"
-dest_files=[ "res://.import/chr_book.png-1ed8868032daa018485077c5d9486835.stex" ]
+source_file="res://Game Assets/fire_science/fire_science/chr_book.png"
+dest_files=[ "res://.import/chr_book.png-cbce0692a55219f4ba8e9132ce03c809.stex" ]
 
 [params]
 

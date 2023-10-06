@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/ui_axe.png-a9b0cae56d3a193f6f4e62d5c71fc812.stex"
+path="res://.import/ui_axe.png-1d7d0e64704aeee3195aff8d1d94bc82.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Game Assets/fire_science/ui_axe.png"
-dest_files=[ "res://.import/ui_axe.png-a9b0cae56d3a193f6f4e62d5c71fc812.stex" ]
+source_file="res://Game Assets/fire_science/fire_science/ui_axe.png"
+dest_files=[ "res://.import/ui_axe.png-1d7d0e64704aeee3195aff8d1d94bc82.stex" ]
 
 [params]
 
