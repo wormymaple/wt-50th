@@ -48,6 +48,7 @@ margin_bottom = 81.0
 custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 1 )
 text = "Time Left"
+align = 1
 
 [node name="MarginContainer2" type="MarginContainer" parent="SidePanel"]
 margin_top = 90.0
