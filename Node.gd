@@ -13,9 +13,9 @@ var rng
 func _ready():
 	rng = RandomNumberGenerator.new()
 	rng.randomize()
-	var beginPlayPos = rng.randf_range(-30,30)
-	var spawnActorPos = rng.randf_range(-30,30)
-	var setRunPos = rng.randf_range(-30,30)
+	var beginPlayPos = rng.randf_range(-20,20)
+	var spawnActorPos = rng.randf_range(-20,20)
+	var setRunPos = rng.randf_range(-20,20)
 	
 	$BeginPlay.global_position = $BeginPlay.global_position + Vector2(beginPlayPos,beginPlayPos)
 	$SpawnActor.global_position = $SpawnActor.global_position + Vector2(spawnActorPos,spawnActorPos)
