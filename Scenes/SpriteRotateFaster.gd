@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-export (float) var rotation_speed = -6
+export (float) var rotation_speed = -6.0
 export (bool) var is_rotating = true
 var dot_in_range = true
 var dot_in_green = false
@@ -31,9 +31,9 @@ func _on_Button_button_down():
 	# print("stop pls?")
 
 
-func _on_Area2D_area_entered(area):
+func _on_Area2D_area_entered(_area):
 	dot_in_range = true
 
 
-func _on_Area2D_area_exited(area):
+func _on_Area2D_area_exited(_area):
 	dot_in_range = false

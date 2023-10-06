@@ -17,7 +17,7 @@ func _ready():
 	label.text = "Stop in the Green!"
 	# label.pop()
 
-func _process(delta):
+func _process(_delta):
 	if (get_node(hammer).win_game == true):
 		label.push_color(Color(70, 213, 80, 255))
 		label.text = "You Win!"

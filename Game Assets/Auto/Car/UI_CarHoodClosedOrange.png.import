@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Ui_waternozzle.png-fb3e3b03b70bfae3676b7cc470d3c850.stex"
+path="res://.import/UI_CarHoodClosedOrange.png-bcbefc93bc26b01e9d5c61f0521cef97.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Game Assets/Precision_Machining/Ui_waternozzle.png"
-dest_files=[ "res://.import/Ui_waternozzle.png-fb3e3b03b70bfae3676b7cc470d3c850.stex" ]
+source_file="res://Game Assets/Auto/Car/UI_CarHoodClosedOrange.png"
+dest_files=[ "res://.import/UI_CarHoodClosedOrange.png-bcbefc93bc26b01e9d5c61f0521cef97.stex" ]
 
 [params]
 

@@ -20,12 +20,6 @@ var win_game = false
 func _ready():
 	timer.connect("timeout", self, "_on_Timer_timeout")
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
-	# print(get_node(dot).dot_in_green)
-
-
 func _on_Button_button_down():
 	if (dot_in_green):
 		if (nailhits < 6 and ready_to_hit):

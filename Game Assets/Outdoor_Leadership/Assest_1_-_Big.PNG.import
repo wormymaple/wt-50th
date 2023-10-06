@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Ui_waternozzle.png-fb3e3b03b70bfae3676b7cc470d3c850.stex"
+path="res://.import/Assest_1_-_Big.PNG-57bef6eefa3b81e0837fe5d72dc269a6.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Game Assets/Precision_Machining/Ui_waternozzle.png"
-dest_files=[ "res://.import/Ui_waternozzle.png-fb3e3b03b70bfae3676b7cc470d3c850.stex" ]
+source_file="res://Game Assets/Outdoor_Leadership/Assest_1_-_Big.PNG"
+dest_files=[ "res://.import/Assest_1_-_Big.PNG-57bef6eefa3b81e0837fe5d72dc269a6.stex" ]
 
 [params]
 
