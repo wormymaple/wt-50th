@@ -1,0 +1,176 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://Fonts/Roboto-Regular.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Node.gd" type="Script" id=2]
+[ext_resource path="res://Game Assets/ui_node.png" type="Texture" id=3]
+[ext_resource path="res://Game Assets/ui_node2.png" type="Texture" id=4]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 17, 11.5 )
+
+[sub_resource type="DynamicFont" id=10]
+size = 100
+font_data = ExtResource( 1 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 3, 3 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 18.5, 13 )
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 3, 3 )
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 3, 3 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 17, 11.5 )
+
+[sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 3, 3 )
+
+[sub_resource type="RectangleShape2D" id=9]
+extents = Vector2( 3, 3 )
+
+[node name="Node" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="BeginPlay" type="Area2D" parent="."]
+position = Vector2( -23, -15 )
+
+[node name="ColBeginPlay" type="CollisionShape2D" parent="BeginPlay"]
+position = Vector2( 0, -0.5 )
+shape = SubResource( 1 )
+
+[node name="SprBeginPlay" type="Sprite" parent="BeginPlay"]
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 3 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="BeginPlay/SprBeginPlay"]
+anchor_left = 0.068
+anchor_top = 0.08
+anchor_right = 0.932
+anchor_bottom = 0.29
+margin_left = -393.516
+margin_top = -285.76
+margin_right = -393.484
+margin_bottom = -285.88
+custom_fonts/normal_font = SubResource( 10 )
+tab_size = 15
+text = "BEGIN PLAY"
+
+[node name="StartBeginPlay" type="Area2D" parent="BeginPlay"]
+position = Vector2( 17, -3 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="ColStartBeginPlay" type="CollisionShape2D" parent="BeginPlay/StartBeginPlay"]
+shape = SubResource( 2 )
+
+[node name="LineBeginPlay" type="Line2D" parent="BeginPlay/StartBeginPlay"]
+z_index = 5
+points = PoolVector2Array( 0, 0, 0, 0 )
+width = 1.0
+default_color = Color( 1, 1, 1, 1 )
+
+[node name="SpawnActor" type="Area2D" parent="."]
+position = Vector2( 18, -15 )
+
+[node name="ColSpawnActor" type="CollisionShape2D" parent="SpawnActor"]
+position = Vector2( 0.5, 0 )
+shape = SubResource( 4 )
+
+[node name="SprSpawnActor" type="Sprite" parent="SpawnActor"]
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 4 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="SpawnActor/SprSpawnActor"]
+anchor_left = 0.049
+anchor_top = 0.045
+anchor_right = 0.983
+anchor_bottom = 0.255
+margin_left = -398.563
+margin_top = -285.74
+margin_right = -393.621
+margin_bottom = -285.86
+custom_fonts/normal_font = SubResource( 10 )
+text = "SPAWN ACTOR"
+
+[node name="StartSpawnActor" type="Area2D" parent="SpawnActor"]
+position = Vector2( 19, -3 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="ColStartSpawnActor" type="CollisionShape2D" parent="SpawnActor/StartSpawnActor"]
+shape = SubResource( 6 )
+
+[node name="LineSpawnActor" type="Line2D" parent="SpawnActor/StartSpawnActor"]
+z_index = 5
+points = PoolVector2Array( 0, 0, 0, 0 )
+width = 1.0
+default_color = Color( 1, 1, 1, 1 )
+
+[node name="EndSpawnActor" type="Area2D" parent="SpawnActor"]
+position = Vector2( -18, -5 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="ColEndSpawnActor" type="CollisionShape2D" parent="SpawnActor/EndSpawnActor"]
+shape = SubResource( 7 )
+
+[node name="SetRun" type="Area2D" parent="."]
+position = Vector2( 0, 18 )
+
+[node name="ColSetRun" type="CollisionShape2D" parent="SetRun"]
+position = Vector2( 0, -0.5 )
+shape = SubResource( 5 )
+
+[node name="SprSetRun" type="Sprite" parent="SetRun"]
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 3 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="SetRun/SprSetRun"]
+anchor_left = 0.068
+anchor_top = 0.08
+anchor_right = 0.932
+anchor_bottom = 0.29
+margin_left = -393.516
+margin_top = -285.76
+margin_right = -393.484
+margin_bottom = -285.88
+custom_fonts/normal_font = SubResource( 10 )
+text = "SET RUN"
+
+[node name="StartSetRun" type="Area2D" parent="SetRun"]
+position = Vector2( 17, -3 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="ColStartSetRun" type="CollisionShape2D" parent="SetRun/StartSetRun"]
+shape = SubResource( 8 )
+
+[node name="LineSetRun" type="Line2D" parent="SetRun/StartSetRun"]
+z_index = 5
+points = PoolVector2Array( 0, 0, 0, 0 )
+width = 1.0
+default_color = Color( 1, 1, 1, 1 )
+
+[node name="EndSetRun" type="Area2D" parent="SetRun"]
+position = Vector2( -17, -3 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="ColEndSetRun" type="CollisionShape2D" parent="SetRun/EndSetRun"]
+shape = SubResource( 9 )
+
+[connection signal="input_event" from="BeginPlay/StartBeginPlay" to="." method="_on_StartBeginPlay_input_event"]
+[connection signal="input_event" from="SpawnActor/StartSpawnActor" to="." method="_on_StartSpawnActor_input_event"]
+[connection signal="input_event" from="SpawnActor/EndSpawnActor" to="." method="_on_EndSpawnActor_input_event"]
+[connection signal="input_event" from="SetRun/StartSetRun" to="." method="_on_StartSetRun_input_event"]
+[connection signal="input_event" from="SetRun/EndSetRun" to="." method="_on_EndSetRun_input_event"]
