@@ -1,0 +1,163 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://NailTechnology/IWant.gd" type="Script" id=1]
+[ext_resource path="res://NailTechnology/SetIWantNail.gd" type="Script" id=2]
+[ext_resource path="res://Game Assets/BuildingTrades/HammerUp.png" type="Texture" id=3]
+[ext_resource path="res://icon.png" type="Texture" id=4]
+[ext_resource path="res://NailTechnology/ColorSelecterNail.gd" type="Script" id=5]
+[ext_resource path="res://NailTechnology/YouPaint.gd" type="Script" id=6]
+[ext_resource path="res://NailTechnology/NailTech.gd" type="Script" id=7]
+[ext_resource path="res://Game Assets/Game_Dev/ui_button(question mark).png" type="Texture" id=8]
+
+[node name="NailTech" type="Node2D"]
+script = ExtResource( 7 )
+
+[node name="IWant" type="Node2D" parent="."]
+script = ExtResource( 1 )
+
+[node name="IWantNail1" type="Sprite" parent="IWant" groups=["one"]]
+position = Vector2( 9, 29 )
+scale = Vector2( 0.0366821, 0.0280151 )
+texture = ExtResource( 3 )
+script = ExtResource( 2 )
+
+[node name="IWantNail2" type="Sprite" parent="IWant" groups=["two"]]
+position = Vector2( 20, 60 )
+scale = Vector2( 0.0366821, 0.0280151 )
+texture = ExtResource( 3 )
+script = ExtResource( 2 )
+
+[node name="IWantNail3" type="Sprite" parent="IWant" groups=["three"]]
+position = Vector2( 38, 33 )
+scale = Vector2( 0.0366821, 0.0280151 )
+texture = ExtResource( 3 )
+script = ExtResource( 2 )
+
+[node name="IWantNail4" type="Sprite" parent="IWant" groups=["four"]]
+position = Vector2( 48, 63 )
+scale = Vector2( 0.0366821, 0.0280151 )
+texture = ExtResource( 3 )
+script = ExtResource( 2 )
+
+[node name="IWantNail5" type="Sprite" parent="IWant" groups=["five"]]
+position = Vector2( 65, 31 )
+scale = Vector2( 0.0366821, 0.0280151 )
+texture = ExtResource( 3 )
+script = ExtResource( 2 )
+
+[node name="YouPaint" type="Node2D" parent="."]
+script = ExtResource( 6 )
+
+[node name="NailYouColor1" type="TextureButton" parent="YouPaint"]
+margin_left = 85.0
+margin_top = 5.0
+margin_right = 149.0
+margin_bottom = 69.0
+rect_scale = Vector2( 0.164461, 0.154612 )
+rect_clip_content = true
+size_flags_stretch_ratio = 0.0
+texture_normal = ExtResource( 4 )
+
+[node name="NailYouColor2" type="TextureButton" parent="YouPaint"]
+margin_left = 96.0
+margin_top = 16.0
+margin_right = 160.0
+margin_bottom = 80.0
+rect_scale = Vector2( 0.185797, 0.179696 )
+rect_clip_content = true
+size_flags_stretch_ratio = 0.0
+texture_normal = ExtResource( 4 )
+
+[node name="NailYouColor3" type="TextureButton" parent="YouPaint"]
+margin_left = 108.0
+margin_top = 5.0
+margin_right = 172.0
+margin_bottom = 69.0
+rect_scale = Vector2( 0.17301, 0.16081 )
+rect_clip_content = true
+size_flags_stretch_ratio = 0.0
+texture_normal = ExtResource( 4 )
+
+[node name="NailYouColor4" type="TextureButton" parent="YouPaint"]
+margin_left = 121.0
+margin_top = 16.0
+margin_right = 185.0
+margin_bottom = 80.0
+rect_scale = Vector2( 0.167055, 0.161905 )
+rect_clip_content = true
+size_flags_stretch_ratio = 0.0
+texture_normal = ExtResource( 4 )
+
+[node name="NailYouColor5" type="TextureButton" parent="YouPaint"]
+margin_left = 130.0
+margin_top = 4.0
+margin_right = 194.0
+margin_bottom = 68.0
+rect_scale = Vector2( 0.191932, 0.177828 )
+rect_clip_content = true
+size_flags_stretch_ratio = 0.0
+texture_normal = ExtResource( 4 )
+
+[node name="PaintColors" type="Node2D" parent="."]
+script = ExtResource( 5 )
+
+[node name="RedColor" type="TextureButton" parent="PaintColors"]
+modulate = Color( 1, 0, 0, 1 )
+margin_left = 70.0
+margin_top = 76.0
+margin_right = 134.0
+margin_bottom = 140.0
+rect_scale = Vector2( 0.176641, 0.177272 )
+texture_normal = ExtResource( 4 )
+
+[node name="BlueColor" type="TextureButton" parent="PaintColors"]
+modulate = Color( 0, 0.392157, 1, 1 )
+margin_left = 82.0
+margin_top = 76.0
+margin_right = 146.0
+margin_bottom = 140.0
+rect_scale = Vector2( 0.176641, 0.177272 )
+texture_normal = ExtResource( 4 )
+
+[node name="GreenColor" type="TextureButton" parent="PaintColors"]
+modulate = Color( 0.219608, 1, 0, 1 )
+margin_left = 94.0
+margin_top = 76.0
+margin_right = 158.0
+margin_bottom = 140.0
+rect_scale = Vector2( 0.176641, 0.177272 )
+texture_normal = ExtResource( 4 )
+
+[node name="YellowColor" type="TextureButton" parent="PaintColors"]
+modulate = Color( 0, 1, 0.764706, 1 )
+margin_left = 106.0
+margin_top = 76.0
+margin_right = 170.0
+margin_bottom = 140.0
+rect_scale = Vector2( 0.176641, 0.177272 )
+texture_normal = ExtResource( 4 )
+
+[node name="CheckButton" type="TextureButton" parent="."]
+margin_left = 153.0
+margin_top = 67.0
+margin_right = 2201.0
+margin_bottom = 2115.0
+rect_scale = Vector2( 0.011712, 0.0101544 )
+texture_normal = ExtResource( 8 )
+
+[connection signal="setnail" from="IWant" to="IWant/IWantNail1" method="_on_IWant_setnail"]
+[connection signal="setnail" from="IWant" to="IWant/IWantNail2" method="_on_IWant_setnail"]
+[connection signal="setnail" from="IWant" to="IWant/IWantNail3" method="_on_IWant_setnail"]
+[connection signal="setnail" from="IWant" to="IWant/IWantNail4" method="_on_IWant_setnail"]
+[connection signal="setnail" from="IWant" to="IWant/IWantNail5" method="_on_IWant_setnail"]
+[connection signal="pressed" from="YouPaint/NailYouColor1" to="YouPaint" method="_on_NailYouColor1_pressed"]
+[connection signal="pressed" from="YouPaint/NailYouColor2" to="YouPaint" method="_on_NailYouColor2_pressed"]
+[connection signal="pressed" from="YouPaint/NailYouColor3" to="YouPaint" method="_on_NailYouColor3_pressed"]
+[connection signal="pressed" from="YouPaint/NailYouColor4" to="YouPaint" method="_on_NailYouColor4_pressed"]
+[connection signal="pressed" from="YouPaint/NailYouColor5" to="YouPaint" method="_on_NailYouColor5_pressed"]
+[connection signal="colorChange" from="PaintColors" to="YouPaint" method="_on_PaintColors_colorChange"]
+[connection signal="button_up" from="PaintColors/RedColor" to="PaintColors" method="_on_RedColor_button_up"]
+[connection signal="button_up" from="PaintColors/BlueColor" to="PaintColors" method="_on_BlueColor_button_up"]
+[connection signal="button_up" from="PaintColors/GreenColor" to="PaintColors" method="_on_GreenColor_button_up"]
+[connection signal="button_up" from="PaintColors/YellowColor" to="PaintColors" method="_on_YellowColor_button_up"]
+[connection signal="pressed" from="CheckButton" to="." method="_on_CheckButton_pressed"]
