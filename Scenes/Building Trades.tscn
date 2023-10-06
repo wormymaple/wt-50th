@@ -11,12 +11,13 @@
 [ext_resource path="res://Scenes/NailHit.gd" type="Script" id=9]
 [ext_resource path="res://Game Assets/BuildingTrades/UI_HammerUp.png" type="Texture" id=10]
 [ext_resource path="res://Scenes/ButtonText.gd" type="Script" id=11]
-[ext_resource path="res://Game Assets/Fonts/ComicNeue-Regular.ttf" type="DynamicFontData" id=12]
+[ext_resource path="res://Fonts/Corben-Regular.ttf" type="DynamicFontData" id=12]
 
 [sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 241.936, 143.911 )
 
 [sub_resource type="DynamicFont" id=4]
+size = 10
 font_data = ExtResource( 12 )
 
 [sub_resource type="CircleShape2D" id=2]
