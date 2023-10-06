@@ -16,7 +16,8 @@ func _ready():
 	label.text = "Stop in the green!"
 
 func _process(delta):
-	pass # if (get_node(hammer).dot_in_green == true):
+	if (get_node(hammer).win_game == true):
+		label.text = "You win!" # if (get_node(hammer).dot_in_green == true):
 		# print("yeah")
 	# print(win_game)
 	

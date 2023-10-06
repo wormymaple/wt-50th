@@ -54,10 +54,10 @@ position = Vector2( 16.1284, -724.556 )
 shape = SubResource( 3 )
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Button"]
-margin_left = -74.0
-margin_top = 16.0
-margin_right = -7.0
-margin_bottom = 46.0
+margin_left = -26.0
+margin_top = 14.0
+margin_right = 106.0
+margin_bottom = 44.0
 tab_size = 1
 text = "Stop the Dot!"
 

@@ -39,7 +39,7 @@ func _on_Button_button_down():
 			nailhits += 1
 		if (nailhits == 6):
 			win_game = true
-			print ("you win")
+			# print ("you win")
 
 func _on_Timer_timeout ():
 	hammdown.visible = false
