@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/chr_pirate.png-04a28b74182939586e9f37de8dcd1ecc.stex"
+path="res://.import/chr_pirate.png-a224dd75c0ff0e2c1913aeee138b6997.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Game Assets/criminal_justice/chr_pirate.png"
-dest_files=[ "res://.import/chr_pirate.png-04a28b74182939586e9f37de8dcd1ecc.stex" ]
+source_file="res://criminal_justice copy/chr_pirate.png"
+dest_files=[ "res://.import/chr_pirate.png-a224dd75c0ff0e2c1913aeee138b6997.stex" ]
 
 [params]
 

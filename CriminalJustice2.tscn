@@ -1,12 +1,12 @@
 [gd_scene load_steps=12 format=2]
 
-[ext_resource path="res://Game Assets/criminal_justice/court_foreground.png" type="Texture" id=1]
+[ext_resource path="res://Game Assets/criminal_justice/bg_courtforeground.png" type="Texture" id=1]
 [ext_resource path="res://Game Assets/optimusprinceps/OptimusPrincepsSemiBold.ttf" type="DynamicFontData" id=3]
-[ext_resource path="res://Game Assets/criminal_justice/ripped_cloth.png" type="Texture" id=4]
-[ext_resource path="res://Game Assets/criminal_justice/photo.png" type="Texture" id=5]
-[ext_resource path="res://Game Assets/criminal_justice/tabletop.png" type="Texture" id=6]
-[ext_resource path="res://Game Assets/criminal_justice/knife.png" type="Texture" id=7]
-[ext_resource path="res://Game Assets/criminal_justice/missing_hook.png" type="Texture" id=8]
+[ext_resource path="res://Game Assets/criminal_justice/ui_rippedcloth.png" type="Texture" id=4]
+[ext_resource path="res://Game Assets/criminal_justice/ui_photo.png" type="Texture" id=5]
+[ext_resource path="res://Game Assets/criminal_justice/ui_tabletop.png" type="Texture" id=6]
+[ext_resource path="res://Game Assets/criminal_justice/ui_knife.png" type="Texture" id=7]
+[ext_resource path="res://Game Assets/criminal_justice/ui_hook.png" type="Texture" id=8]
 [ext_resource path="res://Game Assets/criminal_justice/chr_judge.png" type="Texture" id=9]
 [ext_resource path="res://CriminalJustice2.gd" type="Script" id=10]
 
@@ -61,7 +61,6 @@ texture = ExtResource( 9 )
 
 [node name="Correct" type="CollisionShape2D" parent="."]
 position = Vector2( 25, 34 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 3 )
 
 [node name="Sprite3" type="Sprite" parent="."]
