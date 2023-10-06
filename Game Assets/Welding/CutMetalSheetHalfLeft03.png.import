@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Ui_waternozzle.png-fb3e3b03b70bfae3676b7cc470d3c850.stex"
+path="res://.import/CutMetalSheetHalfLeft03.png-1dca7ba1859fc826e15f5398fab27ebd.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Game Assets/Precision_Machining/Ui_waternozzle.png"
-dest_files=[ "res://.import/Ui_waternozzle.png-fb3e3b03b70bfae3676b7cc470d3c850.stex" ]
+source_file="res://Game Assets/Welding/CutMetalSheetHalfLeft03.png"
+dest_files=[ "res://.import/CutMetalSheetHalfLeft03.png-1dca7ba1859fc826e15f5398fab27ebd.stex" ]
 
 [params]
 
