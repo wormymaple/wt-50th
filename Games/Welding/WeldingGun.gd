@@ -10,11 +10,9 @@ var start_y
 func _ready():
 	start_y = global_position.y
 
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	move_time += delta
 	if move_time > move_time_max:
 		move_time -= move_time_max
-	
 	global_position = Vector2(global_position.x, move_curve.interpolate(move_time / move_time_max) * move_pos + start_y)
