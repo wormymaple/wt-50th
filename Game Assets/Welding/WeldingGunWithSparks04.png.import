@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Ui_waternozzle.png-fb3e3b03b70bfae3676b7cc470d3c850.stex"
+path="res://.import/WeldingGunWithSparks04.png-85cc8c31cf82e21be1dd63cd48a2ee89.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Game Assets/Precision_Machining/Ui_waternozzle.png"
-dest_files=[ "res://.import/Ui_waternozzle.png-fb3e3b03b70bfae3676b7cc470d3c850.stex" ]
+source_file="res://Game Assets/Welding/WeldingGunWithSparks04.png"
+dest_files=[ "res://.import/WeldingGunWithSparks04.png-85cc8c31cf82e21be1dd63cd48a2ee89.stex" ]
 
 [params]
 

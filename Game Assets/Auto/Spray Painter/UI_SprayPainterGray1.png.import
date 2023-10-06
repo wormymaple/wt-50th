@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Ui_waternozzle.png-fb3e3b03b70bfae3676b7cc470d3c850.stex"
+path="res://.import/UI_SprayPainterGray1.png-33daa7a2151bbc02690e13fd5881d00d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Game Assets/Precision_Machining/Ui_waternozzle.png"
-dest_files=[ "res://.import/Ui_waternozzle.png-fb3e3b03b70bfae3676b7cc470d3c850.stex" ]
+source_file="res://Game Assets/Auto/Spray Painter/UI_SprayPainterGray1.png"
+dest_files=[ "res://.import/UI_SprayPainterGray1.png-33daa7a2151bbc02690e13fd5881d00d.stex" ]
 
 [params]
 

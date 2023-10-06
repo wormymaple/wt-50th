@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Ui_waternozzle.png-fb3e3b03b70bfae3676b7cc470d3c850.stex"
+path="res://.import/Maze_1 2.JPEG-4117658498a291cabb9dad98d5f6a116.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Game Assets/Precision_Machining/Ui_waternozzle.png"
-dest_files=[ "res://.import/Ui_waternozzle.png-fb3e3b03b70bfae3676b7cc470d3c850.stex" ]
+source_file="res://Game Assets/Outdoor_Leadership/Maze_1 2.JPEG"
+dest_files=[ "res://.import/Maze_1 2.JPEG-4117658498a291cabb9dad98d5f6a116.stex" ]
 
 [params]
 
