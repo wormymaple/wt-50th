@@ -15,12 +15,18 @@ export var score_cuttoff: int
 
 var showing = false
 
+func _ready():
+	pass
+	#rect_global_position = Vector2(0, start_pos)
+
 func set_score(score):
 	var passed = score_cuttoff < score
+	print(score)
 	if passed:
 		bbcode_text += "[color=green]PASSED!"
 	else:
 		bbcode_text += "[color=red]FAILED!"
+		get_node(sheet).color = Color(0.1, 0, 0, 1)
 	showing = true
 
 
@@ -35,7 +41,7 @@ func _process(delta):
 		showing = false
 	
 	var interpolation = show_curve.interpolate(show_time / show_time_max)
-	rect_global_position = Vector2(-100, start_pos + shift_pos * interpolation)
+	#rect_global_position = Vector2(-100, start_pos + shift_pos * interpolation)
 	modulate = Color(1, 1, 1, interpolation)
 	
 	get_node(sheet).modulate = Color(1, 1, 1, interpolation)

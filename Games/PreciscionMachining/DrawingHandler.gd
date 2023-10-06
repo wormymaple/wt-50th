@@ -107,13 +107,12 @@ func simplify_shape(in_points, n):
 func check_points(in_points):
 	var total = 0.0
 	var ref_points = get_node(ref_object).points
-	for point in in_points:
-		var closest_point = Vector2.INF
-		for ref_point in ref_points:
-			var new_dist = point.distance_to(ref_point)
-			if (new_dist	 < point.distance_to(closest_point)):
-				closest_point = ref_point
-			
-		total += point.distance_to(closest_point)
+	for ref_point in ref_points:
+		var closest_point = in_points[0]
+		for point in in_points:
+			if ref_point.distance_to(point) < ref_point.distance_to(closest_point):
+				closest_point = point
+		
+		total += ref_point.distance_to(closest_point)
 	
 	return total / len(in_points)

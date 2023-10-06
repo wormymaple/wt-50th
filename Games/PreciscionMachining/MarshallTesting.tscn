@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Games/PreciscionMachining/DrawingHandler.gd" type="Script" id=1]
 [ext_resource path="res://Games/PreciscionMachining/ReferenceObject.gd" type="Script" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://Games/PreciscionMachining/Start.gd" type="Script" id=4]
 [ext_resource path="res://Game Assets/Precision_Macining /MetalSheetWithGuidlines1.png" type="Texture" id=5]
 [ext_resource path="res://Game Assets/Precision_Macining /Ui_waternozzle.png" type="Texture" id=6]
+[ext_resource path="res://Games/PreciscionMachining/ComicNeue-Regular.ttf" type="DynamicFontData" id=7]
 
 [sub_resource type="Gradient" id=3]
 colors = PoolColorArray( 0, 0.460938, 1, 1, 0.435518, 0.788319, 1, 1 )
@@ -16,6 +17,10 @@ colors = PoolColorArray( 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1
 
 [sub_resource type="Curve" id=4]
 _data = [ Vector2( 0, 0 ), 0.0, 0.0, 0, 0, Vector2( 1, 1 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="DynamicFont" id=5]
+size = 100
+font_data = ExtResource( 7 )
 
 [sub_resource type="Curve" id=1]
 _data = [ Vector2( 0, 0 ), 0.0, 0.0, 0, 0, Vector2( 1, 1 ), 0.0, 0.0, 0, 0 ]
@@ -52,11 +57,11 @@ script = ExtResource( 1 )
 min_finish_dist = 100
 simp_threshold = 0.95
 min_draw_dist = 15
-max_score = 500
+max_score = 20
 start_pos = Vector2( -196, -113 )
 start_dist = 20.0
 ref_object = NodePath("../ReferenceObject")
-score_indicator = NodePath("../Score")
+score_indicator = NodePath("../CanvasLayer/Control/Score")
 water_particles = NodePath("WaterParticles")
 fill = NodePath("Fill")
 start = NodePath("Start")
@@ -108,27 +113,41 @@ bbcode_text = "[center] Start Here! - Waterjet the Shape"
 text = " Start Here! - Waterjet the Shape"
 
 [node name="UiWaternozzle" type="Sprite" parent="."]
-position = Vector2( -114, -109 )
+position = Vector2( -196, -117 )
 scale = Vector2( 0.15, 0.15 )
 z_index = 4
 texture = ExtResource( 6 )
 offset = Vector2( -54, 0 )
 
-[node name="Score" type="RichTextLabel" parent="."]
-process_priority = -1
-margin_left = -100.0
-margin_top = 250.0
-margin_right = 100.0
-margin_bottom = 290.0
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Score" type="RichTextLabel" parent="CanvasLayer/Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -512.0
+margin_top = 100.0
+margin_right = 488.0
+margin_bottom = 600.0
+rect_rotation = -25.0
+custom_fonts/normal_font = SubResource( 5 )
 bbcode_enabled = true
-bbcode_text = "[center][b]"
+bbcode_text = "[center]"
 script = ExtResource( 3 )
+__meta__ = {
+"_editor_description_": ""
+}
 show_time_max = 0.5
 start_pos = 20
 shift_pos = -20
 show_curve = SubResource( 1 )
-sheet = NodePath("../DrawingLine/Fill")
-score_cuttoff = 400
-
-[node name="Camera2D" type="Camera2D" parent="."]
-current = true
+sheet = NodePath("../../../DrawingLine/Fill")
+score_cuttoff = 10
