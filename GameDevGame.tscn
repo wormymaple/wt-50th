@@ -8,7 +8,7 @@
 [ext_resource path="res://Game Assets/Game_Dev/ui_button(question mark).png" type="Texture" id=6]
 
 [sub_resource type="DynamicFont" id=1]
-size = 13
+size = 100
 font_data = ExtResource( 5 )
 
 [sub_resource type="StyleBoxTexture" id=3]
@@ -34,22 +34,22 @@ region_rect = Rect2( 0, 0, 787, 572 )
 [node name="GameDevGame" type="Node"]
 
 [node name="BackGround" type="Sprite" parent="."]
-position = Vector2( 90, 36.5 )
-scale = Vector2( 0.127334, 0.0758327 )
+position = Vector2( 749, 320 )
+scale = Vector2( 1.0903, 0.5 )
 texture = ExtResource( 2 )
 
 [node name="Node" parent="." instance=ExtResource( 1 )]
-position = Vector2( 55, 45 )
+position = Vector2( 529, 380 )
 
 [node name="Button" type="Button" parent="."]
-anchor_left = 0.628
-anchor_top = 0.044
-anchor_right = 0.972
-anchor_bottom = 0.267
-margin_left = -1.0
-margin_top = 0.04
-margin_right = -1.96001
-margin_bottom = -0.0299988
+anchor_left = 0.653
+anchor_top = 0.157
+anchor_right = 0.997
+anchor_bottom = 0.38
+margin_left = 0.499878
+margin_top = 0.0249939
+margin_right = -0.460083
+margin_bottom = -0.0450439
 custom_fonts/font = SubResource( 1 )
 custom_styles/hover = SubResource( 3 )
 custom_styles/pressed = SubResource( 4 )
@@ -64,8 +64,8 @@ scale = Vector2( 0.01, 0.01 )
 texture = ExtResource( 6 )
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 142, 60 )
-scale = Vector2( 0.02, 0.02 )
+position = Vector2( 1227, 454 )
+scale = Vector2( 0.15, 0.15 )
 texture = ExtResource( 3 )
 
 [connection signal="pressed" from="Button" to="Node" method="_on_Button_pressed"]
