@@ -37,7 +37,7 @@ func _on_Button_pressed ():
 	if (secondtext == true):
 		label.push_color(Color(248, 230, 35, 255))
 		label.text = "Hammer the Nail!"
-		label.pop()
+		#label.pop()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):

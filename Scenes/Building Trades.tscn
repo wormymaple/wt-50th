@@ -1,7 +1,8 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Scenes/SpriteRotate.gd" type="Script" id=1]
 [ext_resource path="res://Game Assets/BuildingTrades/UI_Plywood.png" type="Texture" id=2]
+[ext_resource path="res://Game Assets/BuildingTrades/UI_HammerDown.png" type="Texture" id=3]
 [ext_resource path="res://Game Assets/BuildingTrades/UI_PressButtonToStopDotInGreenRingMinigame.png" type="Texture" id=4]
 [ext_resource path="res://Game Assets/BuildingTrades/UI_DotToStopInGreen.png" type="Texture" id=5]
 [ext_resource path="res://Scenes/SpriteRotateFaster.gd" type="Script" id=6]
@@ -104,7 +105,7 @@ visible = false
 position = Vector2( 82, -11 )
 rotation = -0.403171
 scale = Vector2( 0.04, 0.03 )
-texture = ExtResource( 10 )
+texture = ExtResource( 3 )
 
 [node name="AnimTimer" type="Timer" parent="NailAndHammer"]
 wait_time = 0.3
