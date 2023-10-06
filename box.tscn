@@ -1,0 +1,82 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://Game Assets/criminal_justice/knife.png" type="Texture" id=1]
+[ext_resource path="res://box.gd" type="Script" id=2]
+[ext_resource path="res://Game Assets/criminal_justice/missing_hook.png" type="Texture" id=3]
+[ext_resource path="res://Game Assets/criminal_justice/ripped_cloth.png" type="Texture" id=4]
+[ext_resource path="res://Game Assets/criminal_justice/photo.png" type="Texture" id=5]
+[ext_resource path="res://Game Assets/criminal_justice/tabletop.png" type="Texture" id=6]
+[ext_resource path="res://Game Assets/optimusprinceps/OptimusPrincepsSemiBold.ttf" type="DynamicFontData" id=8]
+[ext_resource path="res://Game Assets/criminal_justice/court_foreground.png" type="Texture" id=9]
+[ext_resource path="res://Game Assets/criminal_justice/chr_judge.png" type="Texture" id=10]
+[ext_resource path="res://Game Assets/criminal_justice/chr_pirate.png" type="Texture" id=11]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 13.0459, 14.5 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 11
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 8 )
+
+[node name="box" type="RigidBody2D"]
+input_pickable = true
+mass = 0.00102041
+gravity_scale = 0.0
+script = ExtResource( 2 )
+
+[node name="Sprite7" type="Sprite" parent="."]
+position = Vector2( 112, 50 )
+scale = Vector2( 0.0239636, 0.0259427 )
+texture = ExtResource( 11 )
+
+[node name="Sprite6" type="Sprite" parent="."]
+position = Vector2( 106, 71 )
+scale = Vector2( 0.0420035, 0.0348558 )
+texture = ExtResource( 9 )
+
+[node name="Sprite5" type="Sprite" parent="."]
+position = Vector2( 40, 51 )
+scale = Vector2( 0.0150467, 0.030459 )
+texture = ExtResource( 6 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 60.9266, 29.9706 )
+scale = Vector2( -0.0200529, 0.0185958 )
+texture = ExtResource( 4 )
+
+[node name="Correct" type="CollisionShape2D" parent="."]
+position = Vector2( 23, 73 )
+shape = SubResource( 1 )
+
+[node name="Sprite2" type="Sprite" parent="."]
+position = Vector2( 22.8164, 75.21 )
+scale = Vector2( 0.00647672, 0.00670844 )
+texture = ExtResource( 3 )
+
+[node name="Sprite4" type="Sprite" parent="."]
+position = Vector2( 24.8164, 34.21 )
+scale = Vector2( 0.0100521, 0.0084478 )
+texture = ExtResource( 5 )
+
+[node name="Sprite3" type="Sprite" parent="."]
+position = Vector2( 59.8164, 75.21 )
+scale = Vector2( 0.0136752, 0.0205589 )
+texture = ExtResource( 1 )
+
+[node name="Label" type="Label" parent="."]
+margin_right = 194.0
+margin_bottom = 14.0
+custom_fonts/font = SubResource( 2 )
+text = "Match the item to the suspect"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Sprite8" type="Sprite" parent="."]
+position = Vector2( 408.25, 483.375 )
+scale = Vector2( 0.034322, 0.0304656 )
+texture = ExtResource( 10 )
+
+[connection signal="input_event" from="." to="." method="_on_box_input_event"]
