@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Ui_waternozzle.png-fb3e3b03b70bfae3676b7cc470d3c850.stex"
+path="res://.import/UI_Audio_Button.png-b8b9ca641191b7fc2d7d1517704cdf02.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Game Assets/Precision_Machining/Ui_waternozzle.png"
-dest_files=[ "res://.import/Ui_waternozzle.png-fb3e3b03b70bfae3676b7cc470d3c850.stex" ]
+source_file="res://Game Assets/StartUp_Screen/UI_Audio_Button.png"
+dest_files=[ "res://.import/UI_Audio_Button.png-b8b9ca641191b7fc2d7d1517704cdf02.stex" ]
 
 [params]
 

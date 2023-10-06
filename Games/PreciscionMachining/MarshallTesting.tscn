@@ -4,8 +4,8 @@
 [ext_resource path="res://Games/PreciscionMachining/ReferenceObject.gd" type="Script" id=2]
 [ext_resource path="res://Games/PreciscionMachining/ScoreLabel.gd" type="Script" id=3]
 [ext_resource path="res://Games/PreciscionMachining/Start.gd" type="Script" id=4]
-[ext_resource path="res://Game Assets/Precision_Macining /MetalSheetWithGuidlines1.png" type="Texture" id=5]
-[ext_resource path="res://Game Assets/Precision_Macining /Ui_waternozzle.png" type="Texture" id=6]
+[ext_resource path="res://Game Assets/Precision_Machining/UI_MetalSheetWithGuidlines1.png" type="Texture" id=5]
+[ext_resource path="res://Game Assets/Precision_Machining/Ui_waternozzle.png" type="Texture" id=6]
 [ext_resource path="res://Games/PreciscionMachining/ComicNeue-Regular.ttf" type="DynamicFontData" id=7]
 
 [sub_resource type="Gradient" id=3]
