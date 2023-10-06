@@ -3,7 +3,7 @@ extends Button
 var is_pressed = false 
 var heat: float 
 var max_or_min: bool 
-var score: int
+var score: float
 export var bar_color: Gradient
 onready var bar = $Heat_Bar
 var is_done: bool
@@ -32,6 +32,7 @@ func _process(_delta):
 	bar.value = heat 
 	if heat < 75 and heat > 25:
 		score += 1
+	$Score.value = score
 	if score >= 200 and is_done == false:
 		is_done = true
-		print("win")
+		$Wintext.visible = true
