@@ -1,9 +1,5 @@
 extends RichTextLabel
 
-
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
 export var show_time_max = 0.0
 export var start_pos = 0
 export var shift_pos = 0
@@ -17,7 +13,7 @@ var showing = false
 
 func _ready():
 	pass
-	#rect_global_position = Vector2(0, start_pos)
+	rect_global_position = Vector2(rect_global_position.x, start_pos)
 
 func set_score(score):
 	var passed = score_cuttoff < score
@@ -41,7 +37,7 @@ func _process(delta):
 		showing = false
 	
 	var interpolation = show_curve.interpolate(show_time / show_time_max)
-	#rect_global_position = Vector2(-100, start_pos + shift_pos * interpolation)
+	rect_global_position = Vector2(rect_global_position.x, start_pos + shift_pos * interpolation)
 	modulate = Color(1, 1, 1, interpolation)
 	
 	get_node(sheet).modulate = Color(1, 1, 1, interpolation)

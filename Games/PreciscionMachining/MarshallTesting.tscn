@@ -133,9 +133,9 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -512.0
+margin_left = -472.0
 margin_top = 100.0
-margin_right = 488.0
+margin_right = 528.0
 margin_bottom = 600.0
 rect_rotation = -25.0
 custom_fonts/normal_font = SubResource( 5 )
@@ -146,8 +146,8 @@ __meta__ = {
 "_editor_description_": ""
 }
 show_time_max = 0.5
-start_pos = 20
-shift_pos = -20
+start_pos = 400
+shift_pos = 20
 show_curve = SubResource( 1 )
 sheet = NodePath("../../../DrawingLine/Fill")
 score_cuttoff = 10
