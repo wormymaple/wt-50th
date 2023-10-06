@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Nursing:medical_assisting_Blood_pressure_animation_assets.png-653e550b948341db3b1dd458294c6917.stex"
+path="res://.import/Nursingmedical_assisting_Blood_pressure_animation_assets.png-2e15231c3d32ff087343ab3df11ac3c4.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Game Assets/Nursing:Medical_Assisting/Nursing:medical_assisting_Blood_pressure_animation_assets.png"
-dest_files=[ "res://.import/Nursing:medical_assisting_Blood_pressure_animation_assets.png-653e550b948341db3b1dd458294c6917.stex" ]
+source_file="res://Game Assets/NursingMedical_Assisting/Nursingmedical_assisting_Blood_pressure_animation_assets.png"
+dest_files=[ "res://.import/Nursingmedical_assisting_Blood_pressure_animation_assets.png-2e15231c3d32ff087343ab3df11ac3c4.stex" ]
 
 [params]
 
