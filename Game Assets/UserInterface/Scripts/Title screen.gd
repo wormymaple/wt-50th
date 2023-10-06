@@ -17,11 +17,11 @@ func _ready():
 
 
 func _on_Play_pressed():
-	get_tree().change_scene("res://Game Assets/UserInterface/Level 2.tscn")
+	get_tree().change_scene("res://Game Assets/UserInterface/Scenes/Level 2.tscn")
 
 func _on_Quit_pressed():
 	get_tree().quit
 
 
 func _on_Credits_pressed():
-	get_tree().change_scene("res://Game Assets/UserInterface/GodotCredits.tscn")
+	get_tree().change_scene("res://Game Assets/UserInterface/Scenes/GodotCredits.tscn")

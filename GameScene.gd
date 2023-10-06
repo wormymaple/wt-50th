@@ -7,11 +7,12 @@ onready var TimeBar = $SidePanel/MarginContainer/TimeBar
 #This is the start of the game
 func _ready():
 	#Makes the TimeBar fill deplete from the top
-	TimeBar.set_fill_mode(3)
+	#TimeBar.set_fill_mode(3)
 	_new_scene()
+	TimeBar.set_max(10)
 
 func _new_scene():
-	TimeBar.max_value = GameTimer.wait_time
+	TimeBar.set_max(5)#GameTimer.wait_time)
 	
 
 func _process(_delta):
