@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/chr_rippedshirt.png-efeb3fcbd4eccf609adaf3f00ba6716a.stex"
+path="res://.import/chr_rippedshirt.png-6331178df8b50a8faa7926bc3b2f860f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Game Assets/criminal_justice/chr_rippedshirt.png"
-dest_files=[ "res://.import/chr_rippedshirt.png-efeb3fcbd4eccf609adaf3f00ba6716a.stex" ]
+source_file="res://criminal_justice copy/chr_rippedshirt.png"
+dest_files=[ "res://.import/chr_rippedshirt.png-6331178df8b50a8faa7926bc3b2f860f.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/ui_rippedcloth.png-18d8408b365e1462a4b9510d06932ea6.stex"
+path="res://.import/ui_rippedcloth.png-f75417680fa71c10af4353bf417eec2d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Game Assets/criminal_justice/ui_rippedcloth.png"
-dest_files=[ "res://.import/ui_rippedcloth.png-18d8408b365e1462a4b9510d06932ea6.stex" ]
+source_file="res://criminal_justice copy/ui_rippedcloth.png"
+dest_files=[ "res://.import/ui_rippedcloth.png-f75417680fa71c10af4353bf417eec2d.stex" ]
 
 [params]
 

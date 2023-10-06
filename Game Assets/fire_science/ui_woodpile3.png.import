@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/ui_hook.png-19c945db866b9c1e0cea006fff64a9ec.stex"
+path="res://.import/ui_woodpile3.png-43516092fbebcf32be58019d953145b2.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://criminal_justice copy/ui_hook.png"
-dest_files=[ "res://.import/ui_hook.png-19c945db866b9c1e0cea006fff64a9ec.stex" ]
+source_file="res://Game Assets/fire_science/ui_woodpile3.png"
+dest_files=[ "res://.import/ui_woodpile3.png-43516092fbebcf32be58019d953145b2.stex" ]
 
 [params]
 

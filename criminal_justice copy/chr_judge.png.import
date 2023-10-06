@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/chr_judge.png-084c751d3422923bb3a9aa84665c467e.stex"
+path="res://.import/chr_judge.png-36d5f6a605aca26e8150a111bb983037.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Game Assets/criminal_justice/chr_judge.png"
-dest_files=[ "res://.import/chr_judge.png-084c751d3422923bb3a9aa84665c467e.stex" ]
+source_file="res://criminal_justice copy/chr_judge.png"
+dest_files=[ "res://.import/chr_judge.png-36d5f6a605aca26e8150a111bb983037.stex" ]
 
 [params]
 
