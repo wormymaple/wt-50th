@@ -62,7 +62,7 @@ tab_size = 15
 text = "BEGIN PLAY"
 
 [node name="StartBeginPlay" type="Area2D" parent="BeginPlay"]
-position = Vector2( 17, -3 )
+position = Vector2( 15, -3 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -104,7 +104,7 @@ custom_fonts/normal_font = SubResource( 10 )
 text = "SPAWN ACTOR"
 
 [node name="StartSpawnActor" type="Area2D" parent="SpawnActor"]
-position = Vector2( 19, -3 )
+position = Vector2( 17, -4 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -123,7 +123,7 @@ scale = Vector2( 0.01, 0.01 )
 texture = ExtResource( 5 )
 
 [node name="EndSpawnActor" type="Area2D" parent="SpawnActor"]
-position = Vector2( -18, -5 )
+position = Vector2( -15, -4 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -159,7 +159,7 @@ custom_fonts/normal_font = SubResource( 10 )
 text = "SET RUN"
 
 [node name="StartSetRun" type="Area2D" parent="SetRun"]
-position = Vector2( 17, -3 )
+position = Vector2( 15, -3 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -178,7 +178,7 @@ scale = Vector2( 0.01, 0.01 )
 texture = ExtResource( 5 )
 
 [node name="EndSetRun" type="Area2D" parent="SetRun"]
-position = Vector2( -17, -3 )
+position = Vector2( -14, -3 )
 __meta__ = {
 "_edit_group_": true
 }
