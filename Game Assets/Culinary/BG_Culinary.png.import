@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/ui_woodpile3.png-4b655583189eac19885ac33c2f62a26d.stex"
+path="res://.import/BG_Culinary.png-5e837cc13c61b5f3a555bbc9cdb9ec48.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Game Assets/fire_science/fire_science/ui_woodpile3.png"
-dest_files=[ "res://.import/ui_woodpile3.png-4b655583189eac19885ac33c2f62a26d.stex" ]
+source_file="res://Game Assets/Culinary/BG_Culinary.png"
+dest_files=[ "res://.import/BG_Culinary.png-5e837cc13c61b5f3a555bbc9cdb9ec48.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/ui_woodpile3.png-4b655583189eac19885ac33c2f62a26d.stex"
+path="res://.import/Nursing:medical_assisting_Blood_pressure_animation_assets.png-653e550b948341db3b1dd458294c6917.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Game Assets/fire_science/fire_science/ui_woodpile3.png"
-dest_files=[ "res://.import/ui_woodpile3.png-4b655583189eac19885ac33c2f62a26d.stex" ]
+source_file="res://Game Assets/Nursing:Medical_Assisting/Nursing:medical_assisting_Blood_pressure_animation_assets.png"
+dest_files=[ "res://.import/Nursing:medical_assisting_Blood_pressure_animation_assets.png-653e550b948341db3b1dd458294c6917.stex" ]
 
 [params]
 

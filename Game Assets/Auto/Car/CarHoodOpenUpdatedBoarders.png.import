@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/ui_woodpile3.png-4b655583189eac19885ac33c2f62a26d.stex"
+path="res://.import/CarHoodOpenUpdatedBoarders.png-85fd29661f07e36f0d4e7b740c8b615e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Game Assets/fire_science/fire_science/ui_woodpile3.png"
-dest_files=[ "res://.import/ui_woodpile3.png-4b655583189eac19885ac33c2f62a26d.stex" ]
+source_file="res://Game Assets/Auto/Car/CarHoodOpenUpdatedBoarders.png"
+dest_files=[ "res://.import/CarHoodOpenUpdatedBoarders.png-85fd29661f07e36f0d4e7b740c8b615e.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/ui_woodpile3.png-4b655583189eac19885ac33c2f62a26d.stex"
+path="res://.import/Audio_Production_Character_body_main.png-0ce53c6709cf9d02501ee387232e33a0.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Game Assets/fire_science/fire_science/ui_woodpile3.png"
-dest_files=[ "res://.import/ui_woodpile3.png-4b655583189eac19885ac33c2f62a26d.stex" ]
+source_file="res://Game Assets/Audio/Audio_Production_Character_body_main.png"
+dest_files=[ "res://.import/Audio_Production_Character_body_main.png-0ce53c6709cf9d02501ee387232e33a0.stex" ]
 
 [params]
 

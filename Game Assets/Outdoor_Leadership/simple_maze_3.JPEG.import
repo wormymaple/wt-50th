@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/ui_woodpile3.png-4b655583189eac19885ac33c2f62a26d.stex"
+path="res://.import/simple_maze_3.JPEG-9d865dc4dea74fba6896963767f8618a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Game Assets/fire_science/fire_science/ui_woodpile3.png"
-dest_files=[ "res://.import/ui_woodpile3.png-4b655583189eac19885ac33c2f62a26d.stex" ]
+source_file="res://Game Assets/Outdoor_Leadership/simple_maze_3.JPEG"
+dest_files=[ "res://.import/simple_maze_3.JPEG-9d865dc4dea74fba6896963767f8618a.stex" ]
 
 [params]
 

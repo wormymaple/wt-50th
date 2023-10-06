@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/ui_woodpile3.png-4b655583189eac19885ac33c2f62a26d.stex"
+path="res://.import/ui_brushpink.png-976a8cbea297623c71373f86128eedb9.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Game Assets/fire_science/fire_science/ui_woodpile3.png"
-dest_files=[ "res://.import/ui_woodpile3.png-4b655583189eac19885ac33c2f62a26d.stex" ]
+source_file="res://Game Assets/NailTechnology/ui_brushpink.png"
+dest_files=[ "res://.import/ui_brushpink.png-976a8cbea297623c71373f86128eedb9.stex" ]
 
 [params]
 

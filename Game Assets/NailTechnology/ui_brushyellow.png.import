@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/ui_woodpile3.png-4b655583189eac19885ac33c2f62a26d.stex"
+path="res://.import/ui_brushyellow.png-fd83ccb7d735f37d8dec7599788291da.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Game Assets/fire_science/fire_science/ui_woodpile3.png"
-dest_files=[ "res://.import/ui_woodpile3.png-4b655583189eac19885ac33c2f62a26d.stex" ]
+source_file="res://Game Assets/NailTechnology/ui_brushyellow.png"
+dest_files=[ "res://.import/ui_brushyellow.png-fd83ccb7d735f37d8dec7599788291da.stex" ]
 
 [params]
 

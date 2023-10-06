@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/ui_woodpile3.png-4b655583189eac19885ac33c2f62a26d.stex"
+path="res://.import/UI_Timer_9.png-453dfab4640564237169f5371f7240bd.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Game Assets/fire_science/fire_science/ui_woodpile3.png"
-dest_files=[ "res://.import/ui_woodpile3.png-4b655583189eac19885ac33c2f62a26d.stex" ]
+source_file="res://Game Assets/Timer_and_Countdown/UI_Timer_9.png"
+dest_files=[ "res://.import/UI_Timer_9.png-453dfab4640564237169f5371f7240bd.stex" ]
 
 [params]
 

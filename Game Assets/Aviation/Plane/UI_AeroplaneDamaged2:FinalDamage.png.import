@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/ui_woodpile3.png-4b655583189eac19885ac33c2f62a26d.stex"
+path="res://.import/UI_AeroplaneDamaged2:FinalDamage.png-3b2403ee998d87f31fa00f01c39d4f19.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Game Assets/fire_science/fire_science/ui_woodpile3.png"
-dest_files=[ "res://.import/ui_woodpile3.png-4b655583189eac19885ac33c2f62a26d.stex" ]
+source_file="res://Game Assets/Aviation/Plane/UI_AeroplaneDamaged2:FinalDamage.png"
+dest_files=[ "res://.import/UI_AeroplaneDamaged2:FinalDamage.png-3b2403ee998d87f31fa00f01c39d4f19.stex" ]
 
 [params]
 

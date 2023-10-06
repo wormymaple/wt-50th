@@ -121,6 +121,7 @@ offset = Vector2( -54, 0 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
+zoom = Vector2( 1.5, 1.5 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
