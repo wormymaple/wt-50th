@@ -154,3 +154,4 @@ text = "Settings"
 [connection signal="pressed" from="MarginContainer4/Quit" to="." method="_on_Quit_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/VBoxContainer/MarginContainer2/Play" to="." method="_on_Play_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/VBoxContainer/MarginContainer3/Credits" to="." method="_on_Credits_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/VBoxContainer/MarginContainer/Settings" to="." method="_on_Settings_pressed"]
