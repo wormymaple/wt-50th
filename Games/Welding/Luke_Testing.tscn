@@ -36,12 +36,14 @@ position = Vector2( 24, -68 )
 position = Vector2( -286, 380 )
 rotation = 3.14112
 scale = Vector2( 0.616144, 0.267083 )
+z_index = 1
 texture = ExtResource( 7 )
 
 [node name="Weld gun" type="Sprite" parent="." index="1"]
 position = Vector2( 87, 616 )
 rotation = -0.785398
 scale = Vector2( 0.140341, 0.126843 )
+z_index = 2
 texture = SubResource( 2 )
 script = ExtResource( 5 )
 move_curve = SubResource( 1 )
@@ -78,6 +80,10 @@ percent_visible = false
 position = Vector2( 121, 157 )
 scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 3 )
+
+[node name="Background" type="Sprite" parent="." index="3"]
+position = Vector2( 857, 561 )
+scale = Vector2( 0.3, 0.3 )
 
 [connection signal="button_down" from="CanvasLayer/Button" to="CanvasLayer/Button" method="_on_Button_button_down"]
 [connection signal="button_up" from="CanvasLayer/Button" to="CanvasLayer/Button" method="_on_Button_button_up"]
