@@ -7,6 +7,12 @@ var beginPlaySet = false
 var spawnActorSet = false
 var setRunSet = false
 
+var compile_tex1 = preload("res://Game Assets/Game_Dev/ui_button(question mark).png")
+var compile_tex2 = preload("res://Game Assets/Game_Dev/ui_button(x).png")
+var compile_tex3 = preload("res://Game Assets/Game_Dev/ui_button(check).png")
+
+onready var compile_tex = get_tree().get_root().get_node("GameDevGame/Button/Compile")
+
 var rng
 
 
@@ -76,6 +82,6 @@ func _on_EndSetRun_input_event(viewport, event, shape_idx):
 
 func _on_Button_pressed():
 	if beginPlaySet and spawnActorSet:
-		print("YIPPEE")
+		compile_tex.set_texture(compile_tex3)
 	else:
-		print("YOU SUCK")
+		compile_tex.set_texture(compile_tex2)
