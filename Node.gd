@@ -7,6 +7,12 @@ var beginPlaySet = false
 var spawnActorSet = false
 var setRunSet = false
 
+var compile_tex1 = preload("res://Game Assets/Game_Dev/ui_button(question mark).png")
+var compile_tex2 = preload("res://Game Assets/Game_Dev/ui_button(x).png")
+var compile_tex3 = preload("res://Game Assets/Game_Dev/ui_button(check).png")
+
+onready var compile_tex = get_tree().get_root().get_node("GameDevGame/Button/Compile")
+
 var rng
 
 
@@ -31,7 +37,7 @@ func _process(delta):
 	if setRunLineMade:
 		$SetRun/StartSetRun/LineSetRun.set_point_position(1,get_global_mouse_position() - $SetRun/StartSetRun/LineSetRun.global_position)
 		
-	if Input.is_action_just_released("LMC"):
+	if not InputEventScreenTouch:
 		beginPlayLineMade = false
 		spawnActorLineMade = false
 		setRunLineMade = false
@@ -45,37 +51,37 @@ func _process(delta):
 
 # Begin Play
 func _on_StartBeginPlay_input_event(viewport, event, shape_idx):
-	if Input.is_action_just_pressed("LMC"):
+	if InputEventScreenTouch:
 		beginPlayLineMade = true
 		beginPlaySet = false
 
 # Spawn Actor
 func _on_StartSpawnActor_input_event(viewport, event, shape_idx):
-	if Input.is_action_just_pressed("LMC"):
+	if InputEventScreenTouch:
 		spawnActorLineMade = true
 		spawnActorSet = false
 
 # Set Run
 func _on_StartSetRun_input_event(viewport, event, shape_idx):
-	if Input.is_action_just_pressed("LMC"):
+	if InputEventScreenTouch:
 		setRunLineMade = true
 		setRunSet = false
 
 # Spawn Actor
 func _on_EndSpawnActor_input_event(viewport, event, shape_idx):
 	if beginPlayLineMade:
-		if Input.is_action_just_released("LMC"):
+		if not InputEventScreenTouch:
 			beginPlaySet = true
 
 # Set Run
 func _on_EndSetRun_input_event(viewport, event, shape_idx):
 	if spawnActorLineMade:
-		if Input.is_action_just_released("LMC"):
+		if not InputEventScreenTouch:
 			spawnActorSet = true
 
 
 func _on_Button_pressed():
 	if beginPlaySet and spawnActorSet:
-		print("YIPPEE")
+		compile_tex.set_texture(compile_tex3)
 	else:
-		print("YOU SUCK")
+		compile_tex.set_texture(compile_tex2)
