@@ -11,7 +11,7 @@
 [ext_resource path="res://Game Assets/Welding/WeldingGunWithSparks04.png" type="Texture" id=9]
 [ext_resource path="res://Game Assets/Backgrounds/BG_Background_Garage.jpg" type="Texture" id=10]
 [ext_resource path="res://Game Assets/pixil-frame-0-6.png" type="Texture" id=11]
-[ext_resource path="res://Games/Welding/Comic Sans MS.ttf" type="DynamicFontData" id=12]
+[ext_resource path="res://Fonts/Corben-Regular.ttf" type="DynamicFontData" id=12]
 
 [sub_resource type="AnimatedTexture" id=2]
 flags = 4
