@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Scenes/SpriteRotate.gd" type="Script" id=1]
 [ext_resource path="res://Game Assets/BuildingTrades/Plywood.png" type="Texture" id=2]
@@ -11,9 +11,13 @@
 [ext_resource path="res://Scenes/NailHit.gd" type="Script" id=9]
 [ext_resource path="res://Game Assets/BuildingTrades/HammerUp.png" type="Texture" id=10]
 [ext_resource path="res://Scenes/ButtonText.gd" type="Script" id=11]
+[ext_resource path="res://Game Assets/Fonts/ComicNeue-Regular.ttf" type="DynamicFontData" id=12]
 
 [sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 241.936, 143.911 )
+
+[sub_resource type="DynamicFont" id=4]
+font_data = ExtResource( 12 )
 
 [sub_resource type="CircleShape2D" id=2]
 radius = 29.9999
@@ -59,8 +63,10 @@ margin_left = -74.0
 margin_top = -43.0
 margin_right = 15.0
 margin_bottom = -30.0
+custom_colors/default_color = Color( 0.890196, 0.156863, 0.156863, 1 )
+custom_fonts/normal_font = SubResource( 4 )
+bbcode_enabled = true
 tab_size = 1
-text = "Stop the Dot!"
 
 [node name="Dot" type="KinematicBody2D" parent="."]
 position = Vector2( 91, 62 )
