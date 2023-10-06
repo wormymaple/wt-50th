@@ -59,7 +59,7 @@ margin_right = 825.0
 margin_bottom = 108.0
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_fonts/font = SubResource( 1 )
-text = "This is the game"
+text = "Stopwatch Example"
 align = 1
 
 [node name="Stopwatch" type="Label" parent="MarginContainer/VBoxContainer"]
@@ -76,16 +76,22 @@ wait_time = 9999.0
 autostart = true
 
 [node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer"]
-margin_left = 301.0
-margin_top = 296.0
-margin_right = 524.0
-margin_bottom = 332.0
-size_flags_horizontal = 4
-size_flags_vertical = 6
+margin_top = 228.0
+margin_right = 825.0
+margin_bottom = 400.0
+size_flags_horizontal = 5
+size_flags_vertical = 7
+custom_constants/margin_right = 250
+custom_constants/margin_top = 50
+custom_constants/margin_left = 250
+custom_constants/margin_bottom = 50
 
 [node name="Button" type="Button" parent="MarginContainer/VBoxContainer/MarginContainer"]
-margin_right = 223.0
-margin_bottom = 36.0
+margin_left = 250.0
+margin_top = 50.0
+margin_right = 575.0
+margin_bottom = 122.0
+size_flags_vertical = 5
 custom_fonts/font = SubResource( 3 )
 text = "Click to Return"
 
