@@ -37,7 +37,7 @@ func _process(delta):
 	if setRunLineMade:
 		$SetRun/StartSetRun/LineSetRun.set_point_position(1,get_global_mouse_position() - $SetRun/StartSetRun/LineSetRun.global_position)
 		
-	if not InputEventScreenTouch:
+	if Input.is_action_just_released("LMC"):
 		beginPlayLineMade = false
 		spawnActorLineMade = false
 		setRunLineMade = false
@@ -51,32 +51,32 @@ func _process(delta):
 
 # Begin Play
 func _on_StartBeginPlay_input_event(viewport, event, shape_idx):
-	if InputEventScreenTouch:
+	if Input.is_action_just_pressed("LMC"):
 		beginPlayLineMade = true
 		beginPlaySet = false
 
 # Spawn Actor
 func _on_StartSpawnActor_input_event(viewport, event, shape_idx):
-	if InputEventScreenTouch:
+	if Input.is_action_just_pressed("LMC"):
 		spawnActorLineMade = true
 		spawnActorSet = false
 
 # Set Run
 func _on_StartSetRun_input_event(viewport, event, shape_idx):
-	if InputEventScreenTouch:
+	if Input.is_action_just_pressed("LMC"):
 		setRunLineMade = true
 		setRunSet = false
 
 # Spawn Actor
 func _on_EndSpawnActor_input_event(viewport, event, shape_idx):
 	if beginPlayLineMade:
-		if not InputEventScreenTouch:
+		if Input.is_action_just_released("LMC"):
 			beginPlaySet = true
 
 # Set Run
 func _on_EndSetRun_input_event(viewport, event, shape_idx):
 	if spawnActorLineMade:
-		if not InputEventScreenTouch:
+		if Input.is_action_just_released("LMC"):
 			spawnActorSet = true
 
 

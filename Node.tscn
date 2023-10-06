@@ -1,9 +1,10 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Fonts/Roboto-Regular.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Node.gd" type="Script" id=2]
 [ext_resource path="res://Game Assets/ui_node.png" type="Texture" id=3]
 [ext_resource path="res://Game Assets/ui_node2.png" type="Texture" id=4]
+[ext_resource path="res://Game Assets/Game_Dev/NodeLinkAnchor.png" type="Texture" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 17, 11.5 )
@@ -75,6 +76,10 @@ points = PoolVector2Array( 0, 0, 0, 0 )
 width = 1.0
 default_color = Color( 1, 1, 1, 1 )
 
+[node name="SprNodeStartBeginPlay" type="Sprite" parent="BeginPlay/StartBeginPlay"]
+scale = Vector2( 0.01, 0.01 )
+texture = ExtResource( 5 )
+
 [node name="SpawnActor" type="Area2D" parent="."]
 position = Vector2( 18, -15 )
 
@@ -113,6 +118,10 @@ points = PoolVector2Array( 0, 0, 0, 0 )
 width = 1.0
 default_color = Color( 1, 1, 1, 1 )
 
+[node name="SprNodeStartSpawnActor" type="Sprite" parent="SpawnActor/StartSpawnActor"]
+scale = Vector2( 0.01, 0.01 )
+texture = ExtResource( 5 )
+
 [node name="EndSpawnActor" type="Area2D" parent="SpawnActor"]
 position = Vector2( -18, -5 )
 __meta__ = {
@@ -121,6 +130,10 @@ __meta__ = {
 
 [node name="ColEndSpawnActor" type="CollisionShape2D" parent="SpawnActor/EndSpawnActor"]
 shape = SubResource( 7 )
+
+[node name="SprNodeEndSpawnActor" type="Sprite" parent="SpawnActor/EndSpawnActor"]
+scale = Vector2( 0.01, 0.01 )
+texture = ExtResource( 5 )
 
 [node name="SetRun" type="Area2D" parent="."]
 position = Vector2( 0, 18 )
@@ -160,6 +173,10 @@ points = PoolVector2Array( 0, 0, 0, 0 )
 width = 1.0
 default_color = Color( 1, 1, 1, 1 )
 
+[node name="SprNodeStartSetRun" type="Sprite" parent="SetRun/StartSetRun"]
+scale = Vector2( 0.01, 0.01 )
+texture = ExtResource( 5 )
+
 [node name="EndSetRun" type="Area2D" parent="SetRun"]
 position = Vector2( -17, -3 )
 __meta__ = {
@@ -168,6 +185,10 @@ __meta__ = {
 
 [node name="ColEndSetRun" type="CollisionShape2D" parent="SetRun/EndSetRun"]
 shape = SubResource( 9 )
+
+[node name="SprNodeEndSetRun" type="Sprite" parent="SetRun/EndSetRun"]
+scale = Vector2( 0.01, 0.01 )
+texture = ExtResource( 5 )
 
 [connection signal="input_event" from="BeginPlay/StartBeginPlay" to="." method="_on_StartBeginPlay_input_event"]
 [connection signal="input_event" from="SpawnActor/StartSpawnActor" to="." method="_on_StartSpawnActor_input_event"]
