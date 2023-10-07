@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/MetalSheetUncut.png-9fae9d7babc529f92de26b2c16dbc591.stex"
+path="res://.import/MetalSheetUncut.png-bcde97ddcb4f6a442453a47315c8ddc9.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Game Assets/Precision_Macining /MetalSheetUncut.png"
-dest_files=[ "res://.import/MetalSheetUncut.png-9fae9d7babc529f92de26b2c16dbc591.stex" ]
+source_file="res://Game Assets/Precision_Macining/MetalSheetUncut.png"
+dest_files=[ "res://.import/MetalSheetUncut.png-bcde97ddcb4f6a442453a47315c8ddc9.stex" ]
 
 [params]
 

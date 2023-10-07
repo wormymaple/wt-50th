@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/MetalSheetWithGuidlines1.png-299d6cce71e144686836e691c3d239d8.stex"
+path="res://.import/MetalSheetWithGuidlines1.png-f1828f4e2ab2b1b08c68c740bf302c47.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Game Assets/Precision_Macining /MetalSheetWithGuidlines1.png"
-dest_files=[ "res://.import/MetalSheetWithGuidlines1.png-299d6cce71e144686836e691c3d239d8.stex" ]
+source_file="res://Game Assets/Precision_Macining/MetalSheetWithGuidlines1.png"
+dest_files=[ "res://.import/MetalSheetWithGuidlines1.png-f1828f4e2ab2b1b08c68c740bf302c47.stex" ]
 
 [params]
 

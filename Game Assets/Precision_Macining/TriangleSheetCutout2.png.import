@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/TriangleSheetCutout2.png-cb7c65a23c0e818f9f1f9dad1c709c6a.stex"
+path="res://.import/TriangleSheetCutout2.png-8e1c992e73c4a59e077ff00018f7ef59.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Game Assets/Precision_Macining /TriangleSheetCutout2.png"
-dest_files=[ "res://.import/TriangleSheetCutout2.png-cb7c65a23c0e818f9f1f9dad1c709c6a.stex" ]
+source_file="res://Game Assets/Precision_Macining/TriangleSheetCutout2.png"
+dest_files=[ "res://.import/TriangleSheetCutout2.png-8e1c992e73c4a59e077ff00018f7ef59.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/WaterNosselWaterEffects1.png-fc1ee7614442605b82de3a95a19080df.stex"
+path="res://.import/WaterNosselWaterEffects1.png-a4bb5d6d6d3db19cee7ef6ca86b46271.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Game Assets/Precision_Macining /WaterNosselWaterEffects1.png"
-dest_files=[ "res://.import/WaterNosselWaterEffects1.png-fc1ee7614442605b82de3a95a19080df.stex" ]
+source_file="res://Game Assets/Precision_Macining/WaterNosselWaterEffects1.png"
+dest_files=[ "res://.import/WaterNosselWaterEffects1.png-a4bb5d6d6d3db19cee7ef6ca86b46271.stex" ]
 
 [params]
 
