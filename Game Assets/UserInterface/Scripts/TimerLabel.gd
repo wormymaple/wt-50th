@@ -3,7 +3,6 @@ extends Label
 var use_milliseconds = true
 #onready var countdown := $Timer
 var ElapsedTime: float = 0.0
-#var FormatString = ".f"
 var ElapsedDelta = 0
 var CurrentSecondThreshold = 0.1
 	#I need to make the time increase consistently. Delta is the time elapsed between frames.

@@ -2,8 +2,9 @@ extends Control
 
 onready var GameTimer = $Timer
 onready var TimeLabel = $SidePanel/MarginContainer/TimeLeft
-onready var TimeBar = $SidePanel/TextureProgress#$SidePanel/MarginContainer4/TextureProgress #$SidePanel/MarginContainer2/TimeBar
+onready var TimeBar = $SidePanel/TextureProgress
 var NewTimerMax = 10
+var game = null
 
 #You do not have to make variables for colors but I am because I like to grab colors from the docs
 var yellow = Color( 1, 1, 0, 1 )
@@ -11,19 +12,27 @@ var red = Color(1,0,0)
 var orange = Color(1,.5,0)
 
 
-func _ready(): #This is the start of the game
-	_new_scene()
+func _ready(): #This is when this scene is first loaded.
+	new_scene()
 	TimeBar.set_max(NewTimerMax)
 	
-func _new_scene(): #This should be called every time that a new game is going to be loaded
-	TimeBar.set_value(5)#GameTimer.wait_time)
-	TimeBar.set_max(NewTimerMax)
-	#load("res://Game Assets/UserInterface/Scenes/Stopwatch.tscn")
-	
+func new_scene(): #This should be called every time that a new game is going to be loaded
+	TimeBar.set_value(NewTimerMax) #Resets value for each new minigame
+	TimeBar.set_max(NewTimerMax) #This updates the max value of the time bar
+	var scene = load("res://Game Assets/UserInterface/Scenes/Stopwatch.tscn") #Creates a new scene
+	game = scene.instance() #
+	$GameHolder.add_child(game)
+	#print("Scene loaded!")
+
+func _fail():
+	print("Game Over")
+	game.queue_free() #Game knows what scene game is
 
 func game_cleared():
 	print("You cleared a game")
+	#$GameHolder.get_child.queue_free()
 	NewTimerMax -= 1
+	new_scene()
 
 
 func _process(_delta):
@@ -57,8 +66,7 @@ func _process(_delta):
 		#TimeBar.tint_under = Color( 1, 0, 0)
 		
 
-func _fail():
-	print("Game Over")
+
 
 
 func _on_Timer_timeout():
@@ -67,3 +75,7 @@ func _on_Timer_timeout():
 
 func _on_QuitButton_pressed():
 	get_tree().change_scene("res://Game Assets/UserInterface/Scenes/Title screen.tscn")
+
+
+func _on_GameHolder_child_entered_tree(node):
+	print("Gameholder loaded scene")
