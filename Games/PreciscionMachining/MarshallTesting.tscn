@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Games/PreciscionMachining/DrawingHandler.gd" type="Script" id=1]
 [ext_resource path="res://Games/PreciscionMachining/ReferenceObject.gd" type="Script" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://Game Assets/Precision_Machining/UI_MetalSheetWithGuidlines1.png" type="Texture" id=5]
 [ext_resource path="res://Game Assets/Precision_Machining/Ui_waternozzle.png" type="Texture" id=6]
 [ext_resource path="res://Games/PreciscionMachining/ComicNeue-Regular.ttf" type="DynamicFontData" id=7]
+[ext_resource path="res://Games/PreciscionMachining/RootNodeMarshallTesting.gd" type="Script" id=8]
 
 [sub_resource type="Gradient" id=3]
 colors = PoolColorArray( 0, 0.460938, 1, 1, 0.435518, 0.788319, 1, 1 )
@@ -26,6 +27,8 @@ font_data = ExtResource( 7 )
 _data = [ Vector2( 0, 0 ), 0.0, 0.0, 0, 0, Vector2( 1, 1 ), 0.0, 0.0, 0, 0 ]
 
 [node name="RootNode" type="Node2D"]
+position = Vector2( 880, 288 )
+script = ExtResource( 8 )
 
 [node name="MetalSheet" type="Polygon2D" parent="."]
 z_index = -10
@@ -58,7 +61,7 @@ min_finish_dist = 100
 simp_threshold = 0.95
 min_draw_dist = 15
 max_score = 20
-start_pos = Vector2( -196, -113 )
+start_pos = Vector2( 684, 176 )
 start_dist = 20.0
 ref_object = NodePath("../ReferenceObject")
 score_indicator = NodePath("../CanvasLayer/Control/Score")
@@ -119,10 +122,6 @@ z_index = 4
 texture = ExtResource( 6 )
 offset = Vector2( -54, 0 )
 
-[node name="Camera2D" type="Camera2D" parent="."]
-current = true
-zoom = Vector2( 1.5, 1.5 )
-
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Control" type="Control" parent="CanvasLayer"]
@@ -152,3 +151,6 @@ shift_pos = 20
 show_curve = SubResource( 1 )
 sheet = NodePath("../../../DrawingLine/Fill")
 score_cuttoff = 10
+
+[connection signal="failed" from="CanvasLayer/Control/Score" to="." method="_on_Score_failed"]
+[connection signal="passed" from="CanvasLayer/Control/Score" to="." method="_on_Score_passed"]

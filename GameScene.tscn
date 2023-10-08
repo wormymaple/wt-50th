@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://GameScene.gd" type="Script" id=1]
 [ext_resource path="res://Game Assets/UserInterface/Fonts/JerseyM54-aLX9.ttf" type="DynamicFontData" id=2]
@@ -20,6 +20,9 @@ font_data = ExtResource( 2 )
 
 [sub_resource type="DynamicFont" id=3]
 size = 32
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0, 0, 0, 1 )
 
 [node name="Game" type="Control"]
 anchor_right = 1.0
@@ -105,6 +108,13 @@ custom_fonts/font = SubResource( 3 )
 text = "House"
 icon = ExtResource( 3 )
 icon_align = 1
+
+[node name="GameOverlay" type="Panel" parent="."]
+visible = false
+margin_left = 200.0
+margin_right = 1500.0
+margin_bottom = 675.0
+custom_styles/panel = SubResource( 5 )
 
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
 [connection signal="child_entered_tree" from="GameHolder" to="." method="_on_GameHolder_child_entered_tree"]

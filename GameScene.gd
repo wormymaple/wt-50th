@@ -20,13 +20,15 @@ func _ready(): #This is when this scene is first loaded.
 func new_scene(): #This should be called every time that a new game is going to be loaded
 	TimeBar.set_value(NewTimerMax) #Resets value for each new minigame
 	TimeBar.set_max(NewTimerMax) #This updates the max value of the time bar
-	var scene = load("res://Game Assets/UserInterface/Scenes/Stopwatch.tscn") #Creates a new scene
+	#var scene = load("res://Game Assets/UserInterface/Scenes/Stopwatch.tscn") #Creates a new scene
+	var scene = load("res://Games/PreciscionMachining/MarshallTesting.tscn")
 	game = scene.instance() #
 	$GameHolder.add_child(game)
 	#print("Scene loaded!")
 
 func _fail():
 	print("Game Over")
+	$GameOverlay.visible = true
 	game.queue_free() #Game knows what scene game is
 
 func game_cleared():
@@ -37,6 +39,16 @@ func game_cleared():
 
 
 func _process(_delta):
+	#check if the player has failed or passed a scene yet
+	if game.passed:
+		print("You suceeded!")
+		$GameOverlay.visible = true
+	if game.failed:
+		_fail()
+		
+	
+	
+	
 	#Timer stuff
 	TimeLabel.set_text(str(round(GameTimer.time_left)))
 	TimeBar.set_value(GameTimer.time_left)
