@@ -18,6 +18,7 @@ export var water_particles: NodePath
 export var fill: NodePath
 export var start: NodePath
 export var water_nozzle: NodePath
+export var start_object: NodePath
 
 var prev_point := Vector2.INF
 
@@ -31,7 +32,8 @@ func _process(delta):
 		return
 	
 	if drawing:
-		var mouse_pos = get_global_mouse_position()
+		var mouse_pos = get_local_mouse_position()
+		print(mouse_pos)
 		var dist = mouse_pos.distance_to(prev_point)
 		if (dist > min_draw_dist):
 			add_point(mouse_pos)
@@ -74,7 +76,7 @@ func _input(event):
 	if event is InputEventMouseButton:
 		if event.button_index == BUTTON_LEFT:
 			if event.pressed:
-				var dist = get_global_mouse_position().distance_to(start_pos)
+				var dist = get_global_mouse_position().distance_to(get_node(start_object).global_position)
 				if (dist < start_dist):
 					drawing = true
 					get_node(water_particles).emitting = true

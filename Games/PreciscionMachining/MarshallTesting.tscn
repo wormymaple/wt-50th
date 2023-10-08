@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Games/PreciscionMachining/DrawingHandler.gd" type="Script" id=1]
 [ext_resource path="res://Games/PreciscionMachining/ReferenceObject.gd" type="Script" id=2]
@@ -6,8 +6,8 @@
 [ext_resource path="res://Games/PreciscionMachining/Start.gd" type="Script" id=4]
 [ext_resource path="res://Game Assets/Precision_Machining/UI_MetalSheetWithGuidlines1.png" type="Texture" id=5]
 [ext_resource path="res://Game Assets/Precision_Machining/Ui_waternozzle.png" type="Texture" id=6]
-[ext_resource path="res://Games/PreciscionMachining/ComicNeue-Regular.ttf" type="DynamicFontData" id=7]
 [ext_resource path="res://Games/PreciscionMachining/RootNodeMarshallTesting.gd" type="Script" id=8]
+[ext_resource path="res://Fonts/Corben-Regular.ttf" type="DynamicFontData" id=9]
 
 [sub_resource type="Gradient" id=3]
 colors = PoolColorArray( 0, 0.460938, 1, 1, 0.435518, 0.788319, 1, 1 )
@@ -19,15 +19,19 @@ colors = PoolColorArray( 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1
 [sub_resource type="Curve" id=4]
 _data = [ Vector2( 0, 0 ), 0.0, 0.0, 0, 0, Vector2( 1, 1 ), 0.0, 0.0, 0, 0 ]
 
+[sub_resource type="DynamicFont" id=6]
+size = 15
+font_data = ExtResource( 9 )
+
 [sub_resource type="DynamicFont" id=5]
 size = 100
-font_data = ExtResource( 7 )
+font_data = ExtResource( 9 )
 
 [sub_resource type="Curve" id=1]
 _data = [ Vector2( 0, 0 ), 0.0, 0.0, 0, 0, Vector2( 1, 1 ), 0.0, 0.0, 0, 0 ]
 
 [node name="RootNode" type="Node2D"]
-position = Vector2( 880, 288 )
+position = Vector2( 750, 300 )
 script = ExtResource( 8 )
 
 [node name="MetalSheet" type="Polygon2D" parent="."]
@@ -69,6 +73,7 @@ water_particles = NodePath("WaterParticles")
 fill = NodePath("Fill")
 start = NodePath("Start")
 water_nozzle = NodePath("../UiWaternozzle")
+start_object = NodePath("Start")
 
 [node name="Fill" type="Polygon2D" parent="DrawingLine"]
 modulate = Color( 1, 1, 1, 0 )
@@ -109,8 +114,10 @@ disappear_curve = SubResource( 4 )
 
 [node name="RichTextLabel" type="RichTextLabel" parent="DrawingLine/Start"]
 margin_left = -200.0
-margin_top = -40.0
+margin_top = -50.0
 margin_right = 200.0
+margin_bottom = -10.0
+custom_fonts/normal_font = SubResource( 6 )
 bbcode_enabled = true
 bbcode_text = "[center] Start Here! - Waterjet the Shape"
 text = " Start Here! - Waterjet the Shape"
