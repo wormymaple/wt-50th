@@ -32,7 +32,7 @@ margin_top = 331.0
 margin_right = 1086.0
 margin_bottom = 362.0
 custom_fonts/font = SubResource( 4 )
-text = "If you are reading this that means that there is currently no scene herew"
+text = "If you are reading this that means that there is currently no scene here uwu"
 
 [node name="Panel" type="Panel" parent="."]
 visible = false

@@ -7,6 +7,7 @@ var NewTimerMax = 10
 var game = null
 
 #You do not have to make variables for colors but I am because I like to grab colors from the docs
+#These are not currently being used
 var yellow = Color( 1, 1, 0, 1 )
 var red = Color(1,0,0)
 var orange = Color(1,.5,0)
