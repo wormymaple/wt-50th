@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/BG_EMS.png-b9c1b6d525d290dfffed19cde963f059.stex"
+path="res://.import/WaterNosselNoWaterEffects.png-5596101171448f62c3e4c3946e2aefe0.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Game_Assets/BG_EMS.png"
-dest_files=[ "res://.import/BG_EMS.png-b9c1b6d525d290dfffed19cde963f059.stex" ]
+source_file="res://Game Assets/Precision_Macining/WaterNosselNoWaterEffects.png"
+dest_files=[ "res://.import/WaterNosselNoWaterEffects.png-5596101171448f62c3e4c3946e2aefe0.stex" ]
 
 [params]
 
