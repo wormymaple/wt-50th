@@ -33,7 +33,7 @@ func _process(delta):
 	
 	if drawing:
 		var mouse_pos = get_local_mouse_position()
-		print(mouse_pos)
+		
 		var dist = mouse_pos.distance_to(prev_point)
 		if (dist > min_draw_dist):
 			add_point(mouse_pos)
@@ -65,7 +65,7 @@ func _process(delta):
 			get_node(score_indicator).set_score(score)
 			get_node(ref_object).modulate = Color(1, 1, 1, 0.2)
 		else:
-			get_node(score_indicator).set_score(0)
+			get_node(score_indicator).set_score(1000000)
 		
 		finished_drawing = true
 
