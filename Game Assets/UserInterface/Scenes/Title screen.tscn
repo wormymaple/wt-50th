@@ -27,6 +27,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 rect_scale = Vector2( 0.176145, 0.176145 )
 script = ExtResource( 1 )
+total_fade = NodePath("TotalFade")
 
 [node name="Panel" type="Panel" parent="."]
 margin_right = 1500.0
@@ -148,6 +149,13 @@ margin_right = 1300.0
 margin_bottom = 140.0
 custom_fonts/font = SubResource( 5 )
 text = "Settings"
+
+[node name="TotalFade" type="Polygon2D" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 270, 0 )
+scale = Vector2( 10, 10 )
+color = Color( 0, 0, 0, 1 )
+polygon = PoolVector2Array( 0, 3000, 3000, -500, -3000, -500 )
 
 [connection signal="pressed" from="MarginContainer4/Quit" to="." method="_on_Quit_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/VBoxContainer/MarginContainer2/Play" to="." method="_on_Play_pressed"]

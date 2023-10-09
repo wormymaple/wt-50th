@@ -4,6 +4,7 @@ export var root: NodePath
 
 export var curve: Curve
 export var max_time: float
+export var load_time: float
 var time: float
 
 export var start_y: float
@@ -11,6 +12,7 @@ export var shift_y: float
 
 var showing = false
 var called_half = false
+var passed = false
 
 export var background: NodePath
 
@@ -19,8 +21,9 @@ func _process(delta):
 		return
 	
 	time += delta
-	if time > max_time / 2 and not called_half:
-		get_node(root).new_scene()
+	if time > load_time and !called_half:
+		get_node(root).new_scene(passed)
+		called_half = true
 	elif time > max_time:
 		showing = false
 		time = max_time
@@ -31,11 +34,17 @@ func _process(delta):
 	rect_position = Vector2(rect_position.x, start_y + shift_y * interp)
 
 func show_pass():
+	passed = true
+	
+	time = 0
 	showing = true
 	called_half = false
 	bbcode_text = "[center][color=green]PASSED!"
 
 func show_fail():
+	passed = false
+	
+	time = 0
 	print("fail")
 	showing = true
 	called_half = false

@@ -15,8 +15,6 @@ var StartFadeIn = false
 #var rng = RandomNumberGenerator.new()
 
 func _ready():
-	$WinLoseLabel.hide()
-	$WinLoseOverlay.hide()
 	#This randomizes the suspect
 	randomize()
 	suspect = PossibleSuspects[randi() % PossibleSuspects.size()]
@@ -24,47 +22,34 @@ func _ready():
 	
 	#This makes the correct suspect visible
 	if suspect == "pirate":
-		$Kid.visible = false
-		$Ghost.visible = false
+		$CanvasLayer2/Kid.visible = false
+		$CanvasLayer2/Ghost.visible = false
 	if suspect == "kid":
-		$Pirate.visible = false
-		$Ghost.visible = false
+		$CanvasLayer2/Pirate.visible = false
+		$CanvasLayer2/Ghost.visible = false
 	if suspect == "ghost":
-		$Pirate.visible = false
-		$Kid.visible = false
-		$Judge.visible = false
+		$CanvasLayer2/Pirate.visible = false
+		$CanvasLayer2/Kid.visible = false
+		$CanvasLayer2/Judge.visible = false
 
 
 func player_win():
+	$CanvasLayer.visible = false
+	$CanvasLayer.layer = 0
 	#Make victory text appear and stuff
 	#Send out victory signal
 	passed = true
-	$WinLoseLabel.text = "PASSED!"
-	$WinLoseLabel.set_modulate(Color(0,1,0))
-	$WinLoseLabel.show()
-	$WinLoseOverlay.show()
 	#print("starting fade in!")	
 	StartFadeIn = true
 	
 	print("You win!")
 
-func _process(delta):
-	if StartFadeIn:
-		#$WinLoseLabel.set_modulate(Color(1,1,1,FadeInValue))
-		$WinLoseOverlay.set_modulate(Color(0.294,0.294,0.294,FadeInValue))
-		while $WinLoseLabel.rect_position.y < 296:
-			$WinLoseLabel.rect_position += 1
-		while FadeInValue < 0.5:
-			print(FadeInValue)
-			FadeInValue += .01
 
 func player_lose():
+	$CanvasLayer.visible = false
+	$CanvasLayer.layer = 0
 	print("Lose!")
-	$WinLoseLabel.text = "FAILED!"
-	$WinLoseLabel.set_modulate(Color(1,0,0))
-	$WinLoseLabel.show()
 	StartFadeIn = true
-	$WinLoseOverlay.show()
 	#$WinLoseLabel.add_color_override("font_color", Color(1,0,0))
 	failed = true
 

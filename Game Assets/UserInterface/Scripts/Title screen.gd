@@ -5,15 +5,18 @@ extends Control
 # var a = 2
 # var b = "text"
 
+export var total_fade: NodePath
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	get_node(total_fade).modulate.a = 1
 	pass # Replace with function body.
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func _process(delta):
+	if get_node(total_fade).modulate.a > 0:
+		get_node(total_fade).modulate.a -= delta
 
 
 func _on_Play_pressed():

@@ -85,7 +85,6 @@ invert_border = 10000.0
 
 [node name="WaterParticles" type="CPUParticles2D" parent="DrawingLine"]
 scale = Vector2( 5, 5 )
-z_index = -4
 emitting = false
 lifetime = 0.5
 randomness = 1.0

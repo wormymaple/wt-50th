@@ -1,12 +1,15 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://GameScene.gd" type="Script" id=1]
 [ext_resource path="res://Game Assets/UserInterface/Fonts/JerseyM54-aLX9.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://Game Assets/UserInterface/Assets/smallerhouse.png" type="Texture" id=3]
+[ext_resource path="res://Fonts/Corben-Regular.ttf" type="DynamicFontData" id=4]
 [ext_resource path="res://Game Assets/UserInterface/Assets/TimerBarResized.png" type="Texture" id=5]
 [ext_resource path="res://Game Assets/UserInterface/Assets/TImerBarProgressResized.png" type="Texture" id=6]
 [ext_resource path="res://Fonts/Corben-Bold.ttf" type="DynamicFontData" id=7]
 [ext_resource path="res://UI/PassFail.gd" type="Script" id=8]
+[ext_resource path="res://CriminalJusticeMinigame.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Games/PreciscionMachining/MarshallTesting.tscn" type="PackedScene" id=10]
 
 [sub_resource type="StyleBoxFlat" id=2]
 bg_color = Color( 0.921569, 0.901961, 0.764706, 1 )
@@ -29,16 +32,24 @@ font_data = ExtResource( 7 )
 [sub_resource type="Curve" id=7]
 _data = [ Vector2( 0, 0 ), 0.0, 0.0, 0, 0, Vector2( 0.219048, 1 ), 0.0, 0.0, 0, 0, Vector2( 0.795238, 1 ), 0.0, 0.0, 0, 0, Vector2( 1, 0 ), 0.0, 0.0, 0, 0 ]
 
+[sub_resource type="DynamicFont" id=8]
+size = 20
+font_data = ExtResource( 4 )
+
 [node name="Game" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 1 )
 pass_fail = NodePath("CanvasLayer/PassFail")
+total_games = NodePath("CanvasLayer/PassFail/TotalGames")
+possible_scenes = [ ExtResource( 9 ), ExtResource( 10 ) ]
+total_fade = NodePath("CanvasLayer/TotalFade")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
-layer = 10
+layer = 5
 
 [node name="Background" type="Polygon2D" parent="CanvasLayer"]
+process_priority = -1
 modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 270, 0 )
 color = Color( 0.0392157, 0.0392157, 0.0392157, 1 )
@@ -130,7 +141,7 @@ anchor_bottom = 0.5
 margin_left = -480.0
 margin_top = -337.5
 margin_right = 520.0
-margin_bottom = -137.5
+margin_bottom = 162.5
 custom_fonts/normal_font = SubResource( 6 )
 bbcode_enabled = true
 bbcode_text = "[center]PASSED"
@@ -139,8 +150,26 @@ script = ExtResource( 8 )
 root = NodePath("../..")
 curve = SubResource( 7 )
 max_time = 3.0
+load_time = 2.0
 shift_y = 100.0
 background = NodePath("../Background")
+
+[node name="TotalGames" type="RichTextLabel" parent="CanvasLayer/PassFail"]
+margin_left = 375.0
+margin_top = 199.365
+margin_right = 625.0
+margin_bottom = 249.365
+custom_fonts/normal_font = SubResource( 8 )
+bbcode_enabled = true
+bbcode_text = "[center]Total Games: "
+text = "Total Games: "
+
+[node name="TotalFade" type="Polygon2D" parent="CanvasLayer"]
+process_priority = -1
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 270, 0 )
+color = Color( 0, 0, 0, 1 )
+polygon = PoolVector2Array( 0, 3000, 3000, -500, -3000, -500 )
 
 [connection signal="timeout" from="CanvasLayer/Timer" to="." method="_on_Timer_timeout"]
 [connection signal="child_entered_tree" from="CanvasLayer/GameHolder" to="." method="_on_GameHolder_child_entered_tree"]

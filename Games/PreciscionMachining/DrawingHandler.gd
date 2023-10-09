@@ -65,7 +65,7 @@ func _process(delta):
 			get_node(score_indicator).set_score(score)
 			get_node(ref_object).modulate = Color(1, 1, 1, 0.2)
 		else:
-			get_node(score_indicator).set_score(1000000)
+			get_node(score_indicator).set_score(-1)
 		
 		finished_drawing = true
 
