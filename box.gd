@@ -1,23 +1,84 @@
-extends RigidBody2D
+extends Control
+
+var suspect = null
+var PossibleSuspects = ["pirate", "kid"]
+var passed = null
+var failed = null
+var FadeInValue = 0
+#Stopwatch stuff:
+#var FadeInStopwatch = null
+var StartFadeIn = false
+#var ElapsedTime: float = 0.0
+#var ElapsedDelta = 0
+#var CurrentSecondThreshold = 0.1
+
+#var rng = RandomNumberGenerator.new()
+
+func _ready():
+	$WinLoseLabel.hide()
+	$WinLoseOverlay.hide()
+	#This randomizes the suspect
+	randomize()
+	suspect = PossibleSuspects[randi() % PossibleSuspects.size()]
+	print(suspect)
+	
+	#This makes the correct suspect visible
+	if suspect == "pirate":
+		$Kid.visible = false
+	if suspect == "kid":
+		$Pirate.visible = false
 
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
+func player_win():
+	#Make victory text appear and stuff
+	#Send out victory signal
+	passed = true
+	$WinLoseLabel.text = "PASSED!"
+	$WinLoseLabel.show()
+	$WinLoseOverlay.show()
+	#print("starting fade in!")	
+	StartFadeIn = true
+	
+	print("You win!")
+
+func _process(delta):
+	if StartFadeIn:
+		$WinLoseLabel.set_modulate(Color(1,1,1,FadeInValue))
+		$WinLoseOverlay.set_modulate(Color(0.294,0.294,0.294,FadeInValue))
+		while $WinLoseLabel.rect_position.y < 296:
+			$WinLoseLabel.rect_position += 1
+		while FadeInValue < 0.5:
+			print(FadeInValue)
+			FadeInValue += .01
+
+func player_lose():
+	print("Lose!")
+	$WinLoseLabel.text = "FAILED!"
+	$WinLoseLabel.show()
+	$WinLoseOverlay.show()
+	$WinLoseLabel.add_color_override("font_color", Color(1,0,0))
+	failed = true
 
 
-# Called when the node enters the scene tree for the first time.
-#func _ready():
-	#pass # Replace with function body.
+func _on_ClothButton_pressed():
+	if suspect == "kid":
+	#if "kid" in suspect: 
+		player_win()
+	else:
+		player_lose()
 
+func _on_HookButton_pressed():
+	if suspect == "pirate":
+	#if "pirate" in suspect: 
+	#if "pirate" in suspect:
+		#if "pirate" == suspect
+		player_win()
+	else:
+		player_lose()
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
-
-func _on_box_input_event(_viewport, event, _shape_idx):
-		if event is InputEventMouseButton and event.pressed and event.button_index == BUTTON_LEFT:
-			print ('Correct')
-			hide()
+func _on_KnifeButton_pressed():
+	player_lose()
+func _on_PhototButton_pressed():
+	player_lose()
 
 
