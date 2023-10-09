@@ -1,7 +1,7 @@
 extends Control
 
 var suspect = null
-var PossibleSuspects = ["pirate", "kid"]
+var PossibleSuspects = ["pirate", "kid", "ghost"]
 var passed = null
 var failed = null
 var FadeInValue = 0
@@ -25,8 +25,14 @@ func _ready():
 	#This makes the correct suspect visible
 	if suspect == "pirate":
 		$Kid.visible = false
+		$Ghost.visible = false
 	if suspect == "kid":
 		$Pirate.visible = false
+		$Ghost.visible = false
+	if suspect == "ghost":
+		$Pirate.visible = false
+		$Kid.visible = false
+		$Judge.visible = false
 
 
 func player_win():
@@ -34,6 +40,7 @@ func player_win():
 	#Send out victory signal
 	passed = true
 	$WinLoseLabel.text = "PASSED!"
+	$WinLoseLabel.set_modulate(Color(0,1,0))
 	$WinLoseLabel.show()
 	$WinLoseOverlay.show()
 	#print("starting fade in!")	
@@ -43,7 +50,7 @@ func player_win():
 
 func _process(delta):
 	if StartFadeIn:
-		$WinLoseLabel.set_modulate(Color(1,1,1,FadeInValue))
+		#$WinLoseLabel.set_modulate(Color(1,1,1,FadeInValue))
 		$WinLoseOverlay.set_modulate(Color(0.294,0.294,0.294,FadeInValue))
 		while $WinLoseLabel.rect_position.y < 296:
 			$WinLoseLabel.rect_position += 1
@@ -54,24 +61,22 @@ func _process(delta):
 func player_lose():
 	print("Lose!")
 	$WinLoseLabel.text = "FAILED!"
+	$WinLoseLabel.set_modulate(Color(1,0,0))
 	$WinLoseLabel.show()
+	StartFadeIn = true
 	$WinLoseOverlay.show()
-	$WinLoseLabel.add_color_override("font_color", Color(1,0,0))
+	#$WinLoseLabel.add_color_override("font_color", Color(1,0,0))
 	failed = true
 
 
 func _on_ClothButton_pressed():
 	if suspect == "kid":
-	#if "kid" in suspect: 
 		player_win()
 	else:
 		player_lose()
 
 func _on_HookButton_pressed():
 	if suspect == "pirate":
-	#if "pirate" in suspect: 
-	#if "pirate" in suspect:
-		#if "pirate" == suspect
 		player_win()
 	else:
 		player_lose()
@@ -79,6 +84,9 @@ func _on_HookButton_pressed():
 func _on_KnifeButton_pressed():
 	player_lose()
 func _on_PhototButton_pressed():
-	player_lose()
+	if suspect == "ghost": 
+		player_win()
+	else:
+		player_lose()
 
 
