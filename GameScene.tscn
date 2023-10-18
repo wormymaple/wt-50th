@@ -7,9 +7,9 @@
 [ext_resource path="res://Game Assets/UserInterface/Assets/TimerBarResized.png" type="Texture" id=5]
 [ext_resource path="res://Game Assets/UserInterface/Assets/TImerBarProgressResized.png" type="Texture" id=6]
 [ext_resource path="res://Fonts/Corben-Bold.ttf" type="DynamicFontData" id=7]
-[ext_resource path="res://UI/PassFail.gd" type="Script" id=8]
-[ext_resource path="res://CriminalJusticeMinigame.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Games/PreciscionMachining/MarshallTesting.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Game Assets/UserInterface/Scripts/PassFail.gd" type="Script" id=8]
+[ext_resource path="res://Games/criminal_justice/CriminalJusticeMinigame.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Games/PreciscionMachining/HiroPrecisionMachining.tscn" type="PackedScene" id=11]
 
 [sub_resource type="StyleBoxFlat" id=2]
 bg_color = Color( 0.921569, 0.901961, 0.764706, 1 )
@@ -42,7 +42,7 @@ anchor_bottom = 1.0
 script = ExtResource( 1 )
 pass_fail = NodePath("CanvasLayer/PassFail")
 total_games = NodePath("CanvasLayer/PassFail/TotalGames")
-possible_scenes = [ ExtResource( 9 ), ExtResource( 10 ) ]
+possible_scenes = [ ExtResource( 9 ), ExtResource( 11 ) ]
 total_fade = NodePath("CanvasLayer/TotalFade")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
@@ -50,6 +50,7 @@ layer = 5
 
 [node name="Background" type="Polygon2D" parent="CanvasLayer"]
 process_priority = -1
+visible = false
 modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 270, 0 )
 color = Color( 0.0392157, 0.0392157, 0.0392157, 1 )

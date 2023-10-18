@@ -10,16 +10,19 @@ export var total_fade: NodePath
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	get_node(total_fade).modulate.a = 1
+	#$TotalFade.modulate.a = 1
+	$TotalFade.visible = true
 	pass # Replace with function body.
 
 
 func _process(delta):
-	if get_node(total_fade).modulate.a > 0:
-		get_node(total_fade).modulate.a -= delta
+	if $TotalFade.modulate.a > 0:
+		$TotalFade.modulate.a -= delta
+	else:
+		$TotalFade.visible = false
 
 
-func _on_Play_pressed():
+func _on_Play_pressed() -> void:
 	get_tree().change_scene("res://GameScene.tscn")
 
 #Mobile does not need to a quit game button
@@ -27,7 +30,7 @@ func _on_Play_pressed():
 	#get_tree().quit
 
 
-func _on_Credits_pressed():
+func _on_Credits_pressed() -> void:
 	get_tree().change_scene("res://Game Assets/UserInterface/Scenes/GodotCredits.tscn")
 
 
