@@ -10,7 +10,7 @@ var FirstPoint: Vector2
 var SimpleThreshold = .98
 var OverlayFadeVar = 0
 var StartingFade = false
-var PossibleOutlines = ["House", "Octagon", "Hammer", "Parallelogram", "Original"]
+var PossibleOutlines = ["House", "Octagon", "Hammer", "Parallelogram", "Original", "Bronto", "W", "ZigZag"]
 onready var ChosenOutline = $OriginalDesign
 var MaxScore = 5 #This is leniency. The higher, the more lenient
 
@@ -33,6 +33,14 @@ func _ready(): #Choose one outline
 		ChosenOutline = $RectangleDesign
 	if RandomOutline == "Original":
 		ChosenOutline = $"OriginalDesign"
+	if RandomOutline == "Bronto":
+		ChosenOutline = $BrontoDesign
+	if RandomOutline == "W":
+		ChosenOutline = $WDesign
+		if RandomOutline == "ZigZag":
+		ChosenOutline = $ZigZagDesign
+		
+		
 	#ChosenOutline = PossibleOutlines[randi() % PossibleOutlines.size()]
 	#print(ChosenOutline)
 	#if ChosenOutline == "Original":
