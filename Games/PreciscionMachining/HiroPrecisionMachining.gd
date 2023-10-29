@@ -11,7 +11,7 @@ var SimpleThreshold = .98
 var OverlayFadeVar = 0
 var StartingFade = false
 var PossibleOutlines = ["House", "Octagon", "Hammer", "Parallelogram", "Original"]
-onready var ChosenOutline = $OriginalDesign
+onready var ChosenOutline = $OriginalDesign #Starts it off as this, but will not be this
 var MaxScore = 5 #This is leniency. The higher, the more lenient
 
 onready var DrawLine = $DrawLine
@@ -67,7 +67,7 @@ func _process(delta):
 		$Particles.emitting = false
 		
 		for point in DrawLine.points: # Disqualifies the player if they draw out of bounds
-			print(point)
+			#print(point)
 			if point.x < 700 or point.x > 1208 or point.y < 100 or point.y > 576:
 				failed = true
 				print("You went out of bounds")

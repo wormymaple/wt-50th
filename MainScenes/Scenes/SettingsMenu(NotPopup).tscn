@@ -1,0 +1,150 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Game Assets/UserInterface/SpaceMono-Regular.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Fonts/SpaceMono-Regular.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://MainScenes/Scripts/SettingsMenu(NotPopup).gd" type="Script" id=3]
+
+
+[sub_resource type="DynamicFont" id=1]
+size = 5
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 8
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 5
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 5
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 5
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 7
+font_data = ExtResource( 2 )
+
+[node name="Settings Menu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 3 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.333333, 0.333333, 0.333333, 1 )
+
+[node name="SettingsTabs" type="TabContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 1 )
+tab_align = 0
+
+[node name="Audio" type="Tabs" parent="SettingsTabs"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 20.0
+margin_right = -4.0
+margin_bottom = -4.0
+custom_fonts/font = SubResource( 2 )
+
+[node name="MarginContainer" type="MarginContainer" parent="SettingsTabs/Audio"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -2.0
+margin_top = -4.0
+margin_right = 2.0
+margin_bottom = 10.0
+custom_constants/margin_right = 0
+custom_constants/margin_top = -5
+custom_constants/margin_left = 0
+custom_constants/margin_bottom = 0
+
+[node name="AudioSettings" type="GridContainer" parent="SettingsTabs/Audio/MarginContainer"]
+margin_top = -5.0
+margin_right = 1496.0
+margin_bottom = 665.0
+columns = 2
+
+[node name="MasterVolumeLabel" type="Label" parent="SettingsTabs/Audio/MarginContainer/AudioSettings"]
+margin_top = 4.0
+margin_right = 39.0
+margin_bottom = 12.0
+custom_fonts/font = SubResource( 3 )
+text = "Master Volume"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="SettingsTabs/Audio/MarginContainer/AudioSettings"]
+margin_left = 1431.0
+margin_right = 1496.0
+margin_bottom = 16.0
+size_flags_horizontal = 10
+
+[node name="MasterSlider" type="HSlider" parent="SettingsTabs/Audio/MarginContainer/AudioSettings/HBoxContainer"]
+margin_right = 65.0
+margin_bottom = 16.0
+rect_min_size = Vector2( 65, 0 )
+size_flags_horizontal = 10
+size_flags_vertical = 1
+
+[node name="MusicVolumeLabel" type="Label" parent="SettingsTabs/Audio/MarginContainer/AudioSettings"]
+margin_top = 24.0
+margin_right = 39.0
+margin_bottom = 32.0
+custom_fonts/font = SubResource( 4 )
+text = "Music Volume"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="SettingsTabs/Audio/MarginContainer/AudioSettings"]
+margin_left = 1431.0
+margin_top = 20.0
+margin_right = 1496.0
+margin_bottom = 36.0
+size_flags_horizontal = 10
+
+[node name="MusicSlider" type="HSlider" parent="SettingsTabs/Audio/MarginContainer/AudioSettings/HBoxContainer2"]
+margin_right = 65.0
+margin_bottom = 16.0
+rect_min_size = Vector2( 65, 8 )
+size_flags_horizontal = 10
+size_flags_vertical = 1
+
+[node name="MasterVolumeLabel3" type="Label" parent="SettingsTabs/Audio/MarginContainer/AudioSettings"]
+margin_top = 44.0
+margin_right = 39.0
+margin_bottom = 52.0
+custom_fonts/font = SubResource( 5 )
+text = "SFX Volume"
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="SettingsTabs/Audio/MarginContainer/AudioSettings"]
+margin_left = 1431.0
+margin_top = 40.0
+margin_right = 1496.0
+margin_bottom = 56.0
+size_flags_horizontal = 10
+
+[node name="SFXSlider" type="HSlider" parent="SettingsTabs/Audio/MarginContainer/AudioSettings/HBoxContainer3"]
+margin_right = 65.0
+margin_bottom = 16.0
+rect_min_size = Vector2( 65, 8 )
+size_flags_horizontal = 10
+size_flags_vertical = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+margin_left = 1.0
+margin_top = 73.0
+margin_right = 41.0
+margin_bottom = 89.0
+
+[node name="Button" type="Button" parent="MarginContainer"]
+margin_right = 40.0
+margin_bottom = 17.0
+focus_mode = 0
+custom_fonts/font = SubResource( 6 )
+text = "Back"
+
+[connection signal="pressed" from="MarginContainer/Button" to="." method="_on_Button_pressed"]

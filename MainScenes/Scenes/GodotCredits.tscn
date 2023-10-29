@@ -1,0 +1,127 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Fonts/Corben-Regular.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://MainScenes/Scripts/GodotCredits.gd" type="Script" id=3]
+
+[sub_resource type="DynamicFont" id=6]
+size = 36
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=1]
+size = 72
+extra_spacing_top = 2
+font_data = ExtResource( 2 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.533333, 0.533333, 0.533333, 0.709804 )
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.533333, 0.533333, 0.533333, 1 )
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0.533333, 0.533333, 0.533333, 0.501961 )
+
+[sub_resource type="DynamicFont" id=7]
+size = 64
+font_data = ExtResource( 2 )
+
+[node name="GodotCredits" type="Control"]
+script = ExtResource( 3 )
+
+[node name="Backround" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 1500.0
+margin_bottom = 675.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="Credits" type="Label" parent="."]
+margin_top = 870.0
+margin_right = 1500.0
+margin_bottom = 5198.0
+custom_fonts/font = SubResource( 6 )
+text = "Warren Tech Golden Arcade
+
+A game made by 3to1 Games Studio
+
+
+
++ Programming +
+Aiden Feistel
+Davian Farias
+Luke Hall
+Hiro Kahara
+Ian Murphy
+Kesler Ratke
+Royce Reinwald
+Beckham Sutton
+Oskar Timm
+
+But Not Cody Sandford
+		
+		
+		
++ Art +
+Peyton Brown
+Jake Gentry
+Conner Pfau-Closser
+Taylor Steffe
+Meredith Ernst
+Quentina (Uhh I don't know their last name)
+Sienna Spencer
+
+
+
+
+
++ Designers +
+Andrew Decker
+Thomas Curtin
+Zachary Martin
+Zane Lee
+Cade Upton
+
+
+
+
+
+Developed with Godot Engine
+https://godotengine.org/license
+
+
+
+
+
+
+
+
+
+
+
+
+Thanks For Playing!
+		"
+align = 1
+
+[node name="Button" type="Button" parent="."]
+margin_left = 24.0
+margin_top = 536.0
+margin_right = 224.0
+margin_bottom = 673.0
+rect_scale = Vector2( 0.979303, 0.826143 )
+rect_clip_content = true
+focus_mode = 0
+custom_fonts/font = SubResource( 1 )
+custom_styles/hover = SubResource( 2 )
+custom_styles/pressed = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
+
+[node name="BackText" type="Label" parent="Button"]
+margin_left = 24.5072
+margin_top = 9.68359
+margin_right = 180.507
+margin_bottom = 129.684
+custom_fonts/font = SubResource( 7 )
+text = "Back"
+
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

@@ -11,12 +11,12 @@ config_version=4
 [application]
 
 config/name="wt-50th"
-run/main_scene="res://Game Assets/UserInterface/Scenes/Title screen.tscn"
+run/main_scene="res://MainScenes/Scenes/Title screen.tscn"
 config/icon="res://icon.png"
 
 [autoload]
 
-GlobalSettings="*res://Game Assets/UserInterface/Scripts/global_settings.gd"
+GlobalSettings="*res://MainScenes/Scripts/global_settings.gd"
 
 [display]
 
