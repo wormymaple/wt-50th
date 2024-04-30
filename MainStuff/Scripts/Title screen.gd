@@ -13,15 +13,12 @@ func _process(delta):
 		$TotalFade.modulate.a -= delta
 	else:
 		$TotalFade.visible = false
+		print("TotalFade is now hidden")
 
 
 func _on_Play_pressed() -> void:
 	if get_tree().change_scene("res://MainStuff/Scenes/GameScene.tscn") != OK:
 		print("An unexpected error occured when trying to switch to the title screen scene")
-
-#Mobile does not need to a quit game button
-#func _on_Quit_pressed():
-	#get_tree().quit
 
 
 func _on_Credits_pressed() -> void:
@@ -32,3 +29,7 @@ func _on_Credits_pressed() -> void:
 func _on_Settings_pressed():
 	#get_tree().change_scene(res://Game Assets/UserInterface/Scenes/settings_menu.tscn")
 	pass
+
+
+func _on_Quit_Game_pressed():
+	get_tree().quit()

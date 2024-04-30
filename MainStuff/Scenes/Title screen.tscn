@@ -1,29 +1,127 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://Fonts/Corben-Regular.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://MainStuff/Scripts/Title screen.gd" type="Script" id=2]
 [ext_resource path="res://MainStuff/Assets/UnusedMainMenuSprites/BG_Startup_Screen.png" type="Texture" id=3]
 [ext_resource path="res://MainStuff/Assets/UnusedMainMenuSprites/UI_Title.png" type="Texture" id=4]
+[ext_resource path="res://MainStuff/Scenes/title_screen_button.tres" type="StyleBox" id=5]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.74902, 0.517647, 0, 1 )
 
-[sub_resource type="DynamicFont" id=4]
-size = 32
-font_data = ExtResource( 1 )
-
-[sub_resource type="DynamicFont" id=2]
-size = 64
-outline_size = 4
-outline_color = Color( 0.329412, 0.192157, 0, 1 )
-font_data = ExtResource( 1 )
-
 [sub_resource type="DynamicFont" id=3]
 size = 32
+outline_size = 3
+outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 1 )
 
-[sub_resource type="DynamicFont" id=7]
+[sub_resource type="StyleBoxFlat" id=9]
+bg_color = Color( 0.278431, 0.313726, 0.45098, 1 )
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color( 0.121569, 0.152941, 0.262745, 1 )
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[sub_resource type="StyleBoxFlat" id=8]
+bg_color = Color( 0.2, 0.235294, 0.356863, 1 )
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color( 0.121569, 0.152941, 0.262745, 1 )
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[sub_resource type="StyleBoxEmpty" id=19]
+
+[sub_resource type="DynamicFont" id=4]
 size = 32
+outline_size = 3
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=11]
+bg_color = Color( 0.239216, 0.415686, 0.262745, 1 )
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color( 0.121569, 0.262745, 0.141176, 1 )
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[sub_resource type="StyleBoxFlat" id=12]
+bg_color = Color( 0.164706, 0.329412, 0.188235, 1 )
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color( 0.121569, 0.262745, 0.141176, 1 )
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[sub_resource type="StyleBoxEmpty" id=14]
+
+[sub_resource type="StyleBoxFlat" id=13]
+bg_color = Color( 0.337255, 0.509804, 0.360784, 1 )
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color( 0.121569, 0.262745, 0.141176, 1 )
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[sub_resource type="StyleBoxFlat" id=15]
+bg_color = Color( 0.631373, 0.172549, 0.172549, 1 )
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color( 0.431373, 0.0862745, 0.0862745, 1 )
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[sub_resource type="StyleBoxFlat" id=16]
+bg_color = Color( 0.560784, 0.105882, 0.105882, 1 )
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color( 0.431373, 0.0862745, 0.0862745, 1 )
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[sub_resource type="StyleBoxEmpty" id=18]
+
+[sub_resource type="StyleBoxFlat" id=17]
+bg_color = Color( 0.713726, 0.25098, 0.25098, 1 )
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color( 0.431373, 0.0862745, 0.0862745, 1 )
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
 
 [sub_resource type="StyleBoxFlat" id=6]
 bg_color = Color( 0, 0, 0, 1 )
@@ -31,6 +129,8 @@ bg_color = Color( 0, 0, 0, 1 )
 [node name="Title Screen" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_right = -1500.0
+margin_bottom = -675.0
 rect_scale = Vector2( 0.176145, 0.176145 )
 script = ExtResource( 2 )
 
@@ -43,136 +143,79 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_styles/panel = SubResource( 1 )
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="Background" type="TextureRect" parent="."]
 margin_right = 1280.0
 margin_bottom = 720.0
 rect_scale = Vector2( 6.65, 6.65 )
 rect_clip_content = true
 texture = ExtResource( 3 )
 
-[node name="QuitMarginContainer" type="MarginContainer" parent="."]
-visible = false
-margin_top = 448.0
-margin_right = 1025.0
-margin_bottom = 590.0
-size_flags_vertical = 3
-custom_constants/margin_right = 300
-custom_constants/margin_top = 20
-custom_constants/margin_left = 300
-custom_constants/margin_bottom = 20
-
-[node name="Quit" type="Button" parent="QuitMarginContainer"]
-margin_left = 300.0
-margin_top = 20.0
-margin_right = 725.0
-margin_bottom = 122.0
-size_flags_vertical = 3
-custom_fonts/font = SubResource( 4 )
-text = "Quit Game"
-
-[node name="TextureRect2" type="TextureRect" parent="."]
+[node name="Title" type="TextureRect" parent="."]
 margin_left = 136.251
-margin_top = -999.177
+margin_top = -1317.1
 margin_right = 1416.25
-margin_bottom = -279.177
+margin_bottom = -597.097
 rect_scale = Vector2( 6.36281, 6.36281 )
 texture = ExtResource( 4 )
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
+[node name="ButtonMarginContainer" type="MarginContainer" parent="."]
 margin_right = 1500.0
-margin_bottom = 675.0
+margin_bottom = 671.0
 rect_scale = Vector2( 5.6871, 5.6871 )
-custom_constants/margin_top = 400
-custom_constants/margin_bottom = 10
+custom_constants/margin_right = 580
+custom_constants/margin_top = 320
+custom_constants/margin_left = 580
+custom_constants/margin_bottom = 50
 
-[node name="VBoxContainer" type="HBoxContainer" parent="MarginContainer"]
-visible = false
-margin_top = 400.0
-margin_right = 1500.0
-margin_bottom = 665.0
-custom_constants/separation = 5
-alignment = 2
-
-[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer"]
-margin_left = 1500.0
-margin_right = 1500.0
-margin_bottom = 655.0
-custom_constants/margin_top = 10
-custom_constants/margin_bottom = 10
-
-[node name="Warren Tech" type="Label" parent="MarginContainer/VBoxContainer/MarginContainer"]
-visible = false
-margin_top = 267.0
-margin_right = 844.0
-margin_bottom = 387.0
-custom_fonts/font = SubResource( 2 )
-text = "Warren Tech Golden Arcade"
-align = 1
-
-[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer"]
-margin_top = 400.0
-margin_right = 1500.0
-margin_bottom = 665.0
+[node name="VBoxContainer2" type="VBoxContainer" parent="ButtonMarginContainer"]
+margin_left = 580.0
+margin_top = 320.0
+margin_right = 920.0
+margin_bottom = 621.0
 grow_horizontal = 0
 size_flags_vertical = 3
 size_flags_stretch_ratio = 3.0
+custom_constants/separation = 20
 
-[node name="MarginContainer2" type="MarginContainer" parent="MarginContainer/VBoxContainer2"]
-margin_right = 1500.0
-margin_bottom = 130.0
-size_flags_vertical = 3
-custom_constants/margin_right = 600
-custom_constants/margin_top = 20
-custom_constants/margin_left = 600
-custom_constants/margin_bottom = 20
-
-[node name="Play" type="Button" parent="MarginContainer/VBoxContainer2/MarginContainer2"]
-margin_left = 600.0
-margin_top = 20.0
-margin_right = 900.0
-margin_bottom = 110.0
+[node name="Play" type="Button" parent="ButtonMarginContainer/VBoxContainer2"]
+margin_right = 340.0
+margin_bottom = 87.0
+size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_fonts/font = SubResource( 3 )
+custom_styles/hover = SubResource( 9 )
+custom_styles/pressed = SubResource( 8 )
+custom_styles/focus = SubResource( 19 )
+custom_styles/normal = ExtResource( 5 )
 text = "Play"
 
-[node name="MarginContainer3" type="MarginContainer" parent="MarginContainer/VBoxContainer2"]
-margin_top = 134.0
-margin_right = 1500.0
-margin_bottom = 265.0
-size_flags_vertical = 3
-custom_constants/margin_right = 600
-custom_constants/margin_top = 20
-custom_constants/margin_left = 600
-custom_constants/margin_bottom = 20
-
-[node name="Credits" type="Button" parent="MarginContainer/VBoxContainer2/MarginContainer3"]
-margin_left = 600.0
-margin_top = 20.0
-margin_right = 900.0
-margin_bottom = 111.0
+[node name="Credits" type="Button" parent="ButtonMarginContainer/VBoxContainer2"]
+margin_top = 107.0
+margin_right = 340.0
+margin_bottom = 194.0
 hint_tooltip = "Test"
+size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_fonts/font = SubResource( 4 )
+custom_styles/hover = SubResource( 11 )
+custom_styles/pressed = SubResource( 12 )
+custom_styles/focus = SubResource( 14 )
+custom_styles/normal = SubResource( 13 )
 text = "Credits"
 
-[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer2"]
-visible = false
-margin_top = 328.0
-margin_right = 1500.0
-margin_bottom = 488.0
+[node name="Quit Game" type="Button" parent="ButtonMarginContainer/VBoxContainer2"]
+margin_top = 214.0
+margin_right = 340.0
+margin_bottom = 301.0
+hint_tooltip = "Test"
+size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_constants/margin_right = 200
-custom_constants/margin_top = 20
-custom_constants/margin_left = 900
-custom_constants/margin_bottom = 20
-
-[node name="Settings" type="Button" parent="MarginContainer/VBoxContainer2/MarginContainer"]
-margin_left = 900.0
-margin_top = 20.0
-margin_right = 1300.0
-margin_bottom = 140.0
-custom_fonts/font = SubResource( 7 )
-text = "Settings"
+custom_fonts/font = SubResource( 4 )
+custom_styles/hover = SubResource( 15 )
+custom_styles/pressed = SubResource( 16 )
+custom_styles/focus = SubResource( 18 )
+custom_styles/normal = SubResource( 17 )
+text = "Quit"
 
 [node name="TotalFade" type="Panel" parent="."]
 visible = false
@@ -183,7 +226,6 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_styles/panel = SubResource( 6 )
 
-[connection signal="pressed" from="QuitMarginContainer/Quit" to="." method="_on_Quit_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer2/MarginContainer2/Play" to="." method="_on_Play_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer2/MarginContainer3/Credits" to="." method="_on_Credits_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer2/MarginContainer/Settings" to="." method="_on_Settings_pressed"]
+[connection signal="pressed" from="ButtonMarginContainer/VBoxContainer2/Play" to="." method="_on_Play_pressed"]
+[connection signal="pressed" from="ButtonMarginContainer/VBoxContainer2/Credits" to="." method="_on_Credits_pressed"]
+[connection signal="pressed" from="ButtonMarginContainer/VBoxContainer2/Quit Game" to="." method="_on_Quit_Game_pressed"]
