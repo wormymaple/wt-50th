@@ -35,12 +35,13 @@ func _process(delta):
 		var mouse_pos = get_local_mouse_position()
 		
 		var dist = mouse_pos.distance_to(prev_point)
-		if (dist > min_draw_dist):
+		if (dist > min_draw_dist): # If the mouse has moved noticeably, the game will draw another point.
 			add_point(mouse_pos)
 			prev_point = mouse_pos
 			
 		get_node(water_particles).position = mouse_pos
 		
+		#This code makes the water nozzle follow the mouse
 		var nozzle = get_node(water_nozzle)
 		nozzle.position = mouse_pos
 		nozzle.rotation = Vector2.ZERO.angle_to_point(mouse_pos) - 90
@@ -49,22 +50,23 @@ func _process(delta):
 		just_released = false
 		
 		var dist = points[-1].distance_to(points[0])
-		if dist <= min_finish_dist:
+		if dist <= min_finish_dist: #Checks that the player made at least a few points, or they fail
 			set_point_position(len(points) - 1, points[0])
-			var simp_points = simplify_shape(points, 4)
-			clear_points()
-			for point in simp_points:
+			var simp_points = simplify_shape(points, 4) # Simp points stands for Simple/Simplified points, probably
+			# The simplify_shape function here simplifies the amount of points to make the cutout look a little sharper
+			clear_points() #Deletes old points
+			for point in simp_points: #Re-adds the points, but simplified
 				add_point(point)
 				
-			get_node(fill).polygon = points
+			get_node(fill).polygon = points #Fills the polygon to look like you cut out a sheet of metal
 			
-			var score = max_score - int(check_points(points))
+			var score = max_score - int(check_points(points)) # This calls the function that gives you a score
 			if (score < 0):
 				score = 0
 			
 			get_node(score_indicator).set_score(score)
 			get_node(ref_object).modulate = Color(1, 1, 1, 0.2)
-		else:
+		else: #This means that the player didn't make enough points. Automatically fails them
 			get_node(score_indicator).set_score(-1)
 		
 		finished_drawing = true
@@ -106,14 +108,14 @@ func simplify_shape(in_points, n):
 	else:
 		return new_points
 
-func check_points(in_points):
+func check_points(in_points): #This scores the points
 	var total = 0.0
 	var ref_points = get_node(ref_object).points
-	for ref_point in ref_points:
+	for ref_point in ref_points: #For every reference point...
 		var closest_point = in_points[0]
 		for point in in_points:
 			if ref_point.distance_to(point) < ref_point.distance_to(closest_point):
-				closest_point = point
+				closest_point = point #If this point was closer to the previous one, then this is the new closest point
 		
 		total += ref_point.distance_to(closest_point)
 	
