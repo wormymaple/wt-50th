@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://Games/CriminalJustice/ui_knife.png" type="Texture" id=1]
 [ext_resource path="res://Games/CriminalJustice/ui_hook.png" type="Texture" id=2]
@@ -12,9 +12,14 @@
 [ext_resource path="res://Games/CriminalJustice/CriminalJustice.gd" type="Script" id=10]
 [ext_resource path="res://Fonts/Corben-Regular.ttf" type="DynamicFontData" id=11]
 [ext_resource path="res://Games/CriminalJustice/laywer.png" type="Texture" id=12]
+[ext_resource path="res://Fonts/Corben-Bold.ttf" type="DynamicFontData" id=13]
 
 [sub_resource type="StyleBoxFlat" id=3]
 bg_color = Color( 0.439216, 0.294118, 0.14902, 1 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 24
+font_data = ExtResource( 13 )
 
 [sub_resource type="DynamicFont" id=2]
 size = 24
@@ -100,29 +105,39 @@ custom_styles/panel = SubResource( 3 )
 margin_right = 440.0
 margin_bottom = 675.0
 custom_constants/margin_right = 20
-custom_constants/margin_top = 50
+custom_constants/margin_top = 30
 custom_constants/margin_left = 20
-custom_constants/margin_bottom = 560
+custom_constants/margin_bottom = 500
 
 [node name="Panel" type="Panel" parent="OtherUILayer/Panel/MarginContainer"]
 margin_left = 20.0
-margin_top = 50.0
+margin_top = 30.0
 margin_right = 420.0
-margin_bottom = 115.0
+margin_bottom = 175.0
 size_flags_horizontal = 3
+
+[node name="Title" type="Label" parent="OtherUILayer"]
+margin_left = 216.0
+margin_top = 48.0
+margin_right = 616.0
+margin_bottom = 94.0
+custom_fonts/font = SubResource( 5 )
+text = "Criminal Justice"
+align = 1
 
 [node name="ObjectiveLabel" type="Label" parent="OtherUILayer"]
 anchor_left = 0.149333
 anchor_top = 0.082963
 anchor_right = 0.445333
 anchor_bottom = 0.151111
-margin_left = 0.00050354
-margin_top = 7.99998
-margin_right = 56.0005
-margin_bottom = 54.0001
+margin_left = -31.9995
+margin_top = 56.0
+margin_right = 24.0005
+margin_bottom = 102.0
 rect_scale = Vector2( 0.877486, 0.877486 )
 custom_fonts/font = SubResource( 2 )
-text = "Objective: Match the item to the suspect"
+text = "Match the item to the suspect!"
+align = 1
 
 [node name="SuspectLabel" type="Label" parent="OtherUILayer"]
 margin_left = 976.0
