@@ -1,14 +1,14 @@
 extends Control
 
-var ScrollSpeed = 1
+var ScrollSpeed = 1.5
 
 func _process(_delta):
-	if Input.is_action_pressed("ui_down"):
-		ScrollSpeed = 5
+	if Input.is_action_pressed("speed_up"):
+		ScrollSpeed = 3
 	else:
-		ScrollSpeed = 1
+		ScrollSpeed = 1.5
 	
-	if $Credits.rect_position.y > -3416:
+	if $Credits.rect_position.y > -2900:
 		$Credits.rect_position.y += - ScrollSpeed
 	
 
