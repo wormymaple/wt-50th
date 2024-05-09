@@ -1,9 +1,9 @@
 [gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://MainStuff/Scripts/GameScene.gd" type="Script" id=1]
-[ext_resource path="res://Games/Welding/WeldingRoot.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Games/PreciscionMachining/HiroPrecisionMachining.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Games/CriminalJustice/CriminalJusticeMinigame.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Games/Welding/Welding.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Games/PreciscionMachining/PrecisionMachining.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Games/CriminalJustice/CriminalJustice.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Fonts/JerseyM54-aLX9.ttf" type="DynamicFontData" id=5]
 [ext_resource path="res://Fonts/Corben-Regular.ttf" type="DynamicFontData" id=6]
 [ext_resource path="res://Fonts/Corben-Bold.ttf" type="DynamicFontData" id=7]
