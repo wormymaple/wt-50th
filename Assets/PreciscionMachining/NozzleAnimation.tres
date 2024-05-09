@@ -1,0 +1,15 @@
+[gd_resource type="SpriteFrames" load_steps=6 format=2]
+
+[ext_resource path="res://Assets/PreciscionMachining/UI_WaterNosselWaterEffects5.png" type="Texture" id=1]
+[ext_resource path="res://Assets/PreciscionMachining/UI_WaterNosselWaterEffects2.png" type="Texture" id=2]
+[ext_resource path="res://Assets/PreciscionMachining/UI_WaterNosselWaterEffects1.png" type="Texture" id=3]
+[ext_resource path="res://Assets/PreciscionMachining/UI_WaterNosselWaterEffects3.png" type="Texture" id=4]
+[ext_resource path="res://Assets/PreciscionMachining/UI_WaterNosselWaterEffects4.png" type="Texture" id=5]
+
+[resource]
+animations = [ {
+"frames": [ ExtResource( 3 ), ExtResource( 2 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 1 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]

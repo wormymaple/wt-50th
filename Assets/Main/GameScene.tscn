@@ -1,0 +1,193 @@
+[gd_scene load_steps=20 format=2]
+
+[ext_resource path="res://Assets/Main/GameScene.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Welding/Welding.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Assets/PreciscionMachining/PrecisionMachining.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Assets/CriminalJustice/CriminalJustice.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Fonts/JerseyM54.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://Fonts/Corben-Regular.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://Fonts/Corben-Bold.ttf" type="DynamicFontData" id=7]
+[ext_resource path="res://Assets/Main/TimerBarBackground.png" type="Texture" id=8]
+[ext_resource path="res://Assets/Main/home.png" type="Texture" id=9]
+[ext_resource path="res://Assets/Main/TimerBarProgress.png" type="Texture" id=10]
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.921569, 0.901961, 0.764706, 1 )
+
+[sub_resource type="DynamicFont" id=1]
+size = 73
+outline_size = 3
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 32
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="DynamicFont" id=10]
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=11]
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 128
+outline_size = 7
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFont" id=12]
+size = 24
+outline_size = 3
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 6 )
+
+[sub_resource type="StyleBoxFlat" id=9]
+bg_color = Color( 0, 0, 0, 1 )
+
+[node name="Game" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+possible_scenes = [ ExtResource( 4 ), ExtResource( 3 ), ExtResource( 2 ) ]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 5
+
+[node name="Panel" type="Panel" parent="CanvasLayer"]
+visible = false
+margin_right = 1500.0
+margin_bottom = 675.0
+
+[node name="Timer" type="Timer" parent="CanvasLayer"]
+wait_time = 10.0
+one_shot = true
+autostart = true
+
+[node name="GameHolder" type="Control" parent="CanvasLayer"]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="SidePanel" type="Panel" parent="CanvasLayer"]
+margin_right = 200.0
+margin_bottom = 675.0
+custom_styles/panel = SubResource( 2 )
+
+[node name="TextureProgress" type="TextureProgress" parent="CanvasLayer/SidePanel"]
+margin_left = 54.0
+margin_top = 80.0
+margin_right = 114.0
+margin_bottom = 340.0
+rect_scale = Vector2( 1.49068, 1.49068 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+max_value = 10.0
+step = 0.001
+value = 10.0
+texture_under = ExtResource( 8 )
+texture_progress = ExtResource( 10 )
+fill_mode = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/SidePanel"]
+margin_right = 200.0
+margin_bottom = 675.0
+custom_constants/margin_right = 5
+custom_constants/margin_left = 5
+custom_constants/margin_bottom = 120
+
+[node name="TimeLeft" type="Label" parent="CanvasLayer/SidePanel/MarginContainer"]
+margin_left = 5.0
+margin_top = 233.0
+margin_right = 195.0
+margin_bottom = 321.0
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "10"
+align = 1
+clip_text = true
+
+[node name="MarginContainer3" type="MarginContainer" parent="CanvasLayer/SidePanel"]
+margin_right = 202.0
+margin_bottom = 675.0
+custom_constants/margin_right = 55
+custom_constants/margin_top = 530
+custom_constants/margin_left = 55
+custom_constants/margin_bottom = 50
+
+[node name="QuitButton" type="Button" parent="CanvasLayer/SidePanel/MarginContainer3"]
+margin_left = 55.0
+margin_top = 530.0
+margin_right = 147.0
+margin_bottom = 625.0
+custom_fonts/font = SubResource( 3 )
+icon_align = 1
+
+[node name="HousePNG" type="TextureRect" parent="CanvasLayer/SidePanel/MarginContainer3/QuitButton"]
+margin_top = -2.0
+margin_right = 512.0
+margin_bottom = 510.0
+rect_scale = Vector2( 0.17945, 0.17945 )
+texture = ExtResource( 9 )
+
+[node name="GameOverlay" type="Panel" parent="CanvasLayer"]
+modulate = Color( 1, 1, 1, 0.501961 )
+margin_left = 200.0
+margin_right = 1500.0
+margin_bottom = 675.0
+mouse_filter = 2
+custom_styles/panel = SubResource( 5 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer"]
+visible = false
+margin_left = 248.0
+margin_top = 104.0
+margin_right = 376.0
+margin_bottom = 144.0
+custom_fonts/normal_font = SubResource( 10 )
+bbcode_enabled = true
+bbcode_text = "Hello"
+text = "Hello"
+
+[node name="PassedOrFailedText" type="RichTextLabel" parent="CanvasLayer"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -550.0
+margin_top = -337.5
+margin_right = 750.0
+margin_bottom = 337.5
+mouse_filter = 1
+custom_fonts/bold_font = SubResource( 11 )
+custom_fonts/normal_font = SubResource( 6 )
+bbcode_enabled = true
+bbcode_text = "[center]PASSED"
+text = "PASSED"
+
+[node name="TotalGamesText" type="Label" parent="CanvasLayer/PassedOrFailedText"]
+margin_left = 520.0
+margin_top = 208.0
+margin_right = 728.0
+margin_bottom = 254.0
+custom_fonts/font = SubResource( 12 )
+text = "Games completed: "
+
+[node name="TotalFade" type="Panel" parent="CanvasLayer"]
+process_priority = -1
+modulate = Color( 1, 1, 1, 0 )
+margin_right = 1500.0
+margin_bottom = 675.0
+custom_styles/panel = SubResource( 9 )
+
+[node name="TimeBetweenGames" type="Timer" parent="CanvasLayer"]
+wait_time = 1.5
+one_shot = true
+
+[node name="GameOverTimer" type="Timer" parent="CanvasLayer"]
+wait_time = 2.0
+
+[connection signal="timeout" from="CanvasLayer/Timer" to="." method="_on_Timer_timeout"]
+[connection signal="pressed" from="CanvasLayer/SidePanel/MarginContainer3/QuitButton" to="." method="_on_QuitButton_pressed"]
+[connection signal="timeout" from="CanvasLayer/TimeBetweenGames" to="." method="_on_TimeBetweenGames_timeout"]
+[connection signal="timeout" from="CanvasLayer/GameOverTimer" to="." method="_on_GameOverTimer_timeout"]

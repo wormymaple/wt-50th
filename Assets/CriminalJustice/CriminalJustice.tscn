@@ -1,0 +1,232 @@
+[gd_scene load_steps=18 format=2]
+
+[ext_resource path="res://Assets/CriminalJustice/ui_knife.png" type="Texture" id=1]
+[ext_resource path="res://Assets/CriminalJustice/ui_hook.png" type="Texture" id=2]
+[ext_resource path="res://Assets/CriminalJustice/ui_rippedcloth.png" type="Texture" id=3]
+[ext_resource path="res://Assets/CriminalJustice/bg_court.png" type="Texture" id=4]
+[ext_resource path="res://Assets/CriminalJustice/bg_courtforeground.png" type="Texture" id=5]
+[ext_resource path="res://Assets/CriminalJustice/ui_photo.png" type="Texture" id=6]
+[ext_resource path="res://Assets/CriminalJustice/chr_judge.png" type="Texture" id=7]
+[ext_resource path="res://Assets/CriminalJustice/chr_pirate.png" type="Texture" id=8]
+[ext_resource path="res://Assets/CriminalJustice/chr_rippedshirt.png" type="Texture" id=9]
+[ext_resource path="res://Assets/CriminalJustice/CriminalJustice.gd" type="Script" id=10]
+[ext_resource path="res://Fonts/Corben-Regular.ttf" type="DynamicFontData" id=11]
+[ext_resource path="res://Assets/CriminalJustice/laywer.png" type="Texture" id=12]
+[ext_resource path="res://Fonts/Corben-Bold.ttf" type="DynamicFontData" id=13]
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.439216, 0.294118, 0.14902, 1 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 24
+font_data = ExtResource( 13 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 24
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 11 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 32
+font_data = ExtResource( 11 )
+
+[node name="Scene" type="Control"]
+script = ExtResource( 10 )
+
+[node name="ButtonCanvasLayer" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="OtherUILayer" type="CanvasLayer" parent="."]
+
+[node name="BackroundPanel" type="Panel" parent="OtherUILayer"]
+visible = false
+margin_left = 200.0
+margin_right = 1500.0
+margin_bottom = 675.0
+
+[node name="Backround" type="TextureRect" parent="OtherUILayer"]
+margin_left = 640.0
+margin_right = 4807.0
+margin_bottom = 4167.0
+rect_scale = Vector2( 0.206299, 0.206299 )
+texture = ExtResource( 4 )
+
+[node name="Pirate" type="TextureRect" parent="OtherUILayer"]
+margin_left = 912.0
+margin_top = 40.0
+margin_right = 2509.0
+margin_bottom = 2768.0
+rect_scale = Vector2( 0.146372, 0.146372 )
+texture = ExtResource( 8 )
+stretch_mode = 1
+
+[node name="Kid" type="TextureRect" parent="OtherUILayer"]
+margin_left = 960.0
+margin_top = 72.0
+margin_right = 2557.0
+margin_bottom = 2800.0
+rect_scale = Vector2( 0.135126, 0.135126 )
+texture = ExtResource( 9 )
+stretch_mode = 1
+
+[node name="Judge" type="TextureRect" parent="OtherUILayer"]
+margin_left = 1184.0
+margin_top = -32.0
+margin_right = 3232.0
+margin_bottom = 2696.0
+rect_scale = Vector2( 0.166546, 0.166546 )
+texture = ExtResource( 12 )
+stretch_mode = 1
+
+[node name="Ghost" type="TextureRect" parent="OtherUILayer"]
+margin_left = 944.0
+margin_top = 104.0
+margin_right = 2541.0
+margin_bottom = 2832.0
+rect_scale = Vector2( 0.124915, 0.124915 )
+texture = ExtResource( 7 )
+stretch_mode = 1
+
+[node name="Court" type="TextureRect" parent="OtherUILayer"]
+margin_left = 640.0
+margin_right = 4807.0
+margin_bottom = 4167.0
+rect_scale = Vector2( 0.20667, 0.20667 )
+texture = ExtResource( 5 )
+
+[node name="Panel" type="Panel" parent="OtherUILayer"]
+margin_left = 200.0
+margin_right = 640.0
+margin_bottom = 675.0
+custom_styles/panel = SubResource( 3 )
+
+[node name="MarginContainer" type="MarginContainer" parent="OtherUILayer/Panel"]
+margin_right = 440.0
+margin_bottom = 675.0
+custom_constants/margin_right = 20
+custom_constants/margin_top = 30
+custom_constants/margin_left = 20
+custom_constants/margin_bottom = 500
+
+[node name="Panel" type="Panel" parent="OtherUILayer/Panel/MarginContainer"]
+margin_left = 20.0
+margin_top = 30.0
+margin_right = 420.0
+margin_bottom = 175.0
+size_flags_horizontal = 3
+
+[node name="Title" type="Label" parent="OtherUILayer"]
+margin_left = 216.0
+margin_top = 48.0
+margin_right = 616.0
+margin_bottom = 94.0
+custom_fonts/font = SubResource( 5 )
+text = "Criminal Justice"
+align = 1
+
+[node name="ObjectiveLabel" type="Label" parent="OtherUILayer"]
+anchor_left = 0.149333
+anchor_top = 0.082963
+anchor_right = 0.445333
+anchor_bottom = 0.151111
+margin_left = -31.9995
+margin_top = 56.0
+margin_right = 24.0005
+margin_bottom = 102.0
+rect_scale = Vector2( 0.877486, 0.877486 )
+custom_fonts/font = SubResource( 2 )
+text = "Match the item to the suspect!"
+align = 1
+
+[node name="SuspectLabel" type="Label" parent="OtherUILayer"]
+margin_left = 976.0
+margin_top = 384.0
+margin_right = 1094.0
+margin_bottom = 445.0
+custom_fonts/font = SubResource( 4 )
+text = "Suspect"
+
+[node name="JudgeLabel" type="Label" parent="OtherUILayer"]
+margin_left = 1280.0
+margin_top = 296.0
+margin_right = 1398.0
+margin_bottom = 357.0
+custom_fonts/font = SubResource( 4 )
+text = "Judge"
+
+[node name="ClothButton" type="Button" parent="OtherUILayer"]
+margin_left = 440.0
+margin_top = 216.0
+margin_right = 590.0
+margin_bottom = 366.0
+
+[node name="RippedFabric" type="TextureRect" parent="OtherUILayer/ClothButton"]
+margin_left = 16.0
+margin_top = 7.99997
+margin_right = 1165.0
+margin_bottom = 1403.0
+rect_scale = Vector2( 0.0968944, 0.0968944 )
+texture = ExtResource( 3 )
+
+[node name="PhototButton" type="Button" parent="OtherUILayer"]
+margin_left = 248.0
+margin_top = 216.0
+margin_right = 398.0
+margin_bottom = 366.0
+
+[node name="Photo" type="TextureRect" parent="OtherUILayer/PhototButton"]
+margin_left = -16.0
+margin_top = 8.0
+margin_right = 2534.0
+margin_bottom = 3308.0
+rect_rotation = -15.0
+rect_scale = Vector2( 0.0544941, 0.0544941 )
+texture = ExtResource( 6 )
+
+[node name="Ghost" type="TextureRect" parent="OtherUILayer/PhototButton"]
+modulate = Color( 1, 1, 1, 0.509804 )
+margin_left = 72.0
+margin_top = 48.0
+margin_right = 1252.0
+margin_bottom = 2239.0
+rect_rotation = -15.0
+rect_scale = Vector2( 0.0265624, 0.0265624 )
+texture = ExtResource( 7 )
+
+[node name="HookButton" type="Button" parent="OtherUILayer"]
+margin_left = 248.0
+margin_top = 416.0
+margin_right = 398.0
+margin_bottom = 566.0
+
+[node name="Hook" type="TextureRect" parent="OtherUILayer/HookButton"]
+margin_left = 96.0001
+margin_top = 160.0
+margin_right = 2646.0
+margin_bottom = 3460.0
+rect_rotation = -150.0
+rect_scale = Vector2( 0.0445695, 0.0445695 )
+texture = ExtResource( 2 )
+
+[node name="KnifeButton" type="Button" parent="OtherUILayer"]
+margin_left = 440.0
+margin_top = 416.0
+margin_right = 590.0
+margin_bottom = 566.0
+focus_mode = 0
+enabled_focus_mode = 0
+
+[node name="Knife" type="TextureRect" parent="OtherUILayer/KnifeButton"]
+margin_left = -48.0
+margin_top = 96.0
+margin_right = 2036.0
+margin_bottom = 1346.0
+rect_rotation = -38.0145
+rect_scale = Vector2( 0.114838, 0.114838 )
+texture = ExtResource( 1 )
+
+[connection signal="pressed" from="OtherUILayer/ClothButton" to="." method="_on_ClothButton_pressed"]
+[connection signal="pressed" from="OtherUILayer/PhototButton" to="." method="_on_PhototButton_pressed"]
+[connection signal="pressed" from="OtherUILayer/HookButton" to="." method="_on_HookButton_pressed"]
+[connection signal="pressed" from="OtherUILayer/KnifeButton" to="." method="_on_KnifeButton_pressed"]
