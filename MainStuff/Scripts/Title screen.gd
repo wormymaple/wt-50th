@@ -13,7 +13,7 @@ func _process(delta):
 		$TotalFade.modulate.a -= delta
 	else:
 		$TotalFade.visible = false
-		print("TotalFade is now hidden")
+		#print("TotalFade is now hidden")
 
 
 func _on_Play_pressed() -> void:

@@ -151,27 +151,29 @@ rect_clip_content = true
 texture = ExtResource( 3 )
 
 [node name="Title" type="TextureRect" parent="."]
-margin_left = 136.251
-margin_top = -1317.1
-margin_right = 1416.25
-margin_bottom = -597.097
+margin_left = 1805.33
+margin_top = -255.471
+margin_right = 2559.33
+margin_bottom = 139.529
 rect_scale = Vector2( 6.36281, 6.36281 )
 texture = ExtResource( 4 )
+expand = true
+stretch_mode = 5
 
 [node name="ButtonMarginContainer" type="MarginContainer" parent="."]
 margin_right = 1500.0
-margin_bottom = 671.0
+margin_bottom = 674.0
 rect_scale = Vector2( 5.6871, 5.6871 )
 custom_constants/margin_right = 580
 custom_constants/margin_top = 320
 custom_constants/margin_left = 580
-custom_constants/margin_bottom = 50
+custom_constants/margin_bottom = 20
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="ButtonMarginContainer"]
 margin_left = 580.0
 margin_top = 320.0
 margin_right = 920.0
-margin_bottom = 621.0
+margin_bottom = 654.0
 grow_horizontal = 0
 size_flags_vertical = 3
 size_flags_stretch_ratio = 3.0
@@ -179,7 +181,7 @@ custom_constants/separation = 20
 
 [node name="Play" type="Button" parent="ButtonMarginContainer/VBoxContainer2"]
 margin_right = 340.0
-margin_bottom = 87.0
+margin_bottom = 98.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_fonts/font = SubResource( 3 )
@@ -190,9 +192,9 @@ custom_styles/normal = ExtResource( 5 )
 text = "Play"
 
 [node name="Credits" type="Button" parent="ButtonMarginContainer/VBoxContainer2"]
-margin_top = 107.0
+margin_top = 118.0
 margin_right = 340.0
-margin_bottom = 194.0
+margin_bottom = 216.0
 hint_tooltip = "Test"
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -204,9 +206,9 @@ custom_styles/normal = SubResource( 13 )
 text = "Credits"
 
 [node name="Quit Game" type="Button" parent="ButtonMarginContainer/VBoxContainer2"]
-margin_top = 214.0
+margin_top = 236.0
 margin_right = 340.0
-margin_bottom = 301.0
+margin_bottom = 334.0
 hint_tooltip = "Test"
 size_flags_horizontal = 3
 size_flags_vertical = 3

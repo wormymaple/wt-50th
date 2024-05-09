@@ -175,7 +175,7 @@ func _on_WavyButton_pressed():
 	_check_button("Wavy")
 
 func _check_button(ButtonName):
-	$RightButtonMargin/WavyButton.disabled = true
+	$WavyButton.disabled = true
 	$ButtonsMargin/VBoxContainer/MountainyButton.disabled = true
 	$ButtonsMargin/VBoxContainer/CurvyButton.disabled = true
 	if RandomShape == ButtonName:

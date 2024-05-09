@@ -50,6 +50,10 @@ speed_up={
  ]
 }
 
+[mono]
+
+project/assembly_name="wt-50th"
+
 [physics]
 
 common/enable_pause_aware_picking=true

@@ -164,31 +164,6 @@ margin_bottom = 494.0
 rect_scale = Vector2( 0.872, 0.529 )
 texture = ExtResource( 11 )
 
-[node name="RightButtonMargin" type="MarginContainer" parent="."]
-margin_right = 1500.0
-margin_bottom = 675.0
-mouse_filter = 2
-custom_constants/margin_right = 30
-custom_constants/margin_top = 200
-custom_constants/margin_left = 1350
-custom_constants/margin_bottom = 202
-
-[node name="WavyButton" type="Button" parent="RightButtonMargin"]
-margin_left = 1350.0
-margin_top = 200.0
-margin_right = 1470.0
-margin_bottom = 473.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-
-[node name="TextureRect" type="TextureRect" parent="RightButtonMargin/WavyButton"]
-margin_left = -86.0
-margin_top = 6.0
-margin_right = 1084.0
-margin_bottom = 2538.0
-rect_scale = Vector2( 0.872, 0.529 )
-texture = ExtResource( 8 )
-
 [node name="WavyMetalPiece" type="TextureRect" parent="."]
 visible = false
 margin_left = 664.0
@@ -302,6 +277,23 @@ margin_right = 1500.0
 margin_bottom = 675.0
 custom_styles/panel = SubResource( 7 )
 
+[node name="WavyButton" type="Button" parent="."]
+margin_left = 1350.0
+margin_top = 200.0
+margin_right = 1470.0
+margin_bottom = 473.0
+focus_mode = 1
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="TextureRect" type="TextureRect" parent="WavyButton"]
+margin_left = -86.0
+margin_top = 6.0
+margin_right = 1084.0
+margin_bottom = 2538.0
+rect_scale = Vector2( 0.872, 0.529 )
+texture = ExtResource( 8 )
+
 [connection signal="pressed" from="ButtonsMargin/VBoxContainer/CurvyButton" to="." method="_on_CurvyButton_pressed"]
 [connection signal="pressed" from="ButtonsMargin/VBoxContainer/MountainyButton" to="." method="_on_MountainyButton_pressed"]
-[connection signal="pressed" from="RightButtonMargin/WavyButton" to="." method="_on_WavyButton_pressed"]
+[connection signal="pressed" from="WavyButton" to="." method="_on_WavyButton_pressed"]
