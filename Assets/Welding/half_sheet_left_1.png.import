@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/UI_WaterNosselWaterEffects2.png-c0e482fb058df51be0c147ba42ee0c54.stex"
+path="res://.import/half_sheet_left_1.png-d91ed02857630139d069e731db50dfa2.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/PreciscionMachining/UI_WaterNosselWaterEffects2.png"
-dest_files=[ "res://.import/UI_WaterNosselWaterEffects2.png-c0e482fb058df51be0c147ba42ee0c54.stex" ]
+source_file="res://Assets/Welding/half_sheet_left_1.png"
+dest_files=[ "res://.import/half_sheet_left_1.png-d91ed02857630139d069e731db50dfa2.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/BG_Startup_Screen.png-74824c0619c3add4bd5ce3e17bc4bded.stex"
+path="res://.import/half_sheet_left_3.png-49f3fc4072fc51e8a15e7bc77364d9ea.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Main/BG_Startup_Screen.png"
-dest_files=[ "res://.import/BG_Startup_Screen.png-74824c0619c3add4bd5ce3e17bc4bded.stex" ]
+source_file="res://Assets/Welding/half_sheet_left_3.png"
+dest_files=[ "res://.import/half_sheet_left_3.png-49f3fc4072fc51e8a15e7bc77364d9ea.stex" ]
 
 [params]
 

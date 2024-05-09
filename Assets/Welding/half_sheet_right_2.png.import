@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/UI_CutMetalSheetHalfLeft03-removebg-preview.png-2eea1e411b04cd46db12d6bef06c7d67.stex"
+path="res://.import/half_sheet_right_2.png-833ddcfbd2a8f2aaae074e8c720513b9.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Welding/UI_CutMetalSheetHalfLeft03-removebg-preview.png"
-dest_files=[ "res://.import/UI_CutMetalSheetHalfLeft03-removebg-preview.png-2eea1e411b04cd46db12d6bef06c7d67.stex" ]
+source_file="res://Assets/Welding/half_sheet_right_2.png"
+dest_files=[ "res://.import/half_sheet_right_2.png-833ddcfbd2a8f2aaae074e8c720513b9.stex" ]
 
 [params]
 

@@ -12,7 +12,7 @@ func _process(delta):
 		$TotalFade.visible = false
 
 func _on_Play_pressed() -> void:
-	if get_tree().change_scene("res://Assets/Main/GameScene.tscn") != OK:
+	if get_tree().change_scene("res://Assets/Main/GameLoader.tscn") != OK:
 		print("An unexpected error occured when trying to switch to the title screen scene")
 func _on_Credits_pressed() -> void:
 	if get_tree().change_scene("res://Assets/Main/Credits.tscn") != OK:

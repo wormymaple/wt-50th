@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/ui_hook.png-20869ca2e3a4e0af77924a5a0d2c8d85.stex"
+path="res://.import/judge.png-b3e477f15e309adf704b77d2c007061c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/CriminalJustice/ui_hook.png"
-dest_files=[ "res://.import/ui_hook.png-20869ca2e3a4e0af77924a5a0d2c8d85.stex" ]
+source_file="res://Assets/CriminalJustice/judge.png"
+dest_files=[ "res://.import/judge.png-b3e477f15e309adf704b77d2c007061c.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/UI_WaterNosselWaterEffects4.png-8effd67e8ca631a952bd29004cba8df6.stex"
+path="res://.import/WeldingGun.png-527d8646b623a4b1af51a3c4f519591d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/PreciscionMachining/UI_WaterNosselWaterEffects4.png"
-dest_files=[ "res://.import/UI_WaterNosselWaterEffects4.png-8effd67e8ca631a952bd29004cba8df6.stex" ]
+source_file="res://Assets/Welding/WeldingGun.png"
+dest_files=[ "res://.import/WeldingGun.png-527d8646b623a4b1af51a3c4f519591d.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/UI_CutMetalSheetHalfRight02-removebg-preview.png-958e06d1bacf756881831d5864170ce1.stex"
+path="res://.import/pirate.png-21f10da8dadd8b5abea92911dd45c782.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Welding/UI_CutMetalSheetHalfRight02-removebg-preview.png"
-dest_files=[ "res://.import/UI_CutMetalSheetHalfRight02-removebg-preview.png-958e06d1bacf756881831d5864170ce1.stex" ]
+source_file="res://Assets/CriminalJustice/pirate.png"
+dest_files=[ "res://.import/pirate.png-21f10da8dadd8b5abea92911dd45c782.stex" ]
 
 [params]
 

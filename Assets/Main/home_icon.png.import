@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/UI_WeldingGunOnNoSparks.png-9ccac1fae875012163bbdac69f32ca48.stex"
+path="res://.import/home_icon.png-31c0f13f3e9de23619654a7c3be6cd9b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Welding/UI_WeldingGunOnNoSparks.png"
-dest_files=[ "res://.import/UI_WeldingGunOnNoSparks.png-9ccac1fae875012163bbdac69f32ca48.stex" ]
+source_file="res://Assets/Main/home_icon.png"
+dest_files=[ "res://.import/home_icon.png-31c0f13f3e9de23619654a7c3be6cd9b.stex" ]
 
 [params]
 

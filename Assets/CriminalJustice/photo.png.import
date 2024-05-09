@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/photo.png-a03c40643391ad9179f9e4b5ceec8aa9.stex"
+path="res://.import/photo.png-c9e461e78461939dfd7ddf46277332dc.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Game Assets/criminal_justice/photo.png"
-dest_files=[ "res://.import/photo.png-a03c40643391ad9179f9e4b5ceec8aa9.stex" ]
+source_file="res://Assets/CriminalJustice/photo.png"
+dest_files=[ "res://.import/photo.png-c9e461e78461939dfd7ddf46277332dc.stex" ]
 
 [params]
 

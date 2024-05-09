@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/court_foreground.png-6c3cd37a3e0efd283a1e71e23b913fb5.stex"
+path="res://.import/court_foreground.png-21ee496e9a0140c6f6ed793ce7505a70.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Game Assets/criminal_justice/court_foreground.png"
-dest_files=[ "res://.import/court_foreground.png-6c3cd37a3e0efd283a1e71e23b913fb5.stex" ]
+source_file="res://Assets/CriminalJustice/court_foreground.png"
+dest_files=[ "res://.import/court_foreground.png-21ee496e9a0140c6f6ed793ce7505a70.stex" ]
 
 [params]
 

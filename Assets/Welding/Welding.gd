@@ -88,7 +88,7 @@ func _process(delta):
 	if Input.is_action_just_pressed("LeftClick") and WeldingStage and CanStartDrawing: #The mouse was clicked for the first time
 		CanStartDrawing = false #Prevents the player from drawing again in this attempt
 		IsWelding = true
-		$WeldingGun.animation = "On"
+		#$WeldingGun.animation = "On"
 		$WeldingGun.show()
 		
 		$WeldingLine.add_point(MousePosition) # Adds the first initial point
@@ -108,7 +108,7 @@ func _process(delta):
 	if Input.is_action_just_released("LeftClick") and IsWelding: #This stuff is done when the player is done drawing
 		IsWelding = false
 		$WeldingGun.hide()
-		$WeldingGun.animation = "Normal"
+		#$WeldingGun.animation = "Normal"
 		$Particles.emitting = false
 		for point in $WeldingLine.points: # Disqualifies the player if they draw out of bounds
 			#print(point)

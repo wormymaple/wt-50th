@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/ui_knife.png-ec68ab88c8ba0233223879fc669c2b06.stex"
+path="res://.import/hook.png-e535b63874be8d113a56fe6e1c3738f8.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/CriminalJustice/ui_knife.png"
-dest_files=[ "res://.import/ui_knife.png-ec68ab88c8ba0233223879fc669c2b06.stex" ]
+source_file="res://Assets/CriminalJustice/hook.png"
+dest_files=[ "res://.import/hook.png-e535b63874be8d113a56fe6e1c3738f8.stex" ]
 
 [params]
 

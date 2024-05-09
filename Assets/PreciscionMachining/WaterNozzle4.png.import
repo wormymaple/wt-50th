@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/chr_pirate.png-7f39c4e2cbd5f86c4210a88795c5ec7d.stex"
+path="res://.import/WaterNozzle4.png-6f3b423bc5f0024b753952af8a1c0a25.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/CriminalJustice/chr_pirate.png"
-dest_files=[ "res://.import/chr_pirate.png-7f39c4e2cbd5f86c4210a88795c5ec7d.stex" ]
+source_file="res://Assets/PreciscionMachining/WaterNozzle4.png"
+dest_files=[ "res://.import/WaterNozzle4.png-6f3b423bc5f0024b753952af8a1c0a25.stex" ]
 
 [params]
 

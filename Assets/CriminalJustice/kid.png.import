@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Ui_waternozzle.png-71b0afd2db3567d48fa80b88707170bc.stex"
+path="res://.import/kid.png-4b8d523527c70bc6441ee9277f04086b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/PreciscionMachining/Ui_waternozzle.png"
-dest_files=[ "res://.import/Ui_waternozzle.png-71b0afd2db3567d48fa80b88707170bc.stex" ]
+source_file="res://Assets/CriminalJustice/kid.png"
+dest_files=[ "res://.import/kid.png-4b8d523527c70bc6441ee9277f04086b.stex" ]
 
 [params]
 

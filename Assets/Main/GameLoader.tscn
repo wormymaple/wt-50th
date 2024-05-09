@@ -1,6 +1,6 @@
 [gd_scene load_steps=20 format=2]
 
-[ext_resource path="res://Assets/Main/GameScene.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Main/GameLoader.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Welding/Welding.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Assets/PreciscionMachining/PrecisionMachining.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Assets/CriminalJustice/CriminalJustice.tscn" type="PackedScene" id=4]
@@ -8,7 +8,7 @@
 [ext_resource path="res://Fonts/Corben-Regular.ttf" type="DynamicFontData" id=6]
 [ext_resource path="res://Fonts/Corben-Bold.ttf" type="DynamicFontData" id=7]
 [ext_resource path="res://Assets/Main/TimerBarBackground.png" type="Texture" id=8]
-[ext_resource path="res://Assets/Main/home.png" type="Texture" id=9]
+[ext_resource path="res://Assets/Main/home_icon.png" type="Texture" id=9]
 [ext_resource path="res://Assets/Main/TimerBarProgress.png" type="Texture" id=10]
 
 [sub_resource type="StyleBoxFlat" id=2]

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/ui_rippedcloth.png-5881533b173adac2f810ee11fef4eae0.stex"
+path="res://.import/half_sheet_right_3.png-dba8da0053f00187f4861c6f45998167.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/CriminalJustice/ui_rippedcloth.png"
-dest_files=[ "res://.import/ui_rippedcloth.png-5881533b173adac2f810ee11fef4eae0.stex" ]
+source_file="res://Assets/Welding/half_sheet_right_3.png"
+dest_files=[ "res://.import/half_sheet_right_3.png-dba8da0053f00187f4861c6f45998167.stex" ]
 
 [params]
 

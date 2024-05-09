@@ -1,6 +1,6 @@
 [gd_scene load_steps=14 format=2]
 
-[ext_resource path="res://Assets/PreciscionMachining/UI_MetalSheetUncut.png" type="Texture" id=1]
+[ext_resource path="res://Assets/PreciscionMachining/MetalSheet.png" type="Texture" id=1]
 [ext_resource path="res://Fonts/Corben-Regular.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://Fonts/Corben-Bold.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://Assets/PreciscionMachining/PrecisionMachining.gd" type="Script" id=5]

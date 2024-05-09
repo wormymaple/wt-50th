@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/UI_CutMetalSheetHalfRight03-removebg-preview.png-66201dbe12498121ebca37b1cf54abb7.stex"
+path="res://.import/Title_Screen_background.png-fa1dcb075c8d5196d0bf406c458c3ce3.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Welding/UI_CutMetalSheetHalfRight03-removebg-preview.png"
-dest_files=[ "res://.import/UI_CutMetalSheetHalfRight03-removebg-preview.png-66201dbe12498121ebca37b1cf54abb7.stex" ]
+source_file="res://Assets/Main/Title_Screen_background.png"
+dest_files=[ "res://.import/Title_Screen_background.png-fa1dcb075c8d5196d0bf406c458c3ce3.stex" ]
 
 [params]
 
