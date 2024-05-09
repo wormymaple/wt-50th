@@ -10,11 +10,9 @@ var ChosenShape = null
 var RightHalfChosenShape = null
 
 var WeldingStage = false
-var ButtonPressed = null
 var OutputYet = false
 var PieceSlideInPhase = false
 var CanStartDrawing = true
-var IsNotHoldingLeftClick = true
 var IsWelding = false
 var StartingFade = false
 var PieceSeparation = 669
@@ -22,10 +20,7 @@ var FirstPoint = null
 var PreviousPoint = null
 var MinimumDistanceBetweenPoints = 5
 var ChosenOutline = null
-var ScoreLeniancy = 12
-
-var PossibleFrames = [0, 1, 2, 3]
-var PreviousFrame = 1
+var ScoreLeniency = 12
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -142,7 +137,7 @@ func _process(delta):
 		#print(position)
 		#print(ChosenOutline.position)
 		#print("Unfiltered Total:" Total)
-		Total = ScoreLeniancy - (Total/ len(ChosenOutline.points)) # Divides the "unaccuracy" amount by the amount of points, which makes diificulty scale with shapes with more points
+		Total = ScoreLeniency - (Total/ len(ChosenOutline.points)) # Divides the "unaccuracy" amount by the amount of points, which makes diificulty scale with shapes with more points
 		
 		
 		#$FadeOverlay.show()

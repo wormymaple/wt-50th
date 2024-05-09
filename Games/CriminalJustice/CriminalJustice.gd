@@ -24,10 +24,10 @@ func _ready():
 
 func player_win():
 	passed = true
-	print("You win!")
+	#print("You win!")
 func player_lose():
 	failed = true
-	print("You lose!")
+	#print("You lose!")
 
 func _on_ClothButton_pressed():
 	if passed or failed:

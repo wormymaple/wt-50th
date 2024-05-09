@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/UI_Title.png-d532a95b5934c92db1abde4fc2cc2646.stex"
+path="res://.import/TimerBarBackground.png-afc6e81662bc73dc78c4d8300fab7b10.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://MainStuff/Assets/UnusedMainMenuSprites/UI_Title.png"
-dest_files=[ "res://.import/UI_Title.png-d532a95b5934c92db1abde4fc2cc2646.stex" ]
+source_file="res://MainStuff/Assets/TimerBarBackground.png"
+dest_files=[ "res://.import/TimerBarBackground.png-afc6e81662bc73dc78c4d8300fab7b10.stex" ]
 
 [params]
 

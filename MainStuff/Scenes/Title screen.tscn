@@ -2,8 +2,8 @@
 
 [ext_resource path="res://Fonts/Corben-Regular.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://MainStuff/Scripts/Title screen.gd" type="Script" id=2]
-[ext_resource path="res://MainStuff/Assets/UnusedMainMenuSprites/BG_Startup_Screen.png" type="Texture" id=3]
-[ext_resource path="res://MainStuff/Assets/UnusedMainMenuSprites/UI_Title.png" type="Texture" id=4]
+[ext_resource path="res://MainStuff/Assets/MainMenu/BG_Startup_Screen.png" type="Texture" id=3]
+[ext_resource path="res://MainStuff/Assets/MainMenu/UI_Title.png" type="Texture" id=4]
 [ext_resource path="res://MainStuff/Scenes/title_screen_button.tres" type="StyleBox" id=5]
 
 [sub_resource type="StyleBoxFlat" id=1]

@@ -13,10 +13,6 @@ config_version=4
 config/name="wt-50th"
 run/main_scene="res://MainStuff/Scenes/Title screen.tscn"
 
-[autoload]
-
-GlobalSettings="*res://MainStuff/Scripts/global_settings.gd"
-
 [display]
 
 window/size/width=1500

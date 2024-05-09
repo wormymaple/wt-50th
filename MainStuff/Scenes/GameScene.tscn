@@ -7,9 +7,9 @@
 [ext_resource path="res://Fonts/JerseyM54-aLX9.ttf" type="DynamicFontData" id=5]
 [ext_resource path="res://Fonts/Corben-Regular.ttf" type="DynamicFontData" id=6]
 [ext_resource path="res://Fonts/Corben-Bold.ttf" type="DynamicFontData" id=7]
-[ext_resource path="res://MainStuff/Assets/TimerBarResized.png" type="Texture" id=8]
-[ext_resource path="res://MainStuff/Assets/house-png-206.png" type="Texture" id=9]
-[ext_resource path="res://MainStuff/Assets/TImerBarProgressResized.png" type="Texture" id=10]
+[ext_resource path="res://MainStuff/Assets/TimerBarBackground.png" type="Texture" id=8]
+[ext_resource path="res://MainStuff/Assets/home.png" type="Texture" id=9]
+[ext_resource path="res://MainStuff/Assets/TimerBarProgress.png" type="Texture" id=10]
 
 [sub_resource type="StyleBoxFlat" id=2]
 bg_color = Color( 0.921569, 0.901961, 0.764706, 1 )

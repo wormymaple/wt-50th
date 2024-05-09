@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/TimerBarProgress.png-87d6b06e1b65e23829b45be5293f9aac.stex"
+path="res://.import/TimerBarProgress.png-58ff02c1a0b2b1e783a5cd575b1cc9d7.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Game Assets/UserInterface/Assets/TimerBarProgress.png"
-dest_files=[ "res://.import/TimerBarProgress.png-87d6b06e1b65e23829b45be5293f9aac.stex" ]
+source_file="res://MainStuff/Assets/TimerBarProgress.png"
+dest_files=[ "res://.import/TimerBarProgress.png-58ff02c1a0b2b1e783a5cd575b1cc9d7.stex" ]
 
 [params]
 

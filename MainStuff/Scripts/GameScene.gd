@@ -87,7 +87,7 @@ func _process(delta):
 	
 	#This is how the game detects a game over
 	if $CanvasLayer/TotalFade.modulate.a == 1 and HasFailedIsWaitingForFadeOut:
-		print("SwitchingScenes!")
+		#print("SwitchingScenes!")
 		if get_tree().change_scene("res://MainStuff/Scenes/Title screen.tscn") != OK:
 			print("An unexpected error occured when trying to switch to the title screen scene")
 	
@@ -134,7 +134,7 @@ func _on_TimeBetweenGames_timeout(): #rest of the new scene script
 	
 	if game != null: # These are tests
 		game.queue_free()
-		print("The game is ", game)
+		#print("The game is ", game)
 		game = null # Might not have to set this to null when it is also freed
 		
 	var rng = RandomNumberGenerator.new()

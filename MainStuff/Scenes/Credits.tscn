@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Fonts/Corben-Regular.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Fonts/Corben-Bold.ttf" type="DynamicFontData" id=2]
-[ext_resource path="res://MainStuff/Scripts/GodotCredits.gd" type="Script" id=3]
+[ext_resource path="res://MainStuff/Scripts/Credits.gd" type="Script" id=3]
 [ext_resource path="res://Fonts/Roboto-Regular.ttf" type="DynamicFontData" id=4]
 [ext_resource path="res://MainStuff/Scenes/credits_button.tres" type="StyleBox" id=5]
 

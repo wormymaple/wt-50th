@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/UI_Credits_Button.png-1474a10bc3d01c3b0ffba61fd8fccdd4.stex"
+path="res://.import/home.png-2ee01e69e7b147c68233aebb6e1e0c5b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://MainStuff/Assets/UnusedMainMenuSprites/UI_Credits_Button.png"
-dest_files=[ "res://.import/UI_Credits_Button.png-1474a10bc3d01c3b0ffba61fd8fccdd4.stex" ]
+source_file="res://MainStuff/Assets/home.png"
+dest_files=[ "res://.import/home.png-2ee01e69e7b147c68233aebb6e1e0c5b.stex" ]
 
 [params]
 

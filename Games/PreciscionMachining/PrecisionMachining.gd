@@ -70,7 +70,7 @@ func _process(delta):
 			#print(point)
 			if point.x < 700 or point.x > 1208 or point.y < 100 or point.y > 576:
 				failed = true
-				print("You went out of bounds")
+				print("Player went out of bounds")
 				return #Quits out early so it doesn't do redundant checks
 		
 		#This checks the score
@@ -92,7 +92,7 @@ func _process(delta):
 			Total += ReferencePoint.distance_to(ClosestPoint) # The less accurate the player was, the bigger this is
 		#print(position)
 		#print(ChosenOutline.position)
-		print(Total)
+		#print(Total)
 		Total = MaxScore - int(Total/ len(DrawLine.points)) # Divides the "unaccuracy" amount by the amount of points, which makes diificulty scale with shapes with more points
 		
 		#set_point_position(len(points) - 1, points[0])
@@ -109,10 +109,10 @@ func _process(delta):
 		print("Total: ", Total)
 		if Total > 0: # Player passes if so 
 			passed = true
-			print("Passed!")
+			#print("Passed!")
 		else:
 			failed = true
-			print("Failed!")
+			#print("Failed!")
 	
 	#Make the FadeOverlay start fading in
 	if StartingFade: # Makes the overlay fade in
