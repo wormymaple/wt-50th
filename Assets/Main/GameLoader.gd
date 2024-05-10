@@ -88,7 +88,7 @@ func _process(delta):
 	#This is how the game detects a game over
 	if $CanvasLayer/TotalFade.modulate.a == 1 and HasFailedIsWaitingForFadeOut:
 		#print("SwitchingScenes!")
-		if get_tree().change_scene("res://Assets/Main/Title screen.tscn") != OK:
+		if get_tree().change_scene("res://Assets/Main/Title_screen.tscn") != OK:
 			print("An unexpected error occured when trying to switch to the title screen scene")
 	
 	
